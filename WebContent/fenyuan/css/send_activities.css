@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+@IMPORT url("../../common/common.css");
+
+#header_wrapper {
+	height: 60px;
+	background-color: #55BB22;
+}
+#left_side  {
+	float: left;
+	height: 60px;
+}
+#left_side img {
+	vertical-align: middle;
+	line-height: 60px;	
+}
+#left_side .word1 {
+	line-height: 60px;	
+	font-size: 25px;
+	color: #fff;
+	font-family: "arial";
+	vertical-align: middle;
+	margin-right: 8px;
+}
+#left_side .word2 {
+	line-height: 60px;	
+	font-size: 25px;
+	color: #fff;
+	font-family: "宋体";
+	vertical-align: middle;
+	margin-left: 8px;
+}
+#right_side {
+	float: right;
+	height: 60px;
+}
+#right_side img {
+	margin-top: 18px;
+	vertical-align: middle;
+	line-height: 60px;	
+}
+#right_side .word {
+	margin-left: 4px;
+	font-size: 18px;
+	color: #fff;
+	font-family: "宋体";
+	vertical-align: bottom;
+}
+#right_side .logout {
+	margin-top: 30px;
+}
