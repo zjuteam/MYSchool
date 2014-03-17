@@ -5,6 +5,10 @@
 #header_wrapper {
 	height: 60px;
 	background-color: #55BB22;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 0px 0px 6px 4px #C1C6C1;
 }
 #left_side  {
 	float: left;
@@ -20,7 +24,7 @@
 	color: #fff;
 	font-family: "arial";
 	vertical-align: middle;
-	margin-right: 8px;
+	margin-right: 6px;
 }
 #left_side .word2 {
 	line-height: 60px;	
@@ -58,12 +62,14 @@ body {
 	background-color: #EFF5EF;
 }
 #main {
+	
 	width: 965px;
 	height: 580px;
 	margin: 0 auto 0 auto;
-	margin-top: 51px;
+	margin-top: 101px;
 	border: 1px solid #DBDBDB;
 	margin-bottom: 125px;
+	box-shadow: 0px 0px 6px 2px #C1C6C1;
 }
 #menu {
 	float: left;

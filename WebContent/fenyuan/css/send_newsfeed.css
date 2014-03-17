@@ -149,56 +149,8 @@ body {
 	vertical-align: middle;
 
 }
-#container {
-	margin: 20px auto 0 auto;
-}
-textarea {
-	border: 1px solid #999;
-	width: 690px;
-	height: 275px;
-	padding: 5px;
-}
-
-#container .upload {
-	width: 700px;
-	height: 100px;
-	margin: 0 auto 0 auto;
-	background: url('../img/u97.png') no-repeat;
-	margin-bottom: 20px;
-}
-#container .upload input[type='file'] {
-	filter: alpha(opacity=0);
-    opacity: 0;
-    float: left;
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-}
-#container .upload input[type='file']:hover {
-	cursor: pointer;
-}
-#container .display {
-	float: left;
-}
-#container .display ul li {
-	display: inline;
-	list-style-type: none;	/* 去掉星号 */
-}
-#container input[type='submit'] {
-	margin-top: 30px;
-	color: #fff;
-	font-size: 16px;
-	background-color: #55BB22;
-	padding: 6px 17px 6px 17px;
-	border-radius: 6px;
-	float: right;
-	margin-right: 40px;
-}
-
-#container input[type='submit']:hover {
-	cursor: pointer;
-}
-
+#content #down label {
+} 
 #footer_wrapper {
 	background-color: #fff;
 	height: 158px;	
