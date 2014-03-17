@@ -65,7 +65,7 @@ body {
 	width: 965px;
 	height: 580px;
 	margin: 0 auto 0 auto;
-	margin-top: 100px;
+	margin-top: 101px;
 	border: 1px solid #DBDBDB;
 	margin-bottom: 125px;
 	box-shadow: 0px 0px 6px 2px #C1C6C1;	/* IE9+ */
@@ -147,12 +147,10 @@ body {
 	height: 526px;
 	text-align: center;
 	vertical-align: middle;
-	border: 1px solid red;
 }
 #container {
 	width: 	610px;
 	height: 260px;
-	border: 1px solid red;
 	margin: 100px auto 0 auto;
 }
 #content #down label {
