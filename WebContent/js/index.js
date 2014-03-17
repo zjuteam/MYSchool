@@ -45,7 +45,7 @@ function slideScreen() {
 			// start from 0
 			// first cancel interval
 			clearInterval(intervalID);
-			$(imageBox).animate({left:"-" + (clickID) * imageWidth + "px"},imageSpeed);
+			$(imageBox).animate({left:"-" + (clickID) * imageWidth + "px"},150);
 		};
 	});
 }
