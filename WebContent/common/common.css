@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.clear {
+	clear:both;
+}
+
+#header {
+	margin: 0 auto 0 auto;
+	width: 950px;
+	height: 60px;
+}
