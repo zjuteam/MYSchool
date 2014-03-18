@@ -4,5 +4,251 @@
 
 #header_wrapper {
 	height: 60px;
-	background-color: 
+	background-color: rgb(85, 187, 34);
 }
+
+#header {
+	background-color: rgb(85, 187, 34);
+}
+
+#logo_regist {
+	float: left;
+	margin-left: 8px;
+}
+
+#logo li {
+	display: block;
+	float: left;
+	margin-right: 15px;
+	line-height: 63px;
+}
+
+#MySchool {
+	margin-top: 15px;
+	margin-left: -12px;
+}
+
+#line {
+	margin-top: 15px;
+}
+
+#regist_text {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+
+#login_btns {
+	float: right;
+	color: #F2F2F2;
+	margin-top: 26px;
+	font-size: 18px;
+	font-family:'Arial Normal','Arial';
+}
+
+#login_btns a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #EFF5EF;
+}
+
+#main {
+	width: 950px;
+	margin: 42px auto 0 auto;
+	background-color: rgb(253, 254, 252);
+}
+
+#regist_content {
+	height: 675px;
+}
+
+.tab {
+	background-color: #EFF5EF;
+	height: 60px;
+}
+
+#fenyuan {
+	float: left;
+	height: 60px;
+	background-color: rgb(253, 254, 252);
+}
+
+#fenyuan img {
+	vertical-align: top;
+	display: block;
+}
+
+#fenyuan label {
+	font-size: 28px;
+	color: #333;
+	font-family: '宋体';
+	text-align: center;
+	display: block;
+	line-height: 60px;
+}
+
+#shetuan {
+	width: 186px;
+	float: left;
+}
+
+#shetuan label {
+	font-size: 28px;
+	color: #999999;
+	font-family: '宋体';
+	text-align: center;
+	display: block;
+	line-height: 60px;
+}
+#step_tab{
+	position:relative;
+	top:-25px;
+}
+
+#step_num {
+	margin-left: 67px;
+	color: #666666;
+	font-size: 16px;
+	font-family: '宋体';
+}
+
+#step_num span {
+	font-family: 'Arial Normal', 'Arial';
+	font-weight: 400;
+}
+
+#step_num li {
+	display: block;
+	float: left;
+	width: 205px;
+	margin-top: 40px;
+}
+
+#step_one {
+	color: #55BB22;
+}
+
+#step_num img {
+	margin-top: 20px;
+	margin-left: -15px;
+}
+
+#step_two img,#step_three img,#step_four img {
+	display: none;
+}
+
+#u352_line {
+	margin-left: 52px;
+}
+
+#underline {
+	height: 1px;
+	width: 800px;
+	background-image: url(../img/u352_line.png);
+	margin-top: 20px;
+	position: relative;
+	left: 52px;
+	top: 81px;
+}
+
+#u352_end {
+	display: block;
+	position: relative;
+	top: -10px;
+	left: -100px;
+}
+
+#regist_panel {
+	width: 400px;
+	margin: 0px auto;
+	position: relative;
+	top: 105px;
+}
+
+.Step_panel {
+	position: absolute;
+	width: 400px;
+}
+
+.Step_panel table {
+	width: 400px;
+}
+
+.Step_panel table input {
+	width: 400px;
+	height: 50px;
+	margin-bottom: 35px;
+	background: #FFFFFF;
+	border: 1px solid rgb(204, 204, 204);
+	color: #CCCCCC;
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 20px;
+	text-align: left;
+}
+
+.Step_panel table label {
+	color: #CCCCCC;
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 20px;
+	text-align: left;
+	position: absolute;
+	width: 200px;
+}
+
+#password {
+	top: 105px;
+	left: 4px;
+}
+
+#pwagain {
+	top: 195px;
+	left: 4px;
+}
+.Step_panel table input[type='button'] {
+	background-color: rgb(85,187,34);
+	color: #fff;
+	font-size: 20px;
+    text-align: center;	
+    border:none;
+}
+.Step_panel table input[type='checkbox'] {
+	width:20px;
+	margin-top:-30px;
+}
+.Step_panel table span {
+	color:#333333;
+	font-size:13px;
+	position:relative;
+	top:-20px;
+}
+.Step_panel table a{
+	font-size:13px;
+	text-decoration:none;
+}
+#footer_wrapper {
+	background-color: #fff;
+	height: 158px;	
+	margin-top:20px;
+}
+#footer {
+	padding-top: 38px;
+	margin: 0 auto 0 auto;
+	width: 950px;
+}
+#footer p {
+	text-align: center;
+	font-size: 13px;
+	color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
