@@ -138,6 +138,9 @@ body {
 	font-size: 18px;
 	font-family: '宋体';
 }
+#content #up #create_acti:hover {
+	cursor: pointer;
+}
 #content #up #create_acti img {
 
 	vertical-align: middle;
@@ -164,4 +167,62 @@ body {
 	text-align: center;
 	font-size: 13px;
 	color: #999;
+}
+#dialog-form {
+	display: none;
+	padding-top: 40px;
+}
+#dialog-form input[type='text'],#dialog-form select {
+	width: 465px;
+	border: 1px solid #DBDBDB;
+	height: 30px;
+}
+#dialog-form input[type='file'] {
+	width: 80px;
+	height: 30px;
+	opacity: 0;
+}
+#dialog-form textarea {
+	width: 465px;
+	height: 116px; 
+	border: 1px solid #DBDBDB;
+}
+#dialog-form ul {
+	width: 528px;
+	margin: 0 auto 0 auto;
+}
+#dialog-form label {
+	margin-right: 20px;
+	font-size: 16px;
+}
+#dialog-form ul li {
+	margin-bottom: 20px;
+}
+.supported {
+	color: #888;
+}
+#dialog-form .main_content {
+	height: 116px;
+	vertical-align: top;
+}
+#dialog-form input[type='submit'],#dialog-form input[type='button'] {
+	background-color: #55BB22;
+	color: #fff;
+	padding: 5px 38px 5px 38px;
+	border-radius: 6px;
+}
+#dialog-form input[type='button'] {
+	background-color: #515151;
+}
+#dialog-form input[type='submit']:hover,#dialog-form input[type='button']:hover {
+	cursor: pointer;
+}
+#dialog-form input[type='submit'] {
+	margin-left: 140px;
+}
+#dialog-form .upload {
+	width: 80px;
+	height: 30px;
+	display: inline-block;
+	background: url("../img/upload.png") no-repeat;
 }
