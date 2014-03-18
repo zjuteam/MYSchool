@@ -119,8 +119,33 @@ body {
 	background-color: #fff;
 	border-right: 1px solid #DBDBDB;
 }
+#content #up #edit {
+	float: right;
+}
+#content #up #edit label {
+	line-height: 53px;
+	vertical-align: middle;
+	font-size: 18px;
+	font-family: '宋体';
+	color: #bbb;
+	margin-right: 30px;
+}
+#content #up #edit label:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
 #content #up #tab img {
 	vertical-align: top;
+}
+#content #down table {
+	color: #333;
+	font-size: 18px;
+}
+#content #down table .name {
+	text-align: right;
+}
+#content #down table .val {
+	text-align: left;
 }
 #content #up #tab label {
 	vertical-align: middle;
@@ -149,12 +174,71 @@ body {
 	vertical-align: middle;
 }
 #container {
-	width: 	610px;
-	height: 260px;
-	margin: 100px auto 0 auto;
+	width: 	650px;
+	height: 260px;	
+	margin: 70px auto 0 auto;
 }
-#content #down label {
-} 
+#edit_container {
+	width: 	650px;
+	height: 260px;
+	margin: 70px auto 0 auto;
+	display: none;	
+
+}
+.operation {
+	margin-left: 60px;
+}
+.operation input[type='submit'] {
+	color: #fff;
+	background-color: #55BB22;
+	padding: 8px 38px 8px 38px;
+	border-radius: 6px;
+}
+.operation input[type='button'] {
+	margin-left: 12px;
+	color: #fff;
+	background-color: #999;
+	padding: 8px 38px 8px 38px;
+	border-radius: 6px;
+}
+input[type="submit"]:hover, input[type="button"]:hover {
+	cursor: pointer;
+}
+.left {
+	float: left;
+	width: 132px;
+	height: 300px;
+	margin-top: 44px;
+	margin-left: 20px;
+}
+.left input[type='file'] {
+	width: 121px;
+	height: 38px;
+	opacity: 0;
+}
+.left .modify_portrait {
+	margin-top: 30px;
+	background: url('../img/btn.png') no-repeat;
+	width: 121px;
+	height: 38px;
+}
+.right {
+	float: right;
+	margin-right: 116px;
+}
+.right table {
+	font-size: 18px;
+}
+
+.left input[type='file']:hover {
+	cursor: pointer;
+}
+.right input[type='text'] {
+	border: 1px solid #DBDBDB;
+	height: 30px;
+	width: 190px;
+	padding-left: 10px;
+}
 #footer_wrapper {
 	background-color: #fff;
 	height: 158px;	

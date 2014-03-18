@@ -55,15 +55,84 @@
 						<img src="img/u85_line.png" />
 						<label>帐号设置</label>
 					</div>
-				</div>
-				<div id="down">
-					<div id="container">
-						<div class="left">
-						</div>
-						<div class="right">
-						</div>
+					<div id="edit">
+						<label>编辑</label>
 					</div>
 				</div>
+				<div id="down">
+					<!-- 原始帐号信息 -->
+					<div id="container">
+						<div class="left">
+							<!-- 修改头像 -->
+							<form action="" method="post">
+								<img src="img/u1.png" />
+								<div class="modify_portrait">
+									<input type="file" name="" />
+								</div>
+							</form>
+						</div>
+						<div class="right">
+							<table cellspacing="25">
+								<tr>
+									<td class="name">组织名称:</td><td class="val">求是设计协会</td>
+								</tr>
+								<tr>
+									<td class="name">组织简称:</td><td class="val">求协</td>
+								</tr>
+								<tr>
+									<td class="name">绑定邮箱:</td><td class="val">4516555@qq.com</td>
+								</tr>
+								<tr>
+									<td class="name">组织负责人:</td><td class="val">张明</td>
+								</tr>
+								<tr>
+									<td class="name">负责人电话:</td><td class="val">124455665855</td>
+								</tr>
+								<tr>
+									<td class="name">挂靠单位:</td><td class="val">校委会</td>
+								</tr>																										
+							</table>
+						</div>
+					</div>
+					<!-- 编辑栏(默认隐藏) -->
+					<div id="edit_container">
+						<form action="" method="post">
+							<div class="left">
+								<!-- 修改头像 -->
+									<img src="img/u1.png" />
+									<div class="modify_portrait">
+										<input type="file" name="" />
+									</div>
+							</div>
+							<div class="right">
+								<table cellspacing="25">
+									<tr>
+										<td class="name">组织名称:</td><td class="val"><input type="text" name="" value="求是设计协会" /></td>
+									</tr>
+									<tr>
+										<td class="name">组织简称:</td><td class="val"><input type="text" name="" value="求协" /></td>
+									</tr>
+									<tr>
+										<td class="name">绑定邮箱:</td><td class="val"><input type="text" name="" value="4516555@qq.com" /></td>
+									</tr>
+									<tr>
+										<td class="name">组织负责人:</td><td class="val"><input type="text" name="" value="张明" /></td>
+									</tr>
+									<tr>
+										<td class="name">负责人电话:</td><td class="val"><input type="text" name="" value="124455665855" /></td>
+									</tr>
+									<tr>
+										<td class="name">挂靠单位:</td><td class="val"><input type="text" name="" value="校委会" /></td>
+									</tr>																										
+								</table>
+							</div>
+							<div class="operation">
+								<input type="submit" name="" value="保存" /><input type="button" name="" value="取消" />
+							</div>
+						</form>
+					</div>
+				</div>
+										
 			</div>		
 		</div>
 		<div id="footer_wrapper">
