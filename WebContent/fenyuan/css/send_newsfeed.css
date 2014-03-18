@@ -148,12 +148,38 @@ body {
 } 
 #content #down {
 	height: 526px;
-	text-align: center;
-	vertical-align: middle;
-
 }
-#content #down label {
-} 
+#down .newsfeed {
+	height: 97px;
+	border-bottom: 1px solid #DBDBDB;
+}
+#down .info {
+	margin-left: 14px;
+	margin-top: 26px;
+	float: left;
+}
+#down .info img {
+	margin-right: 15px;
+}
+#down .info .title {
+	color: #666;
+	font-size: 18px;
+}
+#down .info .last_edit, #down .info .tag {
+	font-size: 12px;
+	color: #888;
+}
+#down .edit {
+	float: right;
+	margin-top: 26px;
+}
+#down .edit img {
+	margin-right: 24px;
+}
+#down .edit table {
+	font-size: 12px;
+	color: #888;
+}
 #footer_wrapper {
 	background-color: #fff;
 	height: 158px;	
