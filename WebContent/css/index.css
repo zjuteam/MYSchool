@@ -114,21 +114,8 @@
 #login_container .panel table td {
 	padding-top: 15px;
 }
-.pwdtip1 {
-	position: absolute;
-	left: 278px;
-	top: 410px;
-	font-size: 16px;
-	color: #999;
-}
-.pwdtip2 {
-	position: absolute;
-	left: 278px;
-	top: 410px;
-	font-size: 16px;
-	color: #999;
-}
 .tw_panel {
+
 	display: block;
 }
 .st_panel {

@@ -125,34 +125,48 @@ function funcHover() {
 }
 
 function inputClearEvent() {
-	$('input[type="text"]').focus(function() {
+	
+	$('#tw_username').focus(function() {
 		if($(this).val() == '用户名')
+			$(this).val('');		
+	});
+	$('#tw_username').blur(function() {
+		if($(this).val() == '')
+			$(this).val('用户名');		
+	});
+	
+	$('#tw_password').focus(function() {
+		if($(this).val() == '密码') {
 			$(this).val('');
-	});
-	$('.tw_panel input[type="password"]').focus(function() {
-		$('.pwdtip1').hide();
-	});
-	$('.tw_panel input[type="password"]').blur(function() {
-		if($(this).val() == '') {
-			$('.pwdtip1').show();
+			$(this).attr("type", "password");
 		}
 	});
-	$('.st_panel input[type="password"]').focus(function() {
-		$('.pwdtip2').hide();
-	});
-	$('.st_panel input[type="password"]').blur(function() {
+	$('#tw_password').blur(function() {
 		if($(this).val() == '') {
-			$('.pwdtip2').show();
-		}
-	});
-	$('input[type="password"]').focus(function() {
-		$('.pwdtip').hide();
-	});	
-	$('input[type="text"]').blur(function() {
-		if($(this).val() == '') {
-			$(this).val("用户名");
+			$(this).attr("type", "text");
+			$(this).val('密码');
 		}
 	});
 
-
+	$('#st_username').focus(function() {
+		if($(this).val() == '用户名')
+			$(this).val('');		
+	});
+	$('#st_username').blur(function() {
+		if($(this).val() == '')
+			$(this).val('用户名');		
+	});
+	
+	$('#st_password').focus(function() {
+		if($(this).val() == '密码') {
+			$(this).val('');
+			$(this).attr("type", "password");
+		}
+	});
+	$('#st_password').blur(function() {
+		if($(this).val() == '') {
+			$(this).attr("type", "text");
+			$(this).val('密码');
+		}
+	});
 }
