@@ -4,8 +4,45 @@
 		<meta charset="UTF-8">
 		<title>发送活动</title>
 		<link rel="stylesheet" type="text/css" href="css/send_activities.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/jquery-ui.css" />
 	</head>
 	<body>
+		<!-- 新建活动对话框 -->
+		<div title="新建活动" id="dialog-form"">
+			<form action="" method="post">
+				<fieldset>
+					<table cellspacing="15">
+						<tr>
+							<td><label>标题</label></td><td colspan="3"><input type="text" class="input" /></td>
+						</tr>	
+						<tr>
+							<td><label>标签</label></td><td colspan="3"><select class="input"><option>体育</option></select></td>
+						</tr>
+						<tr>
+							<td><label>活动配图</label></td><td colspan="3"><div class="upload"><input type="file" name="" /></div><label class="supported">(支持的图片类型：jpg, png, gif, bmp)</label></td>
+						</tr>
+						<tr>
+							<td><label>开始时间</label></td><td><input type="text" id="start_time" /></td><td><label>结束时间</label></td><td><input type="text" id="end_time" /></td>
+						</tr>
+						<tr>
+							<td><label>活动地点</label></td><td colspan="3"><input class="input" type="text" /></td>
+						</tr>
+						<tr>
+							<td><label>主办方</label></td><td colspan="3"><input class="input" type="text" /></td>
+						</tr>
+						<tr>
+							<td><label>赞助商</label></td><td colspan="3"><input class="input" type="text" /></td>
+						</tr>
+						<tr>
+							<td><label class="upper">正文</label></td><td colspan="3"><textarea></textarea></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit" value="保存并发送" class="send" /></td><td colspan="2"><input type="button" value="取消" class="cancel" /></td>
+						</tr>						
+					</table>
+				</fieldset>
+			</form>
+		</div>
 		<div id="header_wrapper">
 			<div id="header">
 				<div id="left_side">
@@ -60,11 +97,50 @@
 					</div>
 				</div>
 				<div id="down">
+					<!-- one piece of activity -->
+					<div class="activity">
+						<div class="check">
+							<input type="checkbox" />
+						</div>
+						<div class="info">
+							<table>
+								<tr  class="title">
+									<td rowspan="3"><img src="img/u220.jpg" /></td>
+									<td>标题:</td>
+									<td>求实设计在现代科技的应用比赛</td>
+								</tr>
+								<tr class="last_edit">
+									<td>上次编辑：</td>
+									<td>2013-11-12-11：12</td>
+								</tr>
+								<tr class="tag">
+									<td>标签：</td>
+									<td>娱乐</td>
+								</tr>
+							</table>
+						</div>
+						<div class="edit">
+							<table>
+								<tr>
+									<td rowspan="2"><img src="img/u211_line.png" /></td>
+									<td><img src="img/u200.png" /></td>
+									<td><img src="img/u212.png" /></td>
+									<td><img src="img/u214.png" /></td>
+								</tr>
+								<tr>
+									<td>娱乐</td><td>编辑</td><td id="confirm_delete">删除</td>
+								</tr>
+							</table>
+						</div>
+						<div class="status">
+							正在进行
+						</div>						
+					</div>
 				</div>
 			</div>		
 		</div>
-		<div id="footer_wrapper">
-			<div id="footer">
+		<div id="back_footer_wrapper">
+			<div id="back_footer">
 				<p>客服QQ：4009987011企业QQ客服电话： 400-998-7011官方微博关于我们最新素材图片下载Sitemap</p>
 				<p>Copyright @ 2014千图网 沪ICP备10011451号-6 用时： 0.0219 1.772 秒 当前版本:1.0</p>
 			</div>
@@ -73,4 +149,5 @@
 	<script type="text/javascript" src="../lib/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="../common/common.js"></script>
 	<script type="text/javascript" src="js/send_activities.js"></script>
+	<script type="text/javascript"src="../lib/jquery-ui.js"></script>
 </html>

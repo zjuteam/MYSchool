@@ -19,7 +19,7 @@
 	background-color: #87b822;
 	height: 540px;
 }
-#main {
+#index_main {
 	width: 950px;
 	height: 540px;
 	margin: 0 auto 0 auto;
@@ -134,7 +134,7 @@
 .st_panel {
 	display: none;
 }
-#login_container .panel table input[type='button'] {
+#login_container .panel table input[type='submit'] {
 	background-color: #80AD21;
 	color: #fff;
 	text-indent: 0;
@@ -142,7 +142,7 @@
 	padding: 0;
 	
 }
-#login_container .panel table input[type='button']:hover {
+#login_container .panel table input[type='submit']:hover {
 	cursor: pointer;
 }
 #login_container .panel table tr td a {

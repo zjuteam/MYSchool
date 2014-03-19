@@ -2,120 +2,15 @@
 
 @IMPORT url("../../common/common.css");
 
-#header_wrapper {
-	height: 60px;
-	background-color: #55BB22;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	box-shadow: 0px 0px 6px 4px #C1C6C1;
-}
-#left_side  {
-	float: left;
-	height: 60px;
-}
-#left_side img {
-	vertical-align: middle;
-	line-height: 60px;	
-}
-#left_side .word1 {
-	line-height: 60px;	
-	font-size: 25px;
-	color: #fff;
-	font-family: "arial";
-	vertical-align: middle;
-	margin-right: 6px;
-}
-#left_side .word2 {
-	line-height: 60px;	
-	font-size: 25px;
-	color: #fff;
-	font-family: "宋体";
-	vertical-align: middle;
-	margin-left: 8px;
-}
-#right_side {
-	float: right;
-	height: 60px;
-}
-#right_side img {
-	margin-top: 18px;
-	vertical-align: middle;
-	line-height: 60px;	
-}
-#right_side .word {
-	margin-left: 4px;
-	font-size: 18px;
-	color: #fff;
-	font-family: "宋体";
-	vertical-align: bottom;
-}
-#right_side .logout {
-	margin-top: 30px;
-}
-#header {
-	padding-left: 5px;
-	padding-right: 5px;
 
-}
 body {
 	background-color: #EFF5EF;
 }
-#main {
-	width: 965px;
-	height: 580px;
-	margin: 0 auto 0 auto;
-	margin-top: 101px;
-	border: 1px solid #DBDBDB;
-	margin-bottom: 125px;
-	box-shadow: 0px 0px 6px 2px #C1C6C1;
-}
-#menu {
-	float: left;
-	width: 192px;
-	height: 580px;
-	background-color: #F3F3F3;
-	border-right: 1px solid #DBDBDB;
-}
-#menu .item {
-	line-height: 60px;
-	padding-left: 22px;
-	height: 60px;
-	border-bottom: 1px solid #DBDBDB;
-	font-size: 18px;
-	color: #333;
-	font-family: '宋体';
-}
-#menu .item:hover {
-	background-color: #55BB22;
-	color: #fff;
-	cursor: pointer;
-}
-#menu .item img {
-	line-height: 60px;
-	margin-right: 20px;
-	vertical-align: middle;
-}
-#menu .selected {
-	background-color: #55BB22;
-	color: #fff;
-}
-#content {
-	float: right;
-	width: 771px;
-	height: 580px;
-	background-color: #fff;
-}
-#content #up {
-	width: 771px;
-	height: 52px;
-	background-color: #F3F3F3;
-	border-bottom: 1px solid #DBDBDB;
-}
+
 #content #up #tab {
 	float: left;
 	width: 130px;
-	height: 53px;
+	height: 51px;
 	background-color: #fff;
 	border-right: 1px solid #DBDBDB;
 }
@@ -131,12 +26,12 @@ body {
 }
 #content #up #create_acti {
 	float: right;
-	height: 52px;
-	line-height: 52px;
+	height: 50px;
+	line-height: 50px;
 	margin-right: 17px;
-	color: #ccc;
+	color: #C2C0C1;
 	font-size: 18px;
-	font-family: '宋体';
+	font-family: '黑体';
 }
 #content #up #create_acti:hover {
 	cursor: pointer;
@@ -180,20 +75,7 @@ body {
 	font-size: 12px;
 	color: #888;
 }
-#footer_wrapper {
-	background-color: #fff;
-	height: 158px;	
-}
-#footer {
-	padding-top: 38px;
-	margin: 0 auto 0 auto;
-	width: 950px;
-}
-#footer p {
-	text-align: center;
-	font-size: 13px;
-	color: #999;
-}
+
 #dialog-form {
 	display: none;
 	padding-top: 40px;
@@ -251,4 +133,19 @@ body {
 	height: 30px;
 	display: inline-block;
 	background: url("../img/upload.png") no-repeat;
+}
+#confirm_delete:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+#dialog-confirm {
+	display: none;
+}
+#dialog-confirm .confirm_panel {
+}
+#dialog-confirm ul {
+}
+#dialog-confirm ul li {
+}
+#dialog-confirm img {
 }
