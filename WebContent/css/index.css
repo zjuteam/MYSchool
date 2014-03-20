@@ -23,7 +23,7 @@
 	width: 950px;
 	height: 540px;
 	margin: 0 auto 0 auto;
-	background:url('../img/main_background.png');
+	background:url('../img/u45.png') right bottom no-repeat;
 }
 #main_left {
 	float:left;
@@ -152,7 +152,7 @@
 
 #iphone_shell {
 	margin-top: 180px;
-	margin-right: 90px;
+	margin-right: 60px;
 
 }
 #main_right img {
