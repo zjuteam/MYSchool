@@ -83,14 +83,18 @@ li {
 /* end of back header css */
 
 /* back main part */
+#main_wrapper {
+	background-color: #EFF5EF;
+	padding-top: 60px;
+	padding-bottom: 50px;
+}
 #main {
 	width: 948px;
 	height: 598px;
 	margin: 0 auto 0 auto;
-	margin-top: 110px;
 	border: 1px solid #DBDBDB;
-	margin-bottom: 50px;
 	box-shadow: 0px 0px 6px 2px #C1C6C1;
+	margin-top: 50px;
 }
 /* end of back main part */
 /* back menu css */

@@ -3,10 +3,6 @@
 @IMPORT url("../../common/common.css");
 
 
-body {
-	background-color: #EFF5EF;
-}
-
 #content #up #tab {
 	float: left;
 	width: 130px;
