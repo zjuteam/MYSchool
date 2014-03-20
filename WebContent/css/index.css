@@ -127,10 +127,16 @@
 	text-indent: 0;
 	font-size: 16px;
 	padding: 0;
-	
+	width: 330px;
+	border-radius: 3px;
 }
 #login_container .panel table input[type='submit']:hover {
 	cursor: pointer;
+	opacity: 0.9;
+
+}
+#login_container .panel table input[type='submit']:FOCUS {
+	opacity: 1;
 }
 #login_container .panel table tr td a {
 	text-decoration: none;
