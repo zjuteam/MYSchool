@@ -1,5 +1,5 @@
-var origin = ['发送活动','统计','发布资讯','设置','简介'];
-var trans = ['发送活动1','统计1','发布资讯1','设置1','简介1'];
+var origin = ['send_activity','statistic','send_newsfeed','setting','profile'];
+var trans = ['send_activity1','statistic1','send_newsfeed1','setting1','profile1'];
 
 function changeImgWhenHover() {
 	$('.item').each(function(index) {
