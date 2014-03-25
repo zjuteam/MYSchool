@@ -9,7 +9,6 @@ var intervalTime = 3000;
 var imageSpeed = 1000;
 
 $(function(){
-	setDownloadIconHover();
 	registerTabboxClick();
 	funcHover();
 	loadTime();
@@ -66,19 +65,6 @@ function funcHoverChange() {
 function loadTime() {
 	var elapse = (new Date().getTime() - start);
 	$('#elapse').html(elapse);
-}
-
-function setDownloadIconHover() {
-	$('.iphone').hover(function() {
-		$(this).attr('src','img/iphone_download_mouse_over.png');
-	},function() {
-		$(this).attr('src','img/iphone_download_mouse_out.png');
-	});
-	$('.android').hover(function() {
-		$(this).attr('src','img/android_download_mouse_over.png');
-	},function() {
-		$(this).attr('src','img/android_download_mouse_out.png');
-	});
 }
 
 function registerTabboxClick() {
