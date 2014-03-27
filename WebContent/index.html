@@ -17,8 +17,8 @@
 				<img title="MYSchool" src="img/logo.png" width="151" height="30">
 			</div>
 			<div id="download_btns">
-				<a href="#"><div class="iphone" ></div></a>
-				<a href="#"><div class="android" ></div></a>
+				<a href="#" class="iphone"></a>
+				<a href="#" class="android"></a>
 			</div>
 		</div><!-- end of header -->
 		<div id="index_main_wrapper">
@@ -27,46 +27,25 @@
 					<img src="img/banner.png" title="我的校园生活助手" alt="我的校园生活助手 校园活动、校园资讯、社团组织尽在一手掌握!"/>
 					<div id="login_container">
 						<div class="tabbox">
-							<div class="tuanwei">团委登录</div>
-							<div class="shetuan left_select">社团登录</div>
+							<label class="user_login">用户登录</label>
 						</div>
 						<div class="panel">
-							<div class="tw_panel"><!-- 团委登录面板(默认) -->
-								<form action="fenyuan/send_activities.html" method="post">
-									<table>
-										<tr>
-											<td align="center" ><input type="text" name="" value="用户名" id="tw_username" /></td>
-										</tr>
-										<tr>
-											<td align="center"><input type="text" name="" value="密码" id="tw_password" /></td>
-										</tr>
-										<tr>
-											<td align="center"><input type="submit" name="login" value="登录" /></td>
-										</tr>		
-										<tr>
-											<td align="center"><a href="">忘记密码</a><span class="sep"> | </span><a href="">注册</a></td>
-										</tr>									
-									</table>
-								</form>
-							</div>
-							<div class="st_panel"><!-- 社团登录面板 -->
-								<form action="#" method="post">
-									<table>
-										<tr>
-											<td align="center" ><input type="text" name="" value="用户名" id="st_username" /></td>
-										</tr>
-										<tr>
-											<td align="center"><input type="text" name="" value="密码" id="st_password" /></td>
-										</tr>
-										<tr>
-											<td align="center"><input type="submit" name="login" value="登录" /></td>
-										</tr>		
-										<tr>
-											<td align="center"><a href="">忘记密码</a><span class="sep"> | </span><a href="">注册</a></td>
-										</tr>									
-									</table>
-								</form>
-							</div>
+							<form action="fenyuan/send_activities.html" method="post">
+								<table>
+									<tr>
+										<td align="center" ><input type="text" name="" value="用户名" id="username" /></td>
+									</tr>
+									<tr>
+										<td align="center"><input type="text" name="" value="密码" id="password" /></td>
+									</tr>
+									<tr>
+										<td align="center"><input type="submit" name="login" value="登录" /></td>
+									</tr>		
+									<tr>
+										<td align="center"><a href="">忘记密码</a><span class="sep"> | </span><a href="">注册</a></td>
+									</tr>									
+								</table>
+							</form>
 						</div>
 					</div>
 				</div>

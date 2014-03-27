@@ -81,40 +81,14 @@
 #login_container .tabbox {
 	height: 49px;
 }
-#login_container .tabbox .tuanwei {
+#login_container .tabbox .user_login {
+	display: inline-block;
 	line-height: 49px;
 	font-size: 22px;
 	color: #333;
-	float:left;
-	width: 179px;
+	width: 360px;
 	text-align: center;
-	font-weight: bolder;
-	font-family: '宋体';
-}
-#login_container .tabbox .shetuan {
-	line-height: 49px;
-	font-size: 22px;
-	color: #333;
-	float: right;
-	width: 179px;
-	text-align: center;
-	font-family: '宋体';
-	font-weight: bolder;
-
-}
-#login_container .tabbox .tuanwei:hover {
-	cursor: pointer;
-}
-#login_container .tabbox .shetuan:hover {
-	cursor: pointer;
-}
-.left_select {
-	border-left: 1px solid #87b822;
-	border-bottom: 1px solid #87b822;
-	background-color: #aadc41;
-}
-.right_select {
-	border-right: 1px solid #87b822;
+	font-family: '微软雅黑','黑体';
 	border-bottom: 1px solid #87b822;
 	background-color: #aadc41;
 }
@@ -135,13 +109,6 @@
 }
 #login_container .panel table td {
 	padding-top: 15px;
-}
-.tw_panel {
-
-	display: block;
-}
-.st_panel {
-	display: none;
 }
 #login_container .panel table input[type='submit'] {
 	background-color: #80AD21;

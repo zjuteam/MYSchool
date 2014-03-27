@@ -9,7 +9,6 @@ var intervalTime = 3000;
 var imageSpeed = 1000;
 
 $(function(){
-	registerTabboxClick();
 	funcHover();
 	loadTime();
 	slideScreen();
@@ -67,28 +66,6 @@ function loadTime() {
 	$('#elapse').html(elapse);
 }
 
-function registerTabboxClick() {
-	$('.tuanwei').click(function() {
-		if($(this).hasClass('right_select')) {
-			// 改变tabbox样式
-			$(this).removeClass('right_select');
-			$('.shetuan').addClass('left_select');
-			// 切换表单
-			$('.tw_panel').show();
-			$('.st_panel').hide();
-
-		}
-	});
-	$('.shetuan').click(function() {
-		if($(this).hasClass('left_select')) {
-			$(this).removeClass('left_select');
-			$('.tuanwei').addClass('right_select');
-			$('.st_panel').show();
-			$('.tw_panel').hide();
-		}
-	});
-}
-
 function funcHover() {
 	$('.left_side img').hover(function() {
 		$(this).parent('.left_side').
@@ -112,47 +89,26 @@ function funcHover() {
 
 function inputClearEvent() {
 	
-	$('#tw_username').focus(function() {
+	$('#username').focus(function() {
 		if($(this).val() == '用户名')
 			$(this).val('');		
 	});
-	$('#tw_username').blur(function() {
+	$('#username').blur(function() {
 		if($(this).val() == '')
 			$(this).val('用户名');		
 	});
 	
-	$('#tw_password').focus(function() {
+	$('#password').focus(function() {
 		if($(this).val() == '密码') {
 			$(this).val('');
 			$(this).attr("type", "password");
 		}
 	});
-	$('#tw_password').blur(function() {
+	$('#password').blur(function() {
 		if($(this).val() == '') {
 			$(this).attr("type", "text");
 			$(this).val('密码');
 		}
 	});
 
-	$('#st_username').focus(function() {
-		if($(this).val() == '用户名')
-			$(this).val('');		
-	});
-	$('#st_username').blur(function() {
-		if($(this).val() == '')
-			$(this).val('用户名');		
-	});
-	
-	$('#st_password').focus(function() {
-		if($(this).val() == '密码') {
-			$(this).val('');
-			$(this).attr("type", "password");
-		}
-	});
-	$('#st_password').blur(function() {
-		if($(this).val() == '') {
-			$(this).attr("type", "text");
-			$(this).val('密码');
-		}
-	});
 }
