@@ -2,8 +2,14 @@ $(function() {
 	changeImgWhenHover();
 	edit();
 	cancel();
+	changePortrait();
 });
 
+function changePortrait() {
+	$("#change_portrait").change(function(){
+	    readURL(this,'origin_portrait');
+	});
+}
 function edit() {
 	$('#edit').children().click(function() {
 		$('#container').hide();
