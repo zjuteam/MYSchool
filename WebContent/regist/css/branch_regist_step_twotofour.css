@@ -1,0 +1,228 @@
+@CHARSET "UTF-8";
+
+@IMPORT url("../../common/common.css");
+
+/* Step2,3,4信息面板样式与布局 */
+
+#select_campus{
+	background-color:#FFFFFF;
+}
+#Step2_panel table select {	
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none;  /*Removes default style Firefox*/
+    appearance: none;
+    background: none repeat scroll 0 0 #FFFFFF;  
+    text-indent: 0.01px;          /* Removes default arrow from firefox*/
+    text-overflow: "";               /*Removes default arrow from firefox*/  
+	width: 400px;
+	height: 40px;
+	margin-bottom: 35px;
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	font-family: '宋体';
+	font-size: 16px;
+	text-align: left;
+	line-height: 40px;
+	background-color:#FFFFFF;
+	background:transparent url("../img/select.png") no-repeat scroll 358px -2px;
+}
+#step_one img{
+	display:none;
+}
+#regist_content
+{
+	height:760;
+}
+#step_two img{
+	display:block;
+}
+#step_one{
+	color:#999999;
+}
+#step_two{
+	color:#55BB22;
+}
+
+
+
+/* step3上传标志页面样式控制 */
+#Step3_panel {
+	width: 600px;
+	margin-left: -100px;
+	display: none;
+}
+
+#appearance {
+	width: 600px;
+	height: 290px;
+	border: 1px solid rgb(204, 204, 204);
+	background-color: rgb(242, 242, 242);
+	margin: 0 auto 0 auto;
+}
+
+#left_current {
+	margin-left: 18px;
+	width: 170px;
+	margin-right: 35px;
+	float: left;
+}
+
+#left_current span,#set_new {
+	font-size: 14px;
+	color: #333333;
+	font-family: '宋体';
+	margin-top: 20px;
+	margin-bottom: 9px;
+	display: block;
+	font-weight:600;
+}
+
+#left_current_line{
+	display:block;
+	width:190px;
+	height:1px;
+	margin-bottom: 10px;
+}
+
+#current_img {
+	width: 190px;
+	height: 190px;
+	background: #00FF00;
+}
+
+#current_img img {
+	width: 190px;
+	height: 190px;
+}
+
+#right_new {
+	width: 330px;
+	/* height: 170px; */
+	/* margin-top: 20px; */
+	float:right;
+	margin-right:45px;
+}
+
+#right_new table tr {
+	display: block;
+	padding:0;
+	height:20px;
+	margin:0 0 5px;
+}
+#right_new table td{
+	display: block;
+	height:20px;
+}
+#new_img_line{
+/* 	margin-bottom:10px; */
+}
+.lookline {
+	display:block;
+}
+
+#new_img img {
+	width: 60px;
+	height: 60px;
+}
+#unload_img_word{
+	display:block;
+	color: #0000FF;
+	font-size: 12px;
+	font-family: '宋体';
+	width: 55px;
+	height:20px;
+	margin:0;
+	position:relative;
+	top:27px;
+	left:3px;
+}
+#upload_img input{
+	width:55px;
+	height:20px;
+	opacity:0;
+}
+#unload_img_word:hover{
+	cursor:pointer;
+}
+#upload_img input:hover{
+	cursor:pointer;
+}
+#img_camera_line{
+	margin:1px 5px 0 -2px;
+	padding-right:5px;
+}
+
+#support_form,#little_img_explain {
+	color: #999999;
+	font-size: 12px;
+	font-family: '宋体';
+}
+
+tr#little_img{
+	font-size: 14px;
+	color: #333333;
+	font-family: '宋体';
+	margin-top: 15px !important;
+	margin-bottom: 9px;
+	display: block;
+	font-weight:600;
+}
+tr.lookline,.lookline td{
+	height:5px !important;
+}
+#little_img_explain{
+	position: relative; 
+	top: -15px; 
+	left: 70px;
+}
+#save_img{
+	position:relative;
+	top:10px;
+	left:10px;
+}
+#save_img input[name="save_img"]{
+	width:60px;
+	height:24px;
+	font-size: 12px;
+	font-family: '宋体';
+	border-radious:2px;
+	
+}
+#step3_table {
+	margin: 35px auto 0;
+}
+
+#ues_img_camera a {
+	font-size: 12px;
+	font-family: '宋体';	
+	color:#0000FF;
+}
+
+#audit {
+	width: 600px;
+	height: 290px;
+	margin: 0 auto 0 auto;
+	line-height: 290px;
+}
+
+#audit img {
+	display: block;
+	float: left;
+	margin-right: 20px;
+	margin-top: 130px;
+}
+
+#audit p {
+	color: #333333;
+	font-size: 18px;
+	font-family: 'Arial Normal', 'Arial';
+}
+
+
+/* step4等待审核页面样式 */
+#Step4_panel {
+	display: none;	
+}
+#Step4_panel table{
+	/* margin-left:125px; */
+}
