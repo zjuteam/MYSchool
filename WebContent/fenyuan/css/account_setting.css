@@ -30,10 +30,11 @@
 }
 #content #down table {
 	color: #333;
-	font-size: 18px;
+	font-size: 16px;
 }
 #content #down table .name {
 	text-align: right;
+	color: #999;
 }
 #content #down table .val {
 	text-align: left;
@@ -77,7 +78,9 @@
 
 }
 .operation {
-	margin-left: 60px;
+	margin-top: 20px;
+	float:left;
+	margin-left: 140px;
 }
 .operation input[type='submit'] {
 	color: #fff;
