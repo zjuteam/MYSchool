@@ -10,14 +10,12 @@
 	border-right: 1px solid #DBDBDB;
 }
 
-#up .week {
+#up .month {
 	float: left;
 	display: block;
 	height: 47px;
 	width: 122px;
-	border-top: 4px solid #55BB22;
-	padding: 0 4px 0 4px;
-	background-color: #fff;
+	padding: 4px 4px 0 4px;
 	border-right: 1px solid #DBDBDB;
 	vertical-align: middle;
 	line-height: 47px;
@@ -26,7 +24,7 @@
 	color: #000;
 }
 
-#up .month {
+#up .week {
 	float: left;
 	display: block;
 	height: 47px;
@@ -45,7 +43,9 @@
 	display: block;
 	height: 47px;
 	width: 81px;
-	padding: 4px 4px 0 4px;
+	border-top: 4px solid #55BB22;
+	padding: 0 4px 0 4px;
+	background-color: #fff;
 	border-right: 1px solid #DBDBDB;
 	vertical-align: middle;
 	line-height: 47px;

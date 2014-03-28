@@ -2,8 +2,8 @@
 <html lang="zh">
 	<head>
 		<meta charset="UTF-8">
-		<title>组织简介</title>
-		<link rel="stylesheet" type="text/css" href="css/org_profile.css" />
+		<title>统计报名</title>
+		<link rel="stylesheet" type="text/css" href="css/statistic_signup_month.css" />
 	</head>
 	<body>
 		<div id="header_wrapper">
@@ -28,39 +28,26 @@
 				<div id="menu">
 					<ul>
 						<li><a href="send_activities.html" class="fshd" >发送活动</a></li>
-						<li><a href="statistic_signup.html" class="tjbm" >统计报名</a></li>
+						<li><a href="#" class="tjbm tjbm_selected" >统计报名</a></li>
 						<li><a href="send_newsfeed.html" class="fszx" >发送资讯</a></li>
 						<li><a href="account_setting.html" class="zhsz" >帐号设置</a></li>
-						<li><a href="#" class="zzjj zzjj_selected" >组织简介</a></li>
+						<li><a href="org_profile.html" class="zzjj" >组织简介</a></li>
 					</ul>
 				</div>
 				<div id="content">
 					<div id="up">
-						<a href="#">
-							组织简介
+						<a href="statistic_signup.html" class="week">
+							未来一周
+						</a>
+						<a href="#" class="month">
+							未来一月
+						</a>
+						<a href="statistic_signup_all.html" class="all">
+							全部
 						</a>
 					</div>
 					<div id="down">
-						<div id="container">
-							<form action="" method="post">
-								<div class="upload">
-									<div class="upload_file">
-										<input type="file" name="" id="profile_image"/>							
-									</div>
-									<div class="display">
-										<ul>
-											<li><img src="img/u91.png" /></li>
-											<li><img src="img/u91.png" /></li>
-										</ul>
-									</div>
-								</div>
-								<div class="description">
-									<input type="text" name="" value="标题" />
-									<textarea name="" >正文</textarea>
-								</div>
-								<input type="submit" value="保存并更新" />						
-							</form>
-						</div>
+					
 					</div>
 				</div>		
 			</div>
@@ -73,5 +60,5 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="../lib/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="js/org_profile.js"></script>
+	<script type="text/javascript" src="js/statistic_signup_month.js"></script>
 </html>
