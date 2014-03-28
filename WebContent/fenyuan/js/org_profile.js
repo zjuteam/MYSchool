@@ -1,5 +1,4 @@
 $(function() {
-	changeImgWhenHover();
 	clearHint();
 	profileImage();
 });

@@ -1,5 +1,4 @@
 $(function() {
-	changeImgWhenHover();
 	publishNewsfeed();
 	close();
 	testAddNewsfeed();

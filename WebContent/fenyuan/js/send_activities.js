@@ -1,5 +1,4 @@
 $(function() {
-	changeImgWhenHover();
 	publishActivities();
 	close();
 	pickTime();
