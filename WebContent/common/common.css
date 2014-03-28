@@ -47,19 +47,15 @@ li {
 	line-height: 60px;	
 }
 #left_side .word1 {
-	line-height: 60px;	
-	font-size: 25px;
-	color: #fff;
-	font-family: "arial";
-	vertical-align: middle;
-	margin-right: 6px;
+	margin-right: 8px;
+	margin-left: 6px;
 }
 #left_side .word2 {
 	line-height: 60px;	
 	color: #fff;
 	vertical-align: middle;
 	margin-left: 8px;
-	font-family: '黑体';
+	font-family: '微软雅黑','黑体';
 	font-size: 24px;
 }
 #right_side {
@@ -68,17 +64,22 @@ li {
 }
 #right_side img {
 	margin-top: 18px;
-	vertical-align: middle;
+	vertical-align: bottom;
 	line-height: 60px;	
+	margin-right: 2px;
+}
+#right_side .notify {
+	cursor: pointer; /* 待完善 */
 }
 #right_side .word {
-	margin-left: 4px;
-	font-size: 18px;
+	font-size: 12px;
 	color: #fff;
+	font-family: '宋体';
 	vertical-align: bottom;
 }
-#right_side .logout {
-	margin-top: 30px;
+#right_side .word:hover {
+	color: blue;
+	text-decoration: underline;
 }
 /* end of back header css */
 
