@@ -1,6 +1,7 @@
 $(function() {
 	changeImgWhenHover();
 	clearHint();
+	profileImage();
 });
 
 function clearHint() {
@@ -22,4 +23,17 @@ function clearHint() {
 			$(this).val('正文');
 		}
 	});	
+}
+
+/* 在列表显式新添加的file */
+function profileImage() {
+	$("#profile_image").change(function(){
+	    if (this.files && this.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+	        	$('.display ul').append('<li><img width = 100 height = 100 src="' + e.target.result + '"/></li>');
+	        };
+	        reader.readAsDataURL(this.files[0]);
+	    }
+	});
 }

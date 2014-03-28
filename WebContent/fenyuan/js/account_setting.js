@@ -7,7 +7,13 @@ $(function() {
 
 function changePortrait() {
 	$("#change_portrait").change(function(){
-	    readURL(this,'origin_portrait');
+	    if (this.files && this.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+	            $('#origin_portrait').attr('src', e.target.result);
+	        };
+	        reader.readAsDataURL(this.files[0]);
+	    }
 	});
 }
 function edit() {

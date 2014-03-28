@@ -11,16 +11,3 @@ function changeImgWhenHover() {
 		});
 	});
 }
-
-function readURL(input,targetId) {
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#' + targetId).attr('src', e.target.result);
-        };
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
