@@ -416,14 +416,15 @@ button.ui-button::-moz-focus-inner {
 	line-height: 50px;
 }
 .ui-dialog .ui-dialog-titlebar-close {
+	border: none !important;
 	position: absolute;
 	right: .3em;
 	top: 50%;
-	width: 20px;
-	margin: -10px 0 0 0;
+	margin: -15px 0 0 0;
 	padding: 1px;
-	height: 20px;
-	display: none; /* do not need this close btn */
+	height: 32px;
+	width: 32px;
+	background: url('../fenyuan/img/u803.png') !important;
 }
 .ui-dialog .ui-dialog-content {
 	position: relative;

@@ -109,6 +109,11 @@
 	float: right;
 	font-size: 16px;
 }
+.hint {
+	font-family: '宋体';
+	color: #FF8040;
+	font-size: 12px !important;
+}
 #start_time,#end_time {
 	width: 140px;
 }
@@ -130,19 +135,21 @@ textarea {
 	height: 116px;
 }
 #dialog-form table .send {
-	float: right;
+	float: left;
 	background-color: #55BB22;
 	color: #fff;
 	font-size: 16px;
-	padding: 5px 18px 5px 18px;
 	border-radius: 6px;
+	width: 90px;
+	margin-left: 50px;
 }
 #dialog-form table .cancel {
 	background-color: #515151;
 	color: #fff;
 	font-size: 16px;
-	padding: 5px 42px 5px 42px;
 	border-radius: 6px;
+	width: 90px;
+	float: right;	
 }
 #dialog-form .send:hover,#dialog-form .cancel:hover {
 	cursor: pointer;

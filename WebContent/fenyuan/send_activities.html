@@ -37,7 +37,15 @@
 							<td><label class="upper">正文</label></td><td colspan="3"><textarea></textarea></td>
 						</tr>
 						<tr>
-							<td colspan="2"><input type="submit" value="保存并发送" class="send" /></td><td colspan="2"><input type="button" value="取消" class="cancel" /></td>
+							<td colspan="2"><label class="hint">填写的手机帐号需已注册客户端</label></td>
+							<td colspan="2" align="right">
+								<form action="" method="post">
+									<input type="text" style="width:130px;height:28px;vertical-align: middle;"/><button style="height: 30px;background-color:#55BB22;font-size: 12px;color:#fff;width:80px;vertical-align: middle;">预览发送</button>
+								</form>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"></td><td colspan="2"><input type="submit" value="发送" class="send" /><input type="button" value="取消" class="cancel" /></td>
 						</tr>						
 					</table>
 				</fieldset>

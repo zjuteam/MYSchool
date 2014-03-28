@@ -8,7 +8,7 @@ $(function() {
 function publishActivities() {
 	$('#create_acti').click(function() {
 		$('#dialog-form').dialog({
-			      height: 610,
+			      height: 650,
 			      width: 646,
 			      draggable: false,
 			      resizable: false,
