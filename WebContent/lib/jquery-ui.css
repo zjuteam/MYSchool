@@ -414,6 +414,7 @@ button.ui-button::-moz-focus-inner {
 	font-size: 20px;
 	vertical-align: middle;
 	line-height: 50px;
+	background-color: #F3F3F3;
 }
 .ui-dialog .ui-dialog-titlebar-close {
 	border: none !important;
@@ -424,7 +425,7 @@ button.ui-button::-moz-focus-inner {
 	padding: 1px;
 	height: 32px;
 	width: 32px;
-	background: url('../fenyuan/img/u803.png') !important;
+/* 	background: url('../fenyuan/img/u803.png') !important; */
 }
 .ui-dialog .ui-dialog-content {
 	position: relative;
@@ -1171,7 +1172,8 @@ body .ui-tooltip {
  */
 /* Overlays */
 .ui-widget-overlay {
-	background: #000 url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+/* 	background: #000 url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; */
+	background-color: #000;	/* ¶Ô»°¿ò±³¾°ÑÕÉ« */
 	opacity: .2;
 	filter: Alpha(Opacity=30);
 }

@@ -3,7 +3,6 @@ $(function() {
 	close();
 	pickTime();
 	sendActivity();
-	checkboxListen();
 });
 
 function publishActivities() {
