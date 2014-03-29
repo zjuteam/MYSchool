@@ -57,3 +57,12 @@
 #up a:hover {
 	text-decoration: none;
 }
+
+#hint {
+	color: #666;
+	width: 776px;
+	height: 550px;
+	vertical-align: middle;
+	line-height: 550px;
+	text-align: center;
+}

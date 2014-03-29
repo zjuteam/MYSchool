@@ -66,3 +66,7 @@
 	line-height: 550px;
 	text-align: center;
 }
+#dialog-form {
+	
+	display: none;
+}
