@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title>发送活动</title>
+		<link rel="stylesheet" type="text/css" href="css/send_activities.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/jquery-ui.css" />
+	</head>
+	<body>
+		<!-- 新建活动对话框 -->
+		<div title="新建活动" id="dialog-form"">
+			<form action="" method="post">
+				<fieldset>
+					<table cellspacing="15">
+						<tr>
+							<td><label>标题</label></td><td colspan="3"><input type= "text" maxlength="16" id="input_title" value="少于16个字" class="input" /></td>
+						</tr>	
+						<tr>
+							<td><label>标签</label></td><td colspan="3"><select class="input" id="input_tag"><option>体育</option></select></td>
+						</tr>
+						<tr>
+							<td><label>活动配图</label></td><td colspan="3"><div class="upload"><input type="file" name="" /></div><label class="supported">(支持的图片类型：jpg, png, gif, bmp)</label></td>
+						</tr>
+						<tr>
+							<td><label>开始时间</label></td><td><input type="text" id="start_time" /></td><td><label>结束时间</label></td><td><input type="text" id="end_time" /></td>
+						</tr>
+						<tr>
+							<td><label>活动地点</label></td><td colspan="3"><input class="input" type="text" /></td>
+						</tr>
+						<tr>
+							<td><label>主办方</label></td><td colspan="3"><input class="input" type="text" /></td>
+						</tr>
+						<tr>
+							<td><label>赞助商</label></td><td colspan="3"><input class="input" type="text" /></td>
+						</tr>
+						<tr>
+							<td><label class="upper">正文</label></td><td colspan="3"><textarea></textarea></td>
+						</tr>
+						<tr>
+							<td colspan="2"><label class="hint">填写的手机帐号需已注册客户端</label></td>
+							<td colspan="2" align="right">
+								<form action="" method="post">
+									<input type="text" value="输入手机号码" maxlength="11" style="width:130px;height:28px;vertical-align: middle;"/><button style="height: 30px;background-color:#55BB22;font-size: 12px;color:#fff;width:80px;vertical-align: middle;">预览发送</button>
+								</form>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"></td><td colspan="2"><input type="button" value="发送" class="send" /><input type="button" value="取消" class="cancel" /></td>
+						</tr>						
+					</table>
+				</fieldset>
+			</form>
+		</div>
+		<div id="header_wrapper">
+			<div id="header">
+				<div id="left_side">
+					<img alt="logo" src="img/u15.png" />
+					<img src="img/u549.png" class="word1" />
+					<img src="img/u546_line.png" />
+					<label class="word2">后台</label>
+				</div>
+				<div id="right_side">
+					<img src="img/u117.png" />
+					<a href="account_setting.html" class="word">欢迎求是设计协会</a>
+					<img src="img/u196.png" class="notify" />
+					<span class="word">|</span>
+					<a href="../index.html" class="word">注销</a>
+				</div>
+			</div>
+		</div>
+		<div id="main_wrapper">
+			<div id="main">
+				<div id="menu">
+					<ul>
+						<li><a href="#" class="fshd fshd_selected" >发送活动</a></li>
+						<li><a href="statistic_signup.html" class="tjbm" >统计报名</a></li>
+						<li><a href="send_newsfeed.html" class="fszx" >发送资讯</a></li>
+						<li id="tuanwei_zzgl"><a href="#" class="zzgl">组织管理<img class="up_to_down" src="img/down.png"/></a>
+						<ul class="tuanwei_select">
+						<li class="manage_top"><a href="#">社团管理</a></li>
+						<li class="manage_bottom"><a href="#">分院管理</a></li>
+						</ul>
+						</li>
+						<li id="tuanwei_sz"><a href="#" class="zhsz">设置<img class="up_to_down" src="img/down.png"/></a>
+						<ul class="tuanwei_select">
+						<li class="manage_top"><a href="#">标签设置</a></li>
+						<li><a href="account_setting.html">账号设置</a></li>
+						<li class="manage_bottom"><a href="#">跨校区发布</a></li>
+						</ul>
+						</li>
+						<li id="tuanwei_jj"><a href="#" class="zzjj">简介<img class="up_to_down" src="img/down.png"/></a>
+						<ul class="tuanwei_select">
+						<li class="manage_top"><a href="#">校园简介</a></li>
+						<li class="manage_bottom"><a href="org_profile.html">组织简介</a></li>
+						</ul>
+						</li>
+						<li id="tuanwei_gj"><a href="#" class="gongju">工具</a></li>
+					</ul>
+				</div>
+				<div id="content">
+					<div id="up">
+						<a href="#">
+							发送活动
+						</a>
+						<div id="create_acti">
+							新建活动
+						</div>
+					</div>
+					<div id="down">
+						<div class="no_content">
+						您还没有创建任何活动，请点击右上方【新建活动】来创建活动
+						</div>
+						<!-- one piece of activity -->
+<!-- 						<div class="activity">
+							<div class="check">
+								<input type="checkbox" />
+							</div>
+							<div class="info">
+								<table>
+									<tr  class="title">
+										<td rowspan="3"><img src="img/u220.jpg" /></td>
+										<td>标题:</td>
+										<td>求实设计在现代科技的应用比赛</td>
+									</tr>
+									<tr class="last_edit">
+										<td>上次编辑：</td>
+										<td>2013-11-12-11：12</td>
+									</tr>
+									<tr class="tag">
+										<td>标签：</td>
+										<td>娱乐</td>
+									</tr>
+								</table>
+							</div>
+							<div class="edit">
+								<table>
+									<tr>
+										<td rowspan="2"><img src="img/u211_line.png" /></td>
+										<td><img src="img/u212.png" /></td>
+									</tr>
+									<tr>
+										<td>编辑</td>
+									</tr>
+								</table>
+							</div>
+							<div class="status">
+								正在进行
+							</div>						
+						</div> -->
+					</div>
+				</div>		
+			</div>
+		</div>
+		<div id="back_footer_wrapper">
+			<div id="back_footer">
+				<p>客服QQ：4009987011企业QQ客服电话： 400-998-7011官方微博关于我们最新素材图片下载Sitemap</p>
+				<p>Copyright @ 2014千图网 沪ICP备10011451号-6 用时： 0.0219 1.772 秒 当前版本:1.0</p>
+			</div>
+		</div>
+		
+		<div id="progressDialog">
+			<div id="circularG">
+				<div id="circularG_1" class="circularG">
+				</div>
+				<div id="circularG_2" class="circularG">
+				</div>
+				<div id="circularG_3" class="circularG">
+				</div>
+				<div id="circularG_4" class="circularG">
+				</div>
+				<div id="circularG_5" class="circularG">
+				</div>
+				<div id="circularG_6" class="circularG">
+				</div>
+				<div id="circularG_7" class="circularG">
+				</div>
+				<div id="circularG_8" class="circularG">
+				</div>
+			</div>
+			<label>请稍等发送中</label>		
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../lib/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/send_activities.js"></script>
+	<script type="text/javascript"src="../lib/jquery-ui.js"></script>
+	<script type="text/javascript"src="js/tuanwei_common_menu.js"></script>
+</html>
