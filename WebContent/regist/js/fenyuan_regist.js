@@ -35,7 +35,8 @@ function changeToStep3() {
 	$("#step_three img").css("display","block");
 	$("#step_two").css("color", "#999999");
 	$("#step_three").css("color", "#55BB22");
-	/*$("html,body").scrollTop(0);*/
+	$("#shetuan_regist_step").height(620);
+	$("html,body").scrollTop(0);
 }
 
 /* step3页面点击下一步，转到step4 */
@@ -56,6 +57,7 @@ function returnToStep2(){
 	$("#Step2_panel").show();
 	$("#step_two img").show();
 	$("#step_two").css("color", "#55BB22");
+	$("#shetuan_regist_step").height(800);
 	$("html,body").scrollTop(0);	
 }
 
@@ -65,6 +67,8 @@ function returnToStep3(){
 	$("#step_four img").hide();
 	$("#Step3_panel").show();
 	$("#step_three img").show();
+	$("#u525_end").hide();
+	$("#u352_end").show();
 	$("#step_three").css("color", "#55BB22");
 	$("html,body").scrollTop(0);	
 }
@@ -94,11 +98,12 @@ function browserCompatibilitySolve(){
 		}
 		//firefox 
 		else if (explorer.indexOf("Firefox") >= 0) {
-			$("#Step2_panel table select").css("padding-top","10px");
+			/*$("#Step2_panel table select").css("padding-top","10px");*/
 			$("#underline").css("top","1px");
-			$(".Step_panel table td.warn_img img").css("margin-top","10px");
-			$("#unload_img_word").css({"top":"22px","left":"0"});
-			$("#img_camera_line").css("margin","1px 5px 0 -2px");
+			$("#Step2_panel table select").css("padding-top","10px");
+			/*$(".Step_panel table td.warn_img img").css("margin-top","10px");*/
+			/*$("#unload_img_word").css({"top":"22px","left":"0"});*/
+			/*$("#img_camera_line").css("margin","1px 5px 0 -2px");*/
 		}
 		//Chrome
 		else if(explorer.indexOf("Chrome") >= 0){
@@ -111,66 +116,45 @@ function browserCompatibilitySolve(){
 function campusSelect(){
 	/*下拉框样式控制*/
 	if($('select[name="campus"]').val()=="请选择校区"){
-		$("#Step2_panel table select").css("color","#CCCCCC");
+		$("#select_campus select").css("color","#CCCCCC");
 	}
 	else{
-		$("#Step2_panel table select").css("color","#333333");
+		$("#select_campus select").css("color","#333333");
 	}
 }
+
+
+/*选择标签类型*/
+function labelStyleSelect(){
+	/*下拉框样式控制*/
+	if($('select[name="label_style"]').val()=="请选择标签类型"){
+		$("#select_label_style select").css("color","#CCCCCC");
+	}
+	else{
+		$("#select_label_style select").css("color","#333333");
+	}
+}
+
 /* 文本框信息格式控制 */
 function inputClearEvent() {
-	$('input[type="text"]').focus(function() {
-		if ($(this).val() == '输入账户名' || $(this).val() == '绑定邮箱'
-			|| $(this).val() == '分院名称'|| $(this).val() == '分院简称'
-			|| $(this).val() == '账号负责人'|| $(this).val() == '负责人电话') 
-		{
-			oldval = $(this).val();
-			$(this).val('');
-			$(this).css("color", "#333333");
-		}		
-	});
-	$('input[type="text"]').blur(function() {
-		if (oldval == '输入账户名' || oldval == '绑定邮箱' ||
-			oldval == '分院名称'|| oldval == '分院简称' || 
-			oldval == '账号负责人'|| oldval == '负责人电话') {
-			if ($(this).val() == '') {
-				$(this).val(oldval);
-				$(this).css("color", "#CCCCCC");
-			}
-
-		}
-	});
-	
-	/* 密码框的鼠标事件处理 */
-	$('input[type="text"]').focus(function() {
-		if ($(this).val() == '输入密码' || $(this).val() == '再次输入密码') 
-		{
-			oldval = $(this).val();
-			$(this).val('');
-			$(this).attr("type", "password");
-			$(this).css("color", "#333333");
-		}
-	});
-	$('input[type="text"]').blur(function() {
-		if (oldval == '输入密码' || oldval == '再次输入密码') {
-			if ($(this).val() == '') {
-				$(this).val(oldval);
-				$(this).attr("type", "text");
-				$(this).css("color", "#CCCCCC");
-			}
-		}
-	});
-	
 	
 	/*输入用户名表单验证 */
 	$('input[name="account"]').focus(function() {
+		if ($(this).val() == '输入账户名'){
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}		
 		$(".account_warn").show();
 		$("#account_wword").html("6到18个字符区包括字母、数字、下划线");
 		$(".account_warn img").attr("src","./img/u585.png");
 		$("#account_wword").css("line-height","14px");
 	});
 	$('input[name="account"]').blur(function() {
-		if($(this).val() != oldval){
+		if ($(this).val() == '') {
+			$(this).val("输入账户名");
+			$(this).css("color", "#CCCCCC");
+		}
+		if($(this).val() != "输入账户名"){
 			/*var regu = "^[0-9a-zA-Z\_]+$"; 
 			var re = new RegExp(regu); 
 			if(re.test($(this).val())&&6<=$(this).val().length&&$(this).val().length<=18) {*/
@@ -195,12 +179,23 @@ function inputClearEvent() {
 	
 	/*输入密码表单验证*/
 	$("input[name='password']").focus(function() {
+		if ($(this).val() == '输入密码') 
+		{
+			$(this).val('');
+			$(this).attr("type", "password");
+			$(this).css("color", "#333333");
+		}
 		$(".password_warn").show();
 		$("#password_wword").html("6到16个字符区分大小写");
 		$(".password_warn img").attr("src","./img/u585.png");
 	});
-	$('input[name="password"]').blur(function() {		
-		if($(this).val() != oldval){
+	$('input[name="password"]').blur(function() {
+			if ($(this).val() == '') {
+				$(this).val("输入密码");
+				$(this).attr("type", "text");
+				$(this).css("color", "#CCCCCC");
+			}
+		if($(this).val() != "输入密码"){
 			if(6<=$(this).val().length&&$(this).val().length<=16) {
 				$("#password_wword").html("");
 				$(".password_warn img").attr("src","./img/u587.png");
@@ -220,12 +215,23 @@ function inputClearEvent() {
 	
 	/*再次输入密码表单验证*/
 	$("input[name='password_again']").focus(function() {
+		if ($(this).val() == '再次输入密码') 
+		{
+			$(this).val('');
+			$(this).attr("type", "password");
+			$(this).css("color", "#333333");
+		}
 		$(".password_again_warn").show();
 		$("#password_again_wword").html("再次输入你设置的密码");
 		$(".password_again_warn img").attr("src","./img/u585.png");
 	});
-	$('input[name="password_again"]').blur(function() {		
-		if($(this).val() != oldval){
+	$('input[name="password_again"]').blur(function() {	
+		if ($(this).val() == '') {
+			$(this).val("再次输入密码");
+			$(this).attr("type", "text");
+			$(this).css("color", "#CCCCCC");
+		}
+		if($(this).val() != "再次输入密码"){
 			if($(this).val()==$("input[name='password']").val()) {
 				$("#password_again_wword").html("");
 				$(".password_again_warn img").attr("src","./img/u587.png");
@@ -245,12 +251,20 @@ function inputClearEvent() {
 	
 	/*输入邮箱表单验证*/
 	$('input[name="mailbox"]').focus(function() {
+		if ($(this).val() == '绑定邮箱'){
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}
 		$(".mailbox_warn").show();
 		$("#mailbox_wword").html("输入邮箱，激活完成注册");
 		$(".mailbox_warn img").attr("src","./img/u585.png");
 	});
-	$('input[name="mailbox"]').blur(function() {		
-		if($(this).val() != oldval){
+	$('input[name="mailbox"]').blur(function() {
+		if ($(this).val() == '') {
+			$(this).val("绑定邮箱");
+			$(this).css("color", "#CCCCCC");
+		}
+		if($(this).val() != "绑定邮箱"){
 			var myReg = /^[-_A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
 			if(myReg.test($(this).val())) {
 				$("#mailbox_wword").html("");
@@ -268,14 +282,117 @@ function inputClearEvent() {
 		}
 	});
 	
+	
+	/*分院名称表单验证 */
+	$("input[name='fenyuan_name']").focus(function() {
+		if ( $(this).val() == '分院名称') 
+		{
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}		
+	});
+	$("input[name='fenyuan_name']").blur(function() {
+			if ($(this).val() == '') {
+				$(this).val('分院名称');
+				$(this).css("color", "#CCCCCC");
+		}
+	});
+	
+	
+	/*社团名称表单验证 */
+	$("input[name='shetuan_name']").focus(function() {
+		if ( $(this).val() == '社团名称') 
+		{
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}		
+	});
+	$("input[name='shetuan_name']").blur(function() {
+			if ($(this).val() == '') {
+				$(this).val('社团名称');
+				$(this).css("color", "#CCCCCC");
+		}
+	});
+	
+	/*分院简称表单验证 */
+	$("input[name='fenyuan_shortname']").focus(function() {
+		if ( $(this).val() == '分院简称') 
+		{
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}		
+	});
+	$("input[name='fenyuan_shortname']").blur(function() {
+			if ($(this).val() == '') {
+				$(this).val('分院简称');
+				$(this).css("color", "#CCCCCC");
+		}
+	});
+	
+	/*社团简称表单验证 */
+	$("input[name='shetuan_shortname']").focus(function() {
+		if ( $(this).val() == '社团简称') 
+		{
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}		
+	});
+	$("input[name='shetuan_shortname']").blur(function() {
+			if ($(this).val() == '') {
+				$(this).val('社团简称');
+				$(this).css("color", "#CCCCCC");
+		}
+	});
+	
+	
+	/*账号负责人表单验证 */
+	$("input[name='principal']").focus(function() {
+		if ( $(this).val() == '账号负责人') 
+		{
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}		
+	});
+	$("input[name='principal']").blur(function() {
+			if ($(this).val() == '') {
+				$(this).val('账号负责人');
+				$(this).css("color", "#CCCCCC");
+		}
+	});
+	
+	/*社团负责人表单验证 */
+	$("input[name='shetuan_principal']").focus(function() {
+		if ( $(this).val() == '社团负责人') 
+		{
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}		
+	});
+	$("input[name='shetuan_principal']").blur(function() {
+			if ($(this).val() == '') {
+				$(this).val('社团负责人');
+				$(this).css("color", "#CCCCCC");
+		}
+	});
+	
+	
 	/*输入手机号表单验证*/
 	$('input[name="phone"]').focus(function() {
+		if ( $(this).val() == '负责人电话') 
+		{
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}
 		$(".phone_warn").show();
 		$("#phone_wword").html("输入11位手机号码");
 		$(".phone_warn img").attr("src","./img/u585.png");
 	});
-	$('input[name="phone"]').blur(function() {		
-		if($(this).val() != oldval){
+	$('input[name="phone"]').blur(function() {	
+		if ($(this).val() == '') {
+			$(this).val('负责人电话');
+			$(this).css("color", "#CCCCCC");
+			}
+		if($(this).val() != '负责人电话'){
 			var regu =/^[1][0-9]{10}$/; 
 			var re = new RegExp(regu); 
 			if(re.test($(this).val())) {
@@ -291,6 +408,21 @@ function inputClearEvent() {
 			$("#phone_wword").html("输入11位手机号码");
 			$(".phone_warn img").attr("src","./img/u585.png");
 			$(".phone_warn").hide();
+		}
+	});
+	
+	/*挂靠单位表单验证 */
+	$("input[name='attached_institutions']").focus(function() {
+		if ( $(this).val() == '挂靠单位') 
+		{
+			$(this).val('');
+			$(this).css("color", "#333333");
+		}		
+	});
+	$("input[name='attached_institutions']").blur(function() {
+			if ($(this).val() == '') {
+				$(this).val('挂靠单位');
+				$(this).css("color", "#CCCCCC");
 		}
 	});
 	

@@ -56,7 +56,7 @@ body {
 	background-color: #EFF5EF;
 }
 
-#main {
+#regist_main {
 	width: 950px;
 	margin: 40px auto 0 auto;
 	background-color: rgb(253, 254, 252);
@@ -65,7 +65,7 @@ body {
 /* #regist_content {
 	height: 675px;
 } */
-#regist_step{
+.regist_step{
 	width:950px;
 	height:620px;
 }
@@ -106,7 +106,13 @@ body {
 #shetuan label {
 	color: #999999;
 }
-
+#shetuan label:hover{
+	cursor:pointer;
+}
+#shetuan a:hover{
+	cursor:pointer;
+	text-decoration:none;
+}
 #step_tab {
 	height:72px;
 	position: relative;
@@ -196,7 +202,7 @@ body {
 .Step_panel table tr{
 	display:block;
 	height: 40px;
-	padding-bottom: 35px;
+	margin-bottom: 35px;
 }
 .Step_panel table td{
 	display:block;
@@ -208,7 +214,7 @@ body {
 	display:none;
 }
 .Step_panel table td.warn_img img{
-	/* padding-top:10px; */
+	padding-top:10px;
 }
 .Step_panel table td.warn_word{
 	display:block;
