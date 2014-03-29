@@ -44,26 +44,23 @@
 	float: right;
 	height: 50px;
 	line-height: 50px;
-	margin-right: 17px;
+	vertical-align: middle;
 	color: #C2C0C1;
 	font-size: 18px;
 	font-family: '黑体';
+	width: 86px;
+	padding-left: 30px;
+	background: url("../img/u79.png") center left no-repeat;
 }
 #content #up #create_acti:hover {
+	background: url("../img/u669.png") center left no-repeat;
+	color: #8A8C8A;
 	cursor: pointer;
 }
-#content #up #create_acti img {
-
-	vertical-align: middle;
-	margin-right: 10px;
-} 
 #content #down {
 	height: 526px;
 
 }
-
-
-
 #down .activity {
 	height: 97px;
 	border-bottom: 1px solid #DBDBDB;

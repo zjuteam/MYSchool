@@ -3,12 +3,26 @@ $(function() {
 	close();
 	testAddNewsfeed();
 	confirmDelete();
+	clearPhoneHint();
 });
 
+function clearPhoneHint() {
+	$('#input_phone').focus(function() {
+		if($(this).val() == '输入手机号码')
+			$(this).val('');
+	});
+	
+	$('#input_phone').blur(function() {
+		if($(this).val() == '') {
+			$(this).val('输入手机号码');
+		}
+	});
+	
+}
 function publishNewsfeed() {
-	$('#create_acti').click(function() {
+	$('#create_news').click(function() {
 		$('#dialog-form').dialog({
-			      height: 472,
+			      height: 502,
 			      width: 640,
 			      draggable: false,
 			      resizable: false,
