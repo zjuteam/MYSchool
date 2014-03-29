@@ -3,6 +3,7 @@ $(function() {
 	openCheckList();
 });
 
+
 /* 打开查看名单对话框 */
 function openCheckList() {
 	$('.query').click(function() {
