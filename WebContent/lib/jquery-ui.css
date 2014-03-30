@@ -396,6 +396,8 @@ button.ui-button::-moz-focus-inner {
 	left: 0;
 	/*padding: .2em;*/
 	outline: 0;
+	border: none !important; /* È¥µô±ß¿ò */
+	border-radius: 6px;
 }
 .ui-dialog .ui-dialog-titlebar {
 	position: relative;
@@ -415,6 +417,7 @@ button.ui-button::-moz-focus-inner {
 	vertical-align: middle;
 	line-height: 50px;
 	background-color: #F3F3F3;
+	font-family: 'Î¢ÈíÑÅºÚ','ºÚÌå';
 }
 .ui-dialog .ui-dialog-titlebar-close {
 	border: none !important;

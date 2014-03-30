@@ -1,8 +1,9 @@
 $(function() {
-	edit();
 	cancel();
 	changePortrait();
+	dialogEvent();
 });
+
 
 function changePortrait() {
 	$("#change_portrait").change(function(){
@@ -15,18 +16,32 @@ function changePortrait() {
 	    }
 	});
 }
-function edit() {
-	$('#edit').children().click(function() {
-		$('#container').hide();
-		$('#edit_container').show();		
+
+/* 帐号设置编辑保存 */
+function save() {
+	$('input[type="submit"]').click(function() {
+		// 保存
 	});
 }
-
+/* 帐号设置编辑取消 */
 function cancel() {
 	$('input[type="button"]').click(function() {
-		// show dialog
-		$(this).dialog();
-		//$('#container').show();
-		//$('#edit_container').hide();		
+		
+		$('#dialog-form').dialog({
+		      height: 220,
+		      width: 400,
+		      draggable: false,
+		      resizable: false,
+		      modal: true	/* prevent user from interacting with the rest of the page. */
+	});
+	});
+}
+/* 对话框是否事件 */
+function dialogEvent() {
+	$('.yes').click(function() {
+		window.location.href="account_setting.html";
+	});
+	$('.no').click(function() {
+		$('#dialog-form').dialog("close");
 	});
 }

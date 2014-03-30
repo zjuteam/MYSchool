@@ -13,7 +13,7 @@
 #up a:hover {
 	text-decoration: none;
 }
-#up a {
+#content #up .tabbox a {
 	float: left;
 	display: block;
 	height: 47px;
@@ -31,7 +31,7 @@
 #content #up #edit {
 	float: right;
 }
-#content #up #edit label {
+#content #up #edit a {
 	line-height: 50px;
 	vertical-align: middle;
 	font-size: 18px;
@@ -39,7 +39,7 @@
 	color: #C2C0C1;
 	margin-right: 30px;
 }
-#content #up #edit label:hover {
+#content #up #edit a:hover {
 	cursor: pointer;
 	text-decoration: underline;
 	color:#8A8C8A;
@@ -86,7 +86,6 @@
 	width: 	650px;
 	height: 260px;
 	margin: 70px auto 0 auto;
-	display: none;	
 
 }
 .operation {
@@ -144,4 +143,44 @@ input[type="submit"]:hover, input[type="button"]:hover {
 	height: 30px;
 	width: 190px;
 	padding-left: 10px;
+}
+#dialog-form {
+	display: none;
+}
+/* 对话框 */
+#dialog-form p {
+	background: url("../img/u141.png") center left no-repeat;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	vertical-align: middle;
+	width: 360px;
+	font-size: 16px;
+	padding-left: 12px;
+}
+#dialog-form .yes {
+	background-color: #55BB22;
+	color: #fff;
+	width: 90px;
+	height: 30px;
+	padding: 8px 35px 8px 35px;
+	font-size: 16px;
+	border-radius: 6px;
+	margin-left: 86px;
+	margin-top: 20px;
+}
+#dialog-form .yes:hover,#dialog-form .no:hover {
+	cursor: pointer;
+	opacity: 0.9;
+	filter:alpha(opacity="90");
+}
+#dialog-form .no {
+	margin-top: 20px;
+	background-color: #515151;
+	color: #fff;
+	width: 90px;
+	height: 30px;
+	padding: 8px 35px 8px 35px;
+	font-size: 16px;
+	border-radius: 6px;
 }
