@@ -272,6 +272,9 @@ body {
 	padding-left:35px;
 	padding-right:15px;
 }
+#only_one_step{
+	padding-left:130px;
+}
 .Step_panel table input[type='button'] {
 	width:140px;
 	background-color: rgb(85, 187, 34);

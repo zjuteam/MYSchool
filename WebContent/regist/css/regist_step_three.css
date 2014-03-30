@@ -1,57 +1,16 @@
 @CHARSET "UTF-8";
-
 @IMPORT url("../../common/common.css");
-
-/* Step2,3,4信息面板样式与布局 */
-
-#select_campus{
-	background-color:#FFFFFF;
-}
-#Step2_panel table select {	
-    -webkit-appearance: none;  /*Removes default chrome and safari style*/
-    -moz-appearance: none;  /*Removes default style Firefox*/
-    appearance: none;
-    background: none repeat scroll 0 0 #FFFFFF;  
-    text-indent: 0.01px;          /* Removes default arrow from firefox*/
-    text-overflow: "";               /*Removes default arrow from firefox*/  
-	width: 400px;
-	height: 40px;
-	margin-bottom: 35px;
-	border: 1px solid #CCCCCC;
-	color: #CCCCCC;
-	font-family: '宋体';
-	font-size: 16px;
-	text-align: left;
-	line-height: 40px;
-	background-color:#FFFFFF;
-	background:transparent url("../img/select.png") no-repeat scroll 358px -2px;
-}
-#step_one img{
-	display:none;
-}
-#regist_content
-{
-	height:760;
-}
-#step_two img{
-	display:block;
-}
-#step_one{
-	color:#999999;
-}
-#step_two{
-	color:#55BB22;
-}
-
-
-
 /* step3上传标志页面样式控制 */
 #Step3_panel {
 	width: 600px;
 	margin-left: -100px;
-	display: none;
 }
-
+#step_one img{
+	display:none;
+}
+#step_three img{
+	display:block;
+}
 #appearance {
 	width: 600px;
 	height: 290px;
@@ -200,33 +159,4 @@ tr.lookline,.lookline td{
 	font-size: 12px;
 	font-family: '宋体';	
 	color:#0000FF;
-}
-
-#audit {
-	width: 600px;
-	height: 220px;
-	margin: 0 auto 0 auto;
-	line-height: 220px;
-}
-
-#audit img {
-	display: block;
-	float: left;
-	margin-right: 20px;
-	margin-top: 95px;
-}
-
-#audit p {
-	color: #333333;
-	font-size: 18px;
-	font-family: 'Arial Normal', 'Arial';
-}
-
-
-/* step4等待审核页面样式 */
-#Step4_panel {
-	display: none;	
-}
-#Step4_panel table{
-	/* margin-left:125px; */
 }

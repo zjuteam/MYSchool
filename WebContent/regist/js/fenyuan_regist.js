@@ -27,58 +27,16 @@ function returnToStep1(){
 	$('#activate_mailbox').dialog("close");
 }	
 
-/* step2页面点击下一步，转到step3 */
-function changeToStep3() {
-	$("#Step2_panel").hide();
-	$("#step_two img").hide();
-	$("#Step3_panel").show();
-	$("#step_three img").css("display","block");
-	$("#step_two").css("color", "#999999");
-	$("#step_three").css("color", "#55BB22");
-	$("#shetuan_regist_step").height(620);
-	$("html,body").scrollTop(0);
-}
-
-/* step3页面点击下一步，转到step4 */
-function changeToStep4() {
-	$("#Step3_panel").hide();
-	$("#step_three img").hide();
-	$("#Step4_panel").show();
-	$("#step_four img").css("display","block");
-	$("#step_three").css("color", "#999999");
-	$("#step_four").css("color", "#55BB22");
-	$("#u525_end").show();
-	$("html,body").scrollTop(0);
-}
 /* step3页面点击上一步，返回step2 */
 function returnToStep2(){
-	$("#Step3_panel").hide();
-	$("#step_three img").hide();
-	$("#Step2_panel").show();
-	$("#step_two img").show();
-	$("#step_two").css("color", "#55BB22");
-	$("#shetuan_regist_step").height(800);
-	$("html,body").scrollTop(0);	
+	window.history.go(-1);
 }
 
 /* step4页面点击上一步，返回step3 */
 function returnToStep3(){
-	$("#Step4_panel").hide();
-	$("#step_four img").hide();
-	$("#Step3_panel").show();
-	$("#step_three img").show();
-	$("#u525_end").hide();
-	$("#u352_end").show();
-	$("#step_three").css("color", "#55BB22");
-	$("html,body").scrollTop(0);	
+	window.history.go(-1);
 }
 
-/*step4页面完成注册，点击关闭窗口*/
-function finishTheRegist(){
-	window.opener=null;
-	window.open('','_self');
-	window.close();
-}
 /*是否接受《my school》协议的样式控制函数*/
 function judgeUseTheDeal(){
 	if($("#Step1_panel input[name='judge_use_deal']").is(":checked")){
@@ -98,12 +56,8 @@ function browserCompatibilitySolve(){
 		}
 		//firefox 
 		else if (explorer.indexOf("Firefox") >= 0) {
-			/*$("#Step2_panel table select").css("padding-top","10px");*/
 			$("#underline").css("top","1px");
 			$("#Step2_panel table select").css("padding-top","10px");
-			/*$(".Step_panel table td.warn_img img").css("margin-top","10px");*/
-			/*$("#unload_img_word").css({"top":"22px","left":"0"});*/
-			/*$("#img_camera_line").css("margin","1px 5px 0 -2px");*/
 		}
 		//Chrome
 		else if(explorer.indexOf("Chrome") >= 0){
@@ -149,6 +103,7 @@ function inputClearEvent() {
 		$(".account_warn img").attr("src","./img/u585.png");
 		$("#account_wword").css("line-height","14px");
 	});
+    
 	$('input[name="account"]').blur(function() {
 		if ($(this).val() == '') {
 			$(this).val("输入账户名");
@@ -297,7 +252,9 @@ function inputClearEvent() {
 				$(this).css("color", "#CCCCCC");
 		}
 	});
-	
+	if($('input[name="fenyuan_name"]').val()!='分院名称'){
+    	$('input[name="fenyuan_name"]').css("color", "#333333");
+    }
 	
 	/*社团名称表单验证 */
 	$("input[name='shetuan_name']").focus(function() {
@@ -313,6 +270,9 @@ function inputClearEvent() {
 				$(this).css("color", "#CCCCCC");
 		}
 	});
+	if($('input[name="shetuan_name"]').val()!='社团名称'){
+    	$('input[name="shetuan_name"]').css("color", "#333333");
+    }
 	
 	/*分院简称表单验证 */
 	$("input[name='fenyuan_shortname']").focus(function() {
@@ -328,6 +288,9 @@ function inputClearEvent() {
 				$(this).css("color", "#CCCCCC");
 		}
 	});
+	if($('input[name="fenyuan_shortname"]').val()!='分院简称'){
+    	$('input[name="fenyuan_shortname"]').css("color", "#333333");
+    }
 	
 	/*社团简称表单验证 */
 	$("input[name='shetuan_shortname']").focus(function() {
@@ -343,7 +306,9 @@ function inputClearEvent() {
 				$(this).css("color", "#CCCCCC");
 		}
 	});
-	
+	if($('input[name="shetuan_shortname"]').val()!='社团简称'){
+    	$('input[name="shetuan_shortname"]').css("color", "#333333");
+    }
 	
 	/*账号负责人表单验证 */
 	$("input[name='principal']").focus(function() {
@@ -359,6 +324,9 @@ function inputClearEvent() {
 				$(this).css("color", "#CCCCCC");
 		}
 	});
+	if($('input[name="principal"]').val()!='账号负责人'){
+    	$('input[name="principal"]').css("color", "#333333");
+    }
 	
 	/*社团负责人表单验证 */
 	$("input[name='shetuan_principal']").focus(function() {
@@ -374,7 +342,9 @@ function inputClearEvent() {
 				$(this).css("color", "#CCCCCC");
 		}
 	});
-	
+	if($('input[name="shetuan_principal"]').val()!='社团负责人'){
+    	$('input[name="shetuan_principal"]').css("color", "#333333");
+    }
 	
 	/*输入手机号表单验证*/
 	$('input[name="phone"]').focus(function() {
@@ -410,6 +380,9 @@ function inputClearEvent() {
 			$(".phone_warn").hide();
 		}
 	});
+	if($('input[name="phone"]').val()!='负责人电话'){
+    	$('input[name="phone"]').css("color", "#333333");
+    }
 	
 	/*挂靠单位表单验证 */
 	$("input[name='attached_institutions']").focus(function() {
@@ -425,5 +398,18 @@ function inputClearEvent() {
 				$(this).css("color", "#CCCCCC");
 		}
 	});
+	if($('input[name="attached_institutions"]').val()!='挂靠单位'){
+    	$('input[name="attached_institutions"]').css("color", "#333333");
+    }
+		
+	/*选择校区*/
+	if($('select[name="campus"]').val()!="请选择校区"){
+		$("#select_campus select").css("color","#333333");
+    }
 	
+	/*选择标签类型*/
+	if($('select[name="label_style"]').val()!="请选择标签类型"){
+		$("#select_label_style select").css("color","#333333");
+	}
+
 }
