@@ -1,19 +1,23 @@
 $(function() {
 	publishActivities();
-	close();
-	pickTime();
-	sendActivity();
 });
 
 function publishActivities() {
 	$('#create_acti').click(function() {
 		$('#dialog-form').dialog({
+				  open: function(event, ui) {
+				   $(this).load('dialog/create_activity_dialog.html', function() {
+				   });
+				  },
+				  close: function(event, ui) {
+				  },
 			      height: 650,
 			      width: 646,
 			      draggable: false,
 			      resizable: false,
 			      modal: true	/* prevent user from interacting with the rest of the page. */
 		});
+		return false;
 	});
 }
 

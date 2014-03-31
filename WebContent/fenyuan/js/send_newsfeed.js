@@ -1,9 +1,5 @@
 $(function() {
 	publishNewsfeed();
-	close();
-	testAddNewsfeed();
-	confirmDelete();
-	clearPhoneHint();
 });
 
 function clearPhoneHint() {
@@ -22,6 +18,12 @@ function clearPhoneHint() {
 function publishNewsfeed() {
 	$('#create_news').click(function() {
 		$('#dialog-form').dialog({
+				 open: function(event, ui) {
+				   $(this).load('dialog/create_newsfeed_dialog.html', function() {
+				   });
+				  },
+				  close: function(event, ui) {
+				  },	
 			      height: 502,
 			      width: 640,
 			      draggable: false,
