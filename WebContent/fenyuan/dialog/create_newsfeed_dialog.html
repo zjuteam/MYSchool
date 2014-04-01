@@ -3,10 +3,15 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
+<style>
+	input {
+		width: 466px;
+	}
+</style>
 </head>
 <body>
-	<form action="" method="post">
-		<fieldset>
+	<form action="" method="post" id="form" style="border: 1px solid red;">
+<!-- 		<fieldset>
 			<ul>
 				<li><label>主题</label> <input type="text" name="" id="theme"
 					value="少于16个字" /></li>
@@ -32,6 +37,24 @@
 				<li><input type="submit" name="" value="发布" /> <input
 					type="button" name="" value="取消" /></li>
 			</ul>
+		</fieldset> -->
+		
+		<fieldset>
+			<p>
+				<label>主题</label><input id="theme" name="" type="text" required maxlength="16" />
+			</p>
+			<p>
+				<label>标签</label><select><option>体育</option><option>娱乐</option></select>
+			</p>
+			<p>
+				<label>活动配图</label><input type="file" />
+			</p>
+			<p>
+				<label>正文</label><textarea>asdf</textarea>
+			</p>
+			<p>
+				<input type="submit" value="ijiao" />
+			</p>
 		</fieldset>
 	</form>
 </body>
@@ -41,6 +64,7 @@
 		testAddNewsfeed();
 		confirmDelete();
 		clearPhoneHint();
+		$('#form').validate();
 	});
 </script>
 </html>
