@@ -1,3 +1,2 @@
-# hide demo dir
-/.settings/
-/.project
+.project
+.settings
