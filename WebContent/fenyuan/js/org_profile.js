@@ -1,8 +1,14 @@
 $(function() {
 	clearHint();
 	profileImage();
+	openImgPickDialog();
 });
 
+function openImgPickDialog() {
+	$('.upload_file').click(function() {
+		$('#profile_image').click();
+	});
+}
 function clearHint() {
 	$('input[type="text"]').focus(function() {
 		if($(this).val() == '' || $(this).val() == '标题')

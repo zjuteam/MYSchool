@@ -36,6 +36,7 @@
 }
 #container {
 	margin: 20px auto 0 auto;
+	width: 700px;
 }
 textarea {
 	border: 1px solid #ccc;
@@ -57,29 +58,41 @@ textarea {
 }
 #container .upload {
 	width: 700px;
-	height: 100px;
+	height: 102px;
 	margin: 0 auto 0 auto;
-	background: url('../img/u97.png') no-repeat;
-	margin-bottom: 20px;
+}
+#container p {
+	float: left;
+	color: #ccc;
+	font-size: 12px;
+	margin: 3px 0 3px 0;
 }
 #container .upload input[type='file'] {
-	filter: alpha(opacity=0);
-    opacity: 0;
-    float: left;
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+	visibility: hidden;
 }
-#container .upload input[type='file']:hover {
-	cursor: pointer;
-}
-#container .display {
+#container .upload .upload_file {
 	float: left;
+	background: url("../img/u97.png") no-repeat center left;
+	height: 100px;
+	width: 100px;
+}
+#container .upload .upload_file:hover {
+	cursor: pointer;
+	background: url("../img/plus2.png") no-repeat center left;
+}
+#container .upload .display {
+	float: left;
+	margin-left: 20px;
 }
 #container .display ul li {
 	display: inline;
 	list-style-type: none;	/* 去掉星号 */
 }
+#container .display ul li img {
+	width: 100px;
+	height: 100px;
+}
+
 #container input[type='submit'] {
 	margin-top: 10px;
 	color: #fff;
@@ -88,7 +101,6 @@ textarea {
 	padding: 6px 17px 6px 17px;
 	border-radius: 6px;
 	float: right;
-	margin-right: 40px;
 	margin-bottom: 50px;
 }
 
