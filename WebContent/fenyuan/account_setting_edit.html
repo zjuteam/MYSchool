@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>帐号设置</title>
-		<link rel="stylesheet" type="text/css" href="css/account_setting.css" />
+		<link rel="stylesheet" type="text/css" href="css/account_setting_edit.css" />
 		<link rel="stylesheet" type="text/css" href="../lib/jquery-ui.css" />
 	</head>
 	<body>
@@ -37,7 +37,7 @@
 						<li><a href="send_activities.html" class ="fshd" >发送活动</a></li>
 						<li><a href="statistic_signup.html" class ="tjbm" >统计报名</a></li>
 						<li><a href="send_newsfeed.html" class ="fszx" >发送资讯</a></li>
-						<li><a href="#" class ="zhsz zhsz_selected" >帐号设置</a></li>
+						<li><a href="account_setting.html" class ="zhsz zhsz_selected" >帐号设置</a></li>
 						<li><a href="org_profile.html" class ="zzjj" >组织简介</a></li>
 					</ul>
 				</div>
@@ -52,13 +52,13 @@
 					<div id="down">
 						<!-- 编辑栏 -->
 						<div id="edit_container">
-							<form action="" method="post">
+							<form enctype="multipart/form-data" action="" method="post">
 								<div class="left">
-									<!-- 修改头像 -->
-										<img src="img/u1.png" id="origin_portrait" width="130" height="130"/>
-										<div class="modify_portrait">
-											<input type="file" name="" id="change_portrait"/>
-										</div>
+									<div class="modify_portrait">
+										<img src="img/u1.png" id="origin_portrait" width="130" height="130"/><!-- 修改头像(头像规格是130*130) -->
+										<a>修改</a>
+										<input type="file" name="" id="change_portrait"/>
+									</div>
 								</div>
 								<div class="right">
 									<table cellspacing="25">
@@ -82,6 +82,7 @@
 										</tr>																										
 									</table>
 								</div>
+								<div style="clear:both"></div>
 								<div class="operation">
 									<input type="submit" name="" value="保存" /><input type="button" name="" value="取消" />
 								</div>

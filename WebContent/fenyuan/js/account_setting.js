@@ -2,6 +2,7 @@ $(function() {
 	cancel();
 	changePortrait();
 	dialogEvent();
+	openFilePickDialog();
 });
 
 
@@ -17,6 +18,12 @@ function changePortrait() {
 	});
 }
 
+function openFilePickDialog() {
+	$('.left .modify_portrait a').click(function(event) {
+		event.preventDefault();
+		$('#change_portrait').click();
+	});
+}
 /* 帐号设置编辑保存 */
 function save() {
 	$('input[type="submit"]').click(function() {
