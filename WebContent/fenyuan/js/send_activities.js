@@ -37,6 +37,8 @@ function close() {
 
 function uploadToServer() {
 	clearInterval(id);
+	// 通知栏
+	$('#notification').miniNotification({effect: 'fade',time: 300});
 	// 隐藏加载框
 	$('#progressDialog').hide();
 	// 隐藏提示字
@@ -90,6 +92,6 @@ function sendActivity() {
 		// 打开加载框
 		$('#progressDialog').show();
 		
-		id = setInterval('uploadToServer()',5000);
+		id = setInterval('uploadToServer()',1500);
 	});
 }
