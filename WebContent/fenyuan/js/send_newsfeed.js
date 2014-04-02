@@ -24,6 +24,10 @@ function publishNewsfeed() {
 				  },
 				  close: function(event, ui) {
 				  },	
+				  show: { effect: "fold", duration: 300
+				  },
+				  hide: { effect: "fold", duration: 500
+				  },
 			      height: 502,
 			      width: 640,
 			      draggable: false,

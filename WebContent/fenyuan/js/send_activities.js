@@ -11,6 +11,10 @@ function publishActivities() {
 				  },
 				  close: function(event, ui) {
 				  },
+				  show: { effect: "fold", duration: 300
+				  },
+				  hide: { effect: "fold", duration: 500
+				  },
 			      height: 650,
 			      width: 646,
 			      draggable: false,
