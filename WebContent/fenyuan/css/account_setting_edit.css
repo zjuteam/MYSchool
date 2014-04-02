@@ -139,7 +139,6 @@ input[type="submit"]:hover, input[type="button"]:hover {
 }
 .left .modify_portrait a:hover {
 	cursor: pointer;
-	color: rgb(0,0,255);
 	
 }
 .left .modify_portrait input[type='file'] {

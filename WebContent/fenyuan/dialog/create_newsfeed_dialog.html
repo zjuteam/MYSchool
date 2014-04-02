@@ -14,10 +14,10 @@
 		<form action="" method="post" id="form" enctype="application/x-www-form-urlencoded">
 			<fieldset>
 				<p>
-					<label>主题</label><input id="theme" name="" type="text" required maxlength="16" value="少于16个字" />
+					<label>主题</label><input id="theme" name="theme" type="text" required maxlength="16" value="少于16个字" />
 				</p>
 				<p>
-					<label>标签</label><select><option>请选择</option><option>体育</option><option>娱乐</option></select>
+					<label>标签</label><select id="tag"><option>请选择</option><option>体育</option><option>娱乐</option></select>
 				</p>
 				<p id="snapshot1">
 					<label>活动配图</label><button class="upload">上传</button><label class="supported">(支持的图片类型：jpg, png, gif, bmp)</label><input type="file" id="pic"/>
@@ -35,7 +35,7 @@
 					<label class="top">活动配图</label><img src="" width="110" height="110" id="final2" /><a href="" id="changeImg">更改图片</a>
 				</p>
 				<p>
-					<label class="top">正文</label><textarea required>正文</textarea>
+					<label class="top">正文</label><textarea required name="body">正文</textarea>
 				</p>
 				<p>
 					<button class="cancel">取消</button><input type="submit" value="发布" />
@@ -87,6 +87,23 @@ function del() {
 	});
 }
 
+/* 验证表单 */
+function validate() {
+	$('#form').validate({
+		rules: {
+			theme: "required",
+			body: "required"
+		},
+		messages: {
+			theme: "请填写标题                       标题需要少于16字",
+			body: "请填写正文"
+		},
+		 highlight: function(element, errorClass) {
+			  $(element).css('outline','1px dotted red');
+		 }
+	});
+	
+}
 function preview(img, selection) {
     if (!selection.width || !selection.height)
         return;
@@ -148,7 +165,7 @@ function pickImg() {
 		clearPhoneHint();
 		openFilePickDialog();
 		pickImg();
-		$('#form').validate();
+		validate();
 	});
 </script>
 </html>
