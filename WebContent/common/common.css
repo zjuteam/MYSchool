@@ -267,6 +267,7 @@ li {
 	min-height: 600px;
 	background-color: #fff;
 	border-left: 1px solid #D7D7D7;	
+	padding-bottom: 5px;
 }
 
 #content #up {
