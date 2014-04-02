@@ -2,6 +2,7 @@ $(function() {
 	publishNewsfeed();
 });
 
+
 function clearPhoneHint() {
 	$('#input_phone').focus(function() {
 		if($(this).val() == '输入手机号码')

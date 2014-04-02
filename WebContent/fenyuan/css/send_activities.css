@@ -191,6 +191,9 @@ textarea {
 	display: inline-block;
 	background: url("../img/upload.png") no-repeat;
 }
+.ui-dialog {
+	border-radius: 0px !important;
+}
 /* end of dialog-form css */
 
 /* activity item css */

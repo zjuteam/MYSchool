@@ -72,13 +72,13 @@ textarea {
 }
 #container .upload .upload_file {
 	float: left;
-	background: url("../img/u97.png") no-repeat center left;
+	background: url("../img/plus2.png") no-repeat center left;
 	height: 100px;
 	width: 100px;
 }
 #container .upload .upload_file:hover {
 	cursor: pointer;
-	background: url("../img/plus2.png") no-repeat center left;
+	background: url("../img/u97.png") no-repeat center left;
 }
 #container .upload .display {
 	float: left;
@@ -106,4 +106,8 @@ textarea {
 
 #container input[type='submit']:hover {
 	cursor: pointer;
+}
+.saveAndUpdate:hover {
+	opacity: 0.8;
+	filter:alpha(opacity=80);
 }
