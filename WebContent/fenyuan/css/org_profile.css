@@ -60,7 +60,7 @@ textarea {
 #container .upload {
 	width: 700px;
 	height: 102px;
-	margin: 0 auto 0 auto;
+	margin: 0 auto 10px auto;
 }
 #container p {
 	float: left;
