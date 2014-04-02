@@ -27,6 +27,7 @@
 	text-align: center;
 	font-size: 20px;
 	color: #000;
+	font-family: '微软雅黑';
 }
 #content #up #tab img {
 	vertical-align: top;
@@ -58,6 +59,8 @@
 #content #down {
 	height: 526px;
 }
+
+/* borrow from activity */
 #down .newsfeed {
 	height: 97px;
 	border-bottom: 1px solid #DBDBDB;
@@ -78,6 +81,14 @@
 	font-size: 12px;
 	color: #888;
 }
+
+#down .check input[type='checkbox'] {
+	float: left;
+	margin-top: 45px;
+	width: 20px;
+	height: 20px;
+	margin-left: 18px;
+}
 #down .edit {
 	float: right;
 	margin-top: 26px;
@@ -89,64 +100,100 @@
 	font-size: 12px;
 	color: #888;
 }
-
+#down .no_content {
+	height: 550px;
+	vertical-align: middle;
+	line-height: 550px;
+	text-align: center;
+}
+#content #down label {
+} 
+/* end of borrow */
 #dialog-form {
 	display: none;
 	padding-top: 40px;
+	width: 604px;
 }
-#dialog-form input[type='text'],#dialog-form select {
-	width: 465px;
+
+#dialog-form p {
+	margin: 0 auto 20px auto;
+	width: 530px;
+}
+#dialog-form p label {
+	font-size: 16px;
+	font-family: '宋体';
+}
+#dialog-form input {
 	border: 1px solid #DBDBDB;
-	height: 30px;
+	font-size: 12px;
+
 }
-#dialog-form input[type='file'] {
-	width: 80px;
+
+#dialog-form p label {
+	margin-right: 20px;
+}
+#dialog-form p .top {
+	vertical-align: top;
+}
+#dialog-form select {
+	border: 1px solid #DBDBDB;
+	width: 465px;
 	height: 30px;
-	opacity: 0;
+	font-size: 12px;
+	line-height: 30px;
+	vertical-align: middle;
 }
 #dialog-form textarea {
 	width: 465px;
-	height: 116px; 
+	height: 117px;
+	font-size: 12px;
+	padding-left: 3px;
+	padding-top: 3px;
 	border: 1px solid #DBDBDB;
 }
-#dialog-form ul {
-	width: 528px;
-	margin: 0 auto 0 auto;
-}
-#dialog-form label {
-	margin-right: 20px;
-	font-size: 16px;
-}
-#dialog-form ul li {
-	margin-bottom: 20px;
-}
-.supported {
-	color: #888;
-}
-#dialog-form .main_content {
-	height: 116px;
-	vertical-align: top;
-}
-#dialog-form input[type='submit'],#dialog-form input[type='button'] {
-	background-color: #55BB22;
-	color: #fff;
-	padding: 5px 38px 5px 38px;
-	border-radius: 6px;
-}
-#dialog-form input[type='button'] {
-	background-color: #515151;
-}
-#dialog-form input[type='submit']:hover,#dialog-form input[type='button']:hover {
-	cursor: pointer;
+#dialog-form input[type='text'] {
+	width: 465px;
+	height: 30px;
+	padding-left: 3px;
 }
 #dialog-form input[type='submit'] {
-	margin-left: 140px;
+	float: right;
+	background-color: #55BB22;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 6px;
+	width: 90px;
+	height: 30px;
+	margin-right: 18px;
+}
+#dialog-form input[type='file'] {
+	visibility: hidden;
 }
 #dialog-form .upload {
-	width: 80px;
+	color: #fff;
+	background-color: #55BB22;
+	padding: 5px 25px 5px 25px;
+	border-radius: 6px;
+}
+#dialog-form .upload:hover,.save:hover,.delete:hover,input[type='submit']:hover,.cancel:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+#dialog-form .supported {
+	color: #888;
+	vertical-align: middle;
+	line-height: 30px;
+	margin-left: 30px;
+}
+#dialog-form .cancel {
+	float: right;
 	height: 30px;
-	display: inline-block;
-	background: url("../img/upload.png") no-repeat;
+	background-color: #666666;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 6px;
+	width: 90px;
 }
 #confirm_delete:hover {
 	text-decoration: underline;
@@ -168,4 +215,26 @@
 	color: #FF8040;
 	font-size: 12px !important;
 	margin-left: 120px;
+}
+.save {
+	margin-top: 15px;
+	color: #fff;
+	background-color: #55BB22;
+	padding: 5px 25px 5px 25px;
+	border-radius: 6px;
+}
+.delete {
+	margin-top: 15px;
+	margin-left: 20px;
+	color: #fff;
+	background-color: #999999;
+	padding: 5px 25px 5px 25px;
+	border-radius: 6px;
+}
+#dialog-form p a {
+	vertical-align: middle;
+	color: blue;
+}
+.ui-dialog {
+	border-radius: 0px !important;
 }
