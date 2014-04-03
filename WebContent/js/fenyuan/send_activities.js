@@ -50,7 +50,7 @@ function uploadToServer() {
 	
 	$('#down').append('<div class="activity">'
 			+ '<div class="check">'
-			+ '<input type="checkbox" />'
+			+ '<input type="checkbox" onclick="alert(0)"/>'
 			+ '</div>'
 			+ '<div class="info">'
 			+ '<table>'
