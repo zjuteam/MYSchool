@@ -13,7 +13,7 @@ function managingOrganizations(){
 	},function(){
 		$(".zzgl .up_to_down").attr("src","./img/down.png");
 	});
-	$('#tuanwei_zzgl').click(function() {
+	$('a.zzgl').click(function() {
 		if($("#tuanwei_zzgl .tuanwei_select").is(":hidden")){
 			$("#tuanwei_zzgl .tuanwei_select").show();
 			$(".zzgl .up_to_down").attr("src","./img/up1.png");
@@ -43,7 +43,7 @@ function briefIntroduction(){
 	},function(){
 		$(".zzjj .up_to_down").attr("src","./img/down.png");
 	});
-	$('#tuanwei_jj').click(function() {
+	$('a.zzjj').click(function() {
 		if($("#tuanwei_jj .tuanwei_select").is(":hidden")){
 			$("#tuanwei_jj .tuanwei_select").show();
 			$(".zzjj .up_to_down").attr("src","./img/up1.png");
@@ -72,7 +72,7 @@ function setTypes(){
 	},function(){
 		$(".zhsz .up_to_down").attr("src","./img/down.png");
 	});
-	$('#tuanwei_sz').click(function() {
+	$('a.zhsz').click(function() {
 		if($("#tuanwei_sz .tuanwei_select").is(":hidden")){
 			$("#tuanwei_sz .tuanwei_select").show();
 			$(".zhsz .up_to_down").attr("src","./img/up1.png");

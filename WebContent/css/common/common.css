@@ -160,10 +160,10 @@ li {
 	background: url("../../img/fenyuan/send_newsfeed1.png") 10% center no-repeat;
 }
 .zzgl{
-	background: url("../tuanwei/img/manage_ organizations.png") 10% center no-repeat;
+	background: url("../../img/tuanwei/manage_ organizations.png") 10% center no-repeat;
 }
 .zzgl:hover{
-	background: url("../tuanwei/img/manage_ organizations1.png") 10% center no-repeat;
+	background: url("../../img/tuanwei/manage_ organizations1.png") 10% center no-repeat;
 }
 .zhsz {
 	background: url("../../img/fenyuan/setting.png") 10% center no-repeat;
@@ -181,10 +181,10 @@ li {
 	background: url("../../img/fenyuan/profile1.png") 10% center no-repeat;
 }
 .gongju{
-	background: url("../tuanwei/img/tool.png") 10% center no-repeat;
+	background: url("../../img/tuanwei/tool.png") 10% center no-repeat;
 }
 .gongju:hover{
-	background: url("../tuanwei/img/tool1.png") 10% center no-repeat;
+	background: url("../../img/tuanwei/tool1.png") 10% center no-repeat;
 }
 .fshd_selected {
 	color: #fff !important;
@@ -207,7 +207,7 @@ li {
 .zzgl_selected {
 	color: #fff !important;
 	text-decoration: none;
-	background: url("../tuanwei/img/manage_ organizations1.png") 10% center no-repeat;
+	background: url("../../img/tuanwei/manage_ organizations1.png") 10% center no-repeat;
 	background-color: #55BB22 !important;
 }
 .zhsz_selected {
@@ -225,7 +225,7 @@ li {
 .gongju_selected {
 	color: #fff !important;
 	text-decoration: none;
-	background: url("../tuanwei/img/tool1.png") 10% center no-repeat;
+	background: url("../../img/tuanwei/tool1.png") 10% center no-repeat;
 	background-color: #55BB22 !important;
 }
 #tuanwei_sz a, #tuanwei_jj a, #tuanwei_gj a{

@@ -3,56 +3,54 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>帐号设置</title>
-		<link rel="stylesheet" type="text/css" href="css/account_setting.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/tuanwei/account_setting_edit.css" />
+		<link rel="stylesheet" type="text/css" href="../../dependency/jquery-ui.css" />
 	</head>
 	<body>
+		<!-- 提示对话框 -->
+		<div title="提示" id="dialog-form">
+			`<p>当前修改信息未保存是否确认关闭？</p>
+			 <button class="yes">是</button>
+			 <button class="no">否</button>
+		</div>
 		<div id="header_wrapper">
 			<div id="header">
 				<div id="left_side">
-					<img alt="logo" src="img/u15.png" />
-					<img src="img/u549.png" class="word1" />
-					<img src="img/u546_line.png" />
+					<img alt="logo" src="../../img/tuanwei/u15.png" />
+					<img src="../../img/tuanwei/u549.png" class="word1" />
+					<img src="../../img/tuanwei/u546_line.png" />
 					<label class="word2">后台</label>
 				</div>
 				<div id="right_side">
-					<img src="img/u117.png" />
+					<img src="../../img/tuanwei/u117.png" />
 					<a href="account_setting.html" class="word">欢迎求是设计协会</a>
-					<img src="img/u196.png" class="notify" />
+					<img src="../../img/tuanwei/u196.png" class="notify" />
 					<span class="word">|</span>
-					<a href="../index.html" class="word">注销</a>
+					<a href="../../index.html" class="word">注销</a>
 				</div>
 			</div>
 		</div>
 		<div id="main_wrapper">
 			<div id="main">
-				<!-- <div id="menu">
-					<ul>
-						<li><a href="send_activities.html" class ="fshd" >发送活动</a></li>
-						<li><a href="statistic_signup.html" class ="tjbm" >统计报名</a></li>
-						<li><a href="send_newsfeed.html" class ="fszx" >发送资讯</a></li>
-						<li><a href="#" class ="zhsz zhsz_selected" >帐号设置</a></li>
-						<li><a href="org_profile.html" class ="zzjj" >组织简介</a></li>
-					</ul>
-				</div> -->
 				<div id="menu">
 					<ul>
 						<li><a href="send_activities.html" class="fshd" >发送活动</a></li>
 						<li><a href="statistic_signup.html" class="tjbm" >统计报名</a></li>
 						<li><a href="send_newsfeed.html" class="fszx" >发送资讯</a></li>
-						<li id="tuanwei_zzgl"><a href="#" class="zzgl">组织管理<img class="up_to_down" src="img/down.png"/></a>
+						<li id="tuanwei_zzgl"><a href="#" class="zzgl">组织管理<img class="up_to_down" src="../../img/tuanwei/down.png"/></a>
 						<ul class="tuanwei_select">
 						<li class="manage_top"><a href="organizationl_manage_shetuan.html">社团管理</a></li>
 						<li class="manage_bottom"><a href="#">分院管理</a></li>
 						</ul>
 						</li>
-						<li id="tuanwei_sz"><a href="#" class="zhsz">设置<img class="up_to_down" src="img/down.png"/></a>
+						<li id="tuanwei_sz"><a href="#" class="zhsz">设置<img class="up_to_down" src="../../img/tuanwei/down.png"/></a>
 						<ul class="tuanwei_select">
 						<li class="manage_top"><a href="#">标签设置</a></li>
 						<li><a href="#" class="tuanwei_zhsz_selected">账号设置</a></li>
 						<li class="manage_bottom"><a href="#">跨校区发布</a></li>
 						</ul>
 						</li>
-						<li id="tuanwei_jj"><a href="#" class="zzjj">简介<img class="up_to_down" src="img/down.png"/></a>
+						<li id="tuanwei_jj"><a href="#" class="zzjj">简介<img class="up_to_down" src="../../img/tuanwei/down.png"/></a>
 						<ul class="tuanwei_select">
 						<li class="manage_top"><a href="#">校园简介</a></li>
 						<li class="manage_bottom"><a href="org_profile.html">组织简介</a></li>
@@ -63,51 +61,22 @@
 				</div>
 				<div id="content">
 					<div id="up">
-						<a href="#">
-							帐号设置
-						</a>
-						<div id="edit">
-							<label>编辑</label>
+						<div class="tabbox">
+							<a href="#">
+								帐号设置
+							</a>						
 						</div>
 					</div>
 					<div id="down">
-						<!-- 原始帐号信息 -->
-						<div id="container">
-							<div class="left">
-								<img src="img/u1.png" />
-							</div>
-							<div class="right">
-								<table cellspacing="25">
-									<tr>
-										<td class="name">组织名称:</td><td class="val">求是设计协会</td>
-									</tr>
-									<tr>
-										<td class="name">组织简称:</td><td class="val">求协</td>
-									</tr>
-									<tr>
-										<td class="name">绑定邮箱:</td><td class="val">4516555@qq.com</td>
-									</tr>
-									<tr>
-										<td class="name">组织负责人:</td><td class="val">张明</td>
-									</tr>
-									<tr>
-										<td class="name">负责人电话:</td><td class="val">124455665855</td>
-									</tr>
-									<tr>
-										<td class="name">挂靠单位:</td><td class="val">校委会</td>
-									</tr>																										
-								</table>
-							</div>
-						</div>
-						<!-- 编辑栏(默认隐藏) -->
+						<!-- 编辑栏 -->
 						<div id="edit_container">
-							<form action="" method="post">
+							<form enctype="multipart/form-data" action="" method="post">
 								<div class="left">
-									<!-- 修改头像 -->
-										<img src="img/u1.png" id="origin_portrait" width="130" height="130"/>
-										<div class="modify_portrait">
-											<input type="file" name="" id="change_portrait"/>
-										</div>
+									<div class="modify_portrait">
+										<img src="../../img/tuanwei/u1.png" id="origin_portrait" width="130" height="130" /><!-- 修改头像(头像规格是130*130) -->
+										<a>修改</a>
+										<input type="file" name="" id="change_portrait"/>
+									</div>
 								</div>
 								<div class="right">
 									<table cellspacing="25">
@@ -128,12 +97,13 @@
 										</tr>
 										<tr>
 											<td class="name">挂靠单位:</td><td class="val"><input type="text" name="" value="校委会" /></td>
+										</tr>
+										<tr>
+											<td colspan="2" class="operation" align="right"><input type="button" name="" value="取消" /><input type="submit" name="" value="保存" /></td>
 										</tr>																										
 									</table>
 								</div>
-								<div class="operation">
-									<input type="submit" name="" value="保存" /><input type="button" name="" value="取消" />
-								</div>
+								<div style="clear:both"></div>
 							</form>
 						</div>
 					</div>
@@ -148,7 +118,8 @@
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="../lib/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="js/account_setting.js"></script>
-	<script type="text/javascript"src="js/tuanwei_common_menu.js"></script>
+	<script type="text/javascript" src="../../dependency/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="../../js/tuanwei/account_setting.js"></script>
+	<script type="text/javascript" src="../../dependency/jquery-ui.js"></script>
+	<script type="text/javascript"src="../../js/tuanwei/tuanwei_common_menu.js"></script>
 </html>
