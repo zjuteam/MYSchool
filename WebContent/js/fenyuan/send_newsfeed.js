@@ -42,9 +42,23 @@ function close() {
 	});
 }
 
-function testAddNewsfeed() {
+function submitForm() {
 	$('#dialog-form input[type="submit"]').click(function(event) {
+		
 		event.preventDefault();
+		
+		$("#dialog-form").dialog( "close" );	// 关闭对话框
+		$('#progressDialog').show();	// 打开加载框
+		
+		id = setInterval('publish()',1500); // 模拟网络操作 1500ms		
+		
+	});
+}
+function publish() {
+	
+		$('#progressDialog').hide();	// 隐藏加载框
+		clearInterval(id);
+		$('#notification').miniNotification({effect: 'fade',time: 300});
 		var theme = $("#theme").val();
 		var tag = $("#tag").val();
 		
@@ -82,8 +96,7 @@ function testAddNewsfeed() {
 				+ '</div>'
 				+ '</div>');
 		
-	   $("#dialog-form").dialog( "close" );	// close dialog
-	});
+	
 }
 
 function confirmDelete() {
@@ -100,6 +113,7 @@ function confirmDelete() {
 }
 
 var originPic;
+var id; // interval id
 
 function openFilePickDialog() {
 	$('#dialog-form .upload').click(function(event) {
@@ -207,4 +221,20 @@ function pickImg() {
 	        }
 	    });
 	});
+}
+
+function dialogInit() {
+	// hide snapshot2,3
+	$('#snapshot2').hide();
+	$('#snapshot3').hide();
+	changeImg();
+	save();
+	del();
+	close();
+	confirmDelete();
+	clearPhoneHint();
+	openFilePickDialog();
+	pickImg();
+	validate();
+	submitForm();
 }

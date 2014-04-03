@@ -202,24 +202,3 @@ textarea {
 
 /* end of activity item css */
 
-/* notification */
-#notification {
-    display: none;
-    position: fixed;
-    cursor: pointer;
-	box-shadow: 0px 0px 3px 3px #DBDBDB; /* IE9+ */
-    width: 300px;
-    height: 80px;
-    border-radius: 55px;
-    background-color: #fff;
-    text-align: center;
-    z-index:9999;
-    border: 1px solid #DBDBDB;
-    top: 70px !important;
-    left: 50%;
-    margin-left: -150px;
-    line-height: 80px;
-    vertical-align: middle;
-    font-size: 12px;
-    font-family: '黑体';
-}
