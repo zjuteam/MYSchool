@@ -16,3 +16,4 @@
 
 Note:
     新建资讯和新建活动对话框须在http上可打开（存在cross domain issue in browsers)
+ 2014-04-03 项目结构重构
