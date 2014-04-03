@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("../../common/common.css");
+@IMPORT url("../common/common.css");
 
 
 #content #up #tab {
@@ -49,10 +49,10 @@
 	font-family: '黑体';
 	width: 86px;
 	padding-left: 30px;
-	background: url("../img/u79.png") center left no-repeat;
+	background: url("../../img/fenyuan/u79.png") center left no-repeat;
 }
 #content #up #create_news:hover {
-	background: url("../img/u669.png") center left no-repeat;
+	background: url("../../img/fenyuan/u669.png") center left no-repeat;
 	color: #8A8C8A;
 	cursor: pointer;
 }

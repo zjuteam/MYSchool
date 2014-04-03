@@ -45,5 +45,21 @@
 		</form>
 	</div>
 </body>
-	<script type="text/javascript" src="js/create_newsfeed_dialog.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		// hide snapshot2,3
+		$('#snapshot2').hide();
+		$('#snapshot3').hide();
+		changeImg();
+		save();
+		del();
+		close();
+		testAddNewsfeed();
+		confirmDelete();
+		clearPhoneHint();
+		openFilePickDialog();
+		pickImg();
+		validate();
+	});
+	</script>
 </html>

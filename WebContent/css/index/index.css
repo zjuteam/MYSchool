@@ -14,24 +14,24 @@
 	float:right;
 }
 #download_btns .android {
-	background: url("../img/android_download_mouse_out.png");
+	background: url("../../img/index/android_download_mouse_out.png");
 	width: 125px;
 	height: 20px;
 	display: inline-block;
 }
 #download_btns .android:hover {
-	background: url("../img/android_download_mouse_over.png");
+	background: url("../../img/index/android_download_mouse_over.png");
 	width: 125px;
 	height: 20px;
 }
 #download_btns .iphone {
-	background: url("../img/iphone_download_mouse_out.png");
+	background: url("../../img/index/iphone_download_mouse_out.png");
 	width: 125px;
 	height: 20px;
 	display: inline-block;
 }
 #download_btns .iphone:hover {
-	background: url("../img/iphone_download_mouse_over.png");
+	background: url("../../img/index/iphone_download_mouse_over.png");
 	width: 125px;
 	height: 20px;
 }
@@ -45,7 +45,7 @@
 	width: 950px;
 	height: 540px;
 	margin: 0 auto 0 auto;
-	background:url('../img/u45.png') right bottom no-repeat;
+	background:url('../../img/index/u45.png') right bottom no-repeat;
 }
 #main_left {
 	float:left;

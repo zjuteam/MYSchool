@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("../../common/common.css");
+@IMPORT url("../common/common.css");
 
 #content #up #tab {
 	float: left;
@@ -10,7 +10,7 @@
 	border-right: 1px solid #DBDBDB;
 }
 
-#up .month {
+#up .week {
 	float: left;
 	display: block;
 	height: 47px;
@@ -27,7 +27,7 @@
 	font-family: '微软雅黑';
 }
 
-#up .week {
+#up .month {
 	float: left;
 	display: block;
 	height: 47px;
@@ -68,4 +68,8 @@
 	vertical-align: middle;
 	line-height: 550px;
 	text-align: center;
+}
+#dialog-form {
+	
+	display: none;
 }
