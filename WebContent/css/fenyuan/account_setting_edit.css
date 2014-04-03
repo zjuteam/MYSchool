@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("../../common/common.css");
+@IMPORT url("../common/common.css");
 
 
 #content #up #tab {
@@ -168,7 +168,7 @@ input[type="submit"]:hover, input[type="button"]:hover {
 }
 /* 对话框 */
 #dialog-form p {
-	background: url("../img/u141.png") center left no-repeat;
+	background: url("../../img/fenyuan/u141.png") center left no-repeat;
 	height: 48px;
 	text-align: center;
 	line-height: 48px;

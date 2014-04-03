@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("../../common/common.css");
+@IMPORT url("../common/common.css");
 
 
 #content #up #tab {
@@ -39,10 +39,10 @@
 	font-family: '黑体';
 	margin-right: 18px;
 	padding-left: 30px;
-	background: url("../img/u99.png") center left no-repeat;
+	background: url("../../img/fenyuan/u99.png") center left no-repeat;
 }
 #content #up #edit a:hover {
-	background: url("../img/u98.png") center left no-repeat;
+	background: url("../../img/fenyuan/u98.png") center left no-repeat;
 	color: #8A8C8A;
 	cursor: pointer;
 }
@@ -124,7 +124,7 @@ input[type="submit"]:hover, input[type="button"]:hover {
 }
 .left .modify_portrait {
 	margin-top: 30px;
-	background: url('../img/btn.png') no-repeat;
+	background: url('../../img/fenyuan/btn.png') no-repeat;
 	width: 121px;
 	height: 38px;
 }
@@ -150,7 +150,7 @@ input[type="submit"]:hover, input[type="button"]:hover {
 }
 /* 对话框 */
 #dialog-form p {
-	background: url("../img/u141.png") center left no-repeat;
+	background: url("../../img/fenyuan/u141.png") center left no-repeat;
 	height: 48px;
 	text-align: center;
 	line-height: 48px;

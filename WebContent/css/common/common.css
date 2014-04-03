@@ -137,27 +137,27 @@ li {
 }
 
 .fshd {
-	background: url("../fenyuan/img/send_activity.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/send_activity.png") 10% center no-repeat;
 }
 
 .fshd:hover {
-	background: url("../fenyuan/img/send_activity1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/send_activity1.png") 10% center no-repeat;
 }
 
 .tjbm {
-	background: url("../fenyuan/img/statistic.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/statistic.png") 10% center no-repeat;
 }
 
 .tjbm:hover {
-	background: url("../fenyuan/img/statistic1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/statistic1.png") 10% center no-repeat;
 }
 
 .fszx {
-	background: url("../fenyuan/img/send_newsfeed.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/send_newsfeed.png") 10% center no-repeat;
 }
 
 .fszx:hover {
-	background: url("../fenyuan/img/send_newsfeed1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/send_newsfeed1.png") 10% center no-repeat;
 }
 .zzgl{
 	background: url("../tuanwei/img/manage_ organizations.png") 10% center no-repeat;
@@ -166,19 +166,19 @@ li {
 	background: url("../tuanwei/img/manage_ organizations1.png") 10% center no-repeat;
 }
 .zhsz {
-	background: url("../fenyuan/img/setting.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/setting.png") 10% center no-repeat;
 }
 
 .zhsz:hover {
-	background: url("../fenyuan/img/setting1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/setting1.png") 10% center no-repeat;
 }
 
 .zzjj {
-	background: url("../fenyuan/img/profile.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/profile.png") 10% center no-repeat;
 }
 
 .zzjj:hover {
-	background: url("../fenyuan/img/profile1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/profile1.png") 10% center no-repeat;
 }
 .gongju{
 	background: url("../tuanwei/img/tool.png") 10% center no-repeat;
@@ -189,19 +189,19 @@ li {
 .fshd_selected {
 	color: #fff !important;
 	text-decoration: none;
-	background: url("../fenyuan/img/send_activity1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/send_activity1.png") 10% center no-repeat;
 	background-color: #55BB22 !important;
 }
 .tjbm_selected {
 	color: #fff !important;
 	text-decoration: none;
-	background: url("../fenyuan/img/statistic1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/statistic1.png") 10% center no-repeat;
 	background-color: #55BB22 !important;
 }
 .fszx_selected {
 	color: #fff !important;
 	text-decoration: none;
-	background: url("../fenyuan/img/send_newsfeed1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/send_newsfeed1.png") 10% center no-repeat;
 	background-color: #55BB22 !important;
 }
 .zzgl_selected {
@@ -213,13 +213,13 @@ li {
 .zhsz_selected {
 	color: #fff !important;
 	text-decoration: none;
-	background: url("../fenyuan/img/setting1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/setting1.png") 10% center no-repeat;
 	background-color: #55BB22 !important;
 }
 .zzjj_selected {
 	color: #fff !important;
 	text-decoration: none;
-	background: url("../fenyuan/img/profile1.png") 10% center no-repeat;
+	background: url("../../img/fenyuan/profile1.png") 10% center no-repeat;
 	background-color: #55BB22 !important;
 }
 .gongju_selected {
@@ -500,4 +500,25 @@ transform:scale(.3)}
 #progressDialog label {
 	line-height: 80px;
 	vertical-align: middle;
+}
+/* notification */
+#notification {
+    display: none;
+    position: fixed;
+    cursor: pointer;
+	box-shadow: 0px 0px 3px 3px #DBDBDB; /* IE9+ */
+    width: 300px;
+    height: 80px;
+    border-radius: 55px;
+    background-color: #fff;
+    text-align: center;
+    z-index:9999;
+    border: 1px solid #DBDBDB;
+    top: 70px !important;
+    left: 50%;
+    margin-left: -150px;
+    line-height: 80px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-family: '黑体';
 }

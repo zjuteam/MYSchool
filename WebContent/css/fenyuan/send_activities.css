@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("../../common/common.css");
+@IMPORT url("../common/common.css");
 
 
 
@@ -51,10 +51,10 @@
 	font-family: '黑体';
 	width: 86px;
 	padding-left: 30px;
-	background: url("../img/u79.png") center left no-repeat;
+	background: url("../../img/fenyuan/u79.png") center left no-repeat;
 }
 #content #up #create_acti:hover {
-	background: url("../img/u669.png") center left no-repeat;
+	background: url("../../img/fenyuan/u669.png") center left no-repeat;
 	color: #8A8C8A;
 	cursor: pointer;
 }
@@ -190,7 +190,7 @@ textarea {
 	width: 80px;
 	height: 30px;
 	display: inline-block;
-	background: url("../img/upload.png") no-repeat;
+	background: url("../../img/fenyuan/upload.png") no-repeat;
 }
 .ui-dialog {
 	border-radius: 0px !important;
@@ -202,24 +202,3 @@ textarea {
 
 /* end of activity item css */
 
-/* notification */
-#notification {
-    display: none;
-    position: fixed;
-    cursor: pointer;
-	box-shadow: 0px 0px 3px 3px #DBDBDB; /* IE9+ */
-    width: 300px;
-    height: 80px;
-    border-radius: 55px;
-    background-color: #fff;
-    text-align: center;
-    z-index:9999;
-    border: 1px solid #DBDBDB;
-    top: 70px !important;
-    left: 50%;
-    margin-left: -150px;
-    line-height: 80px;
-    vertical-align: middle;
-    font-size: 12px;
-    font-family: '黑体';
-}

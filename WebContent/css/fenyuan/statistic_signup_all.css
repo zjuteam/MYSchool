@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("../../common/common.css");
+@IMPORT url("../common/common.css");
 
 #content #up #tab {
 	float: left;

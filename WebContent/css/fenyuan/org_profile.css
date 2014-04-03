@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("../../common/common.css");
+@IMPORT url("../common/common.css");
 
 
 #content #up #tab {
@@ -73,13 +73,13 @@ textarea {
 }
 #container .upload .upload_file {
 	float: left;
-	background: url("../img/plus2.png") no-repeat center left;
+	background: url("../../img/fenyuan/plus2.png") no-repeat center left;
 	height: 100px;
 	width: 100px;
 }
 #container .upload .upload_file:hover {
 	cursor: pointer;
-	background: url("../img/u97.png") no-repeat center left;
+	background: url("../../img/fenyuan/u97.png") no-repeat center left;
 }
 #container .upload .display {
 	float: left;
