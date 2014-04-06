@@ -2,8 +2,8 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<title>组织管理——社团管理</title>
-<link rel="stylesheet" type="text/css" href="../../css/tuanwei/organizationl_manage_shetuan.css" />
+<title>组织管理——分院管理</title>
+<link rel="stylesheet" type="text/css" href="../../css/tuanwei/organizationl_manage_fenyuan.css" />
 <link rel="stylesheet" type="text/css" href="../../dependency/jquery-ui.css" />
 </head>
 <body>
@@ -31,9 +31,8 @@
 					<li id="tuanwei_zzgl"><a href="#" class="zzgl">组织管理<img
 							class="up_to_down" src="../../img/tuanwei/down.png" /></a>
 						<ul class="tuanwei_select">
-							<li class="manage_top"><a href="#"
-								class="tuanwei_stgl_selected">社团管理</a></li>
-							<li class="manage_bottom"><a href="organizationl_manage_fenyuan.html">分院管理</a></li>
+							<li class="manage_top"><a href="organizationl_manage_shetuan.html">社团管理</a></li>
+							<li class="manage_bottom"><a href="#" class="tuanwei_fygl_selected">分院管理</a></li>
 						</ul></li>
 					<li id="tuanwei_sz"><a href="#" class="zhsz">设置<img
 							class="up_to_down" src="../../img/tuanwei/down.png" /></a>
@@ -54,26 +53,26 @@
 			</div>
 			<div id="content">
 				<div id="up">
-					<a href="#"> 社团管理 </a>
+					<a href="#"> 分院管理 </a>
 				</div>
 
 				<div id="down">
-					<!-- 待审核、新增、总社团数统计 -->
-					<div id="shetuan_head">
-						<a href="#" id="uncheck_shetuan"
-							class="shetuan_count shetuan_select"> <img
-							src="../../img/tuanwei/uncheck.png" /> <span id="uncheck_shetuan_num"
-							class="num_count">15</span> <span id="uncheck_shetuan_name"
-							class="num_tag">待审核社团数</span>
+					<!-- 待审核、新增、总分院数统计 -->
+					<div id="fenyuan_head">
+						<a href="#" id="uncheck_fenyuan"
+							class="fenyuan_count fenyuan_select"> <img
+							src="../../img/tuanwei/uncheck.png" /> <span id="uncheck_fenyuan_num"
+							class="num_count">15</span> <span id="uncheck_fenyuan_name"
+							class="num_tag">待审核分院数</span>
 						</a>
-						<div class="shetuan_unselect">
-							<a href="organizationl_manage_addnew_shetuan.html"
-								id="newadd_shetuan" class="shetuan_count"> <img
+						<div class="fenyuan_unselect">
+							<a href="organizationl_manage_addnew_fenyuan.html"
+								id="newadd_fenyuan" class="fenyuan_count"> <img
 								src="../../img/tuanwei/addnew.png" /> <span class="num_count">15</span> <span
-								class="num_tag">新增社团数</span>
-							</a> <a href="organizationl_manage_allnum_shetuan.html" id="allnum_shetuan" class="shetuan_count"> <img
+								class="num_tag">新增分院数</span>
+							</a> <a href="organizationl_manage_allnum_fenyuan.html" id="allnum_fenyuan" class="fenyuan_count"> <img
 								id="allnum_img" src="../../img/tuanwei/allnum.png" /> <span class="num_count">94</span>
-								<span class="num_tag"> 总社团数 </span>
+								<span class="num_tag"> 总分院数 </span>
 							</a>
 						</div>
 						<div style="clear: both;"></div>
@@ -92,6 +91,6 @@
 	</div>
 </body>
 <script type="text/javascript" src="../../dependency/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="../../js/tuanwei/organizationl_manage_shetuan.js"></script>
+<script type="text/javascript" src="../../js/tuanwei/organizationl_manage_fenyuan.js"></script>
 <script type="text/javascript" src="../../js/tuanwei/tuanwei_common_menu.js"></script>
 </html>

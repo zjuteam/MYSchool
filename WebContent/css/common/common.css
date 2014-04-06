@@ -246,6 +246,7 @@ li {
     display: block;
     height: 29px !important;
     line-height: 29px !important;
+    font-size:14px;
 }
 .tuanwei_select li a:hover {
 	background-color: #55BB22;
