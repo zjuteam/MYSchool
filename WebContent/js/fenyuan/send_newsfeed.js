@@ -155,6 +155,7 @@ function save() {
 function del() {
 	$('.delete').click(function(event) {
 		event.preventDefault();
+		originPic.cancelSelection();	// 点击保存按钮时，会取消图片选择区域
 		$('#snapshot1').show();
 		$('#snapshot2').hide();
 	});
@@ -195,6 +196,16 @@ function preview(img, selection) {
 function pickImg() {
 	$("#pic").change(function(){
 	    if (this.files && this.files[0]) {
+	    	
+	    	// 扩展名判断 (jpg, png, gif, bmp)
+	    	var fileName = this.files[0].name;
+	    	var extention = fileName.substr(fileName.indexOf('.') + 1);
+	    	var pattern = /(jpg|png|gif|bmp)/;
+	    	if(!pattern.test(extention)) {
+	    		alert("支持的图片类型：jpg, png, gif, bmp");
+	    		return;
+	    	}
+	    	
 	        var reader = new FileReader();
 	        reader.onload = function (e) {
 	            $('#originPic').attr('src', e.target.result);
