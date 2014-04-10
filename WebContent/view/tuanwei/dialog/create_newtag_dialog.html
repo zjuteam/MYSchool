@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- 新建标签对话框  -->
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div id="dialog_body" >	
+		<form action="" method="post" id="form" enctype="multipart/form-data">
+			<fieldset>
+				<p>
+					<label>标签类型</label><input class="tag_style" name="tag" id="activity_tag" type="radio"/>活动标签
+					<input class="tag_style" name="tag" id="newsfeed_tag" type="radio"/>资讯标签
+					<input class="tag_style" name="tag" id="shetuan_tag" type="radio"/>社团标签
+				</p>
+				<p>
+					<label>标签名字</label><input id="tag_name" name="tag_name" type="text"/>
+				</p>	
+				<p>
+					<input type="submit" value="确认" /><button class="cancel">取消</button>
+				</p>		
+			</fieldset>
+		</form>
+	</div>
+</body>
+	<script type="text/javascript">
+	$(function() {
+		dialogInit();
+	});
+	</script>
+</html>
