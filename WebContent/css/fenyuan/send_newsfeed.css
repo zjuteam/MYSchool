@@ -115,11 +115,11 @@
 	width: 604px;
 }
 
-#dialog-form p {
+#dialog-form ul {
 	margin: 0 auto 20px auto;
 	width: 530px;
 }
-#dialog-form p label {
+#dialog-form li label {
 	font-size: 16px;
 	font-family: '宋体';
 }
@@ -129,18 +129,24 @@
 
 }
 
-#dialog-form p label {
+#dialog-form li label {
 	margin-right: 20px;
+	float: left;
 }
-#dialog-form p .top {
+#dialog-form li .top {
 	vertical-align: top;
+	float: left;
+}
+#dialog-form li {
+	margin-top: 20px;
 }
 #dialog-form select {
 	border: 1px solid #DBDBDB;
-	width: 465px;
+	width: 470px;
 	height: 30px;
 	font-size: 12px;
 	line-height: 30px;
+	float: right;
 	vertical-align: middle;
 }
 #dialog-form textarea {
@@ -148,6 +154,7 @@
 	height: 117px;
 	font-size: 12px;
 	padding-left: 3px;
+	float: right;
 	padding-top: 3px;
 	border: 1px solid #DBDBDB;
 }
@@ -155,6 +162,7 @@
 	width: 465px;
 	height: 30px;
 	padding-left: 3px;
+	float: right;
 }
 #dialog-form input[type='submit'] {
 	float: right;
@@ -174,6 +182,7 @@
 	background-color: #55BB22;
 	padding: 5px 25px 5px 25px;
 	border-radius: 6px;
+	float: left;
 }
 #dialog-form .upload:hover,.save:hover,.delete:hover,input[type='submit']:hover,.cancel:hover {
 	cursor: pointer;
@@ -231,7 +240,7 @@
 	padding: 5px 25px 5px 25px;
 	border-radius: 6px;
 }
-#dialog-form p a {
+#dialog-form ul a {
 	vertical-align: middle;
 	color: blue;
 }

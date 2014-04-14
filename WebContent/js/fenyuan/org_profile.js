@@ -2,6 +2,7 @@ $(function() {
 	clearHint();
 	profileImage();
 	openImgPickDialog();
+	UE.getEditor('profile_content');
 });
 
 function openImgPickDialog() {
@@ -10,24 +11,25 @@ function openImgPickDialog() {
 	});
 }
 function clearHint() {
-	$('input[type="text"]').focus(function() {
+	$('#mtitle').focus(function() {
 		if($(this).val() == '' || $(this).val() == '标题')
 			$(this).val('');
 	});
-	$('input[type="text"]').blur(function() {
+	$('#mtitle').blur(function() {
 		if($(this).val() == '') {
 			$(this).val('标题');
 		}
 	});
-	$('textarea').focus(function() {
-		if($(this).val() == '正文' || $(this).val() == '')
-		$(this).val('');
+	
+	$('.cellphone').focus(function() {
+		if($(this).val() == '' || $(this).val() == '输入手机号码')
+			$(this).val('');
 	});
-	$('textarea').blur(function() {
+	$('.cellphone').blur(function() {
 		if($(this).val() == '') {
-			$(this).val('正文');
+			$(this).val('输入手机号码');
 		}
-	});	
+	});
 }
 
 /* 在列表显式新添加的file */

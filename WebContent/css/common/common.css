@@ -316,6 +316,19 @@ a:visited {
 	text-decoration: none;
 }
 
+/* added in 4-14 contributor:tsw */
+button:hover {
+	cursor: pointer;
+	opacity: 0.9;
+	filter: alpha(opacity = 90);
+}
+
+input[type='text'] {
+	padding-left: 6px;
+}
+/* added end */
+
+
 input[type="button"]:hover {
 	opacity: 0.9;
 	filter: alpha(opacity = 90);

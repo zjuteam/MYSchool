@@ -56,10 +56,16 @@
 								</div>
 								<p>(支持的图片类型：jpg, png, gif, bmp)</p>
 								<div class="description">
-									<input type="text" name="" value="标题" />
-									<textarea name="" >正文</textarea>
+									<input type="text" name="" value="标题" id="mtitle"/>
+									<textarea id="profile_content" style="height: 360px;width: 698px;">正文</textarea>
+									
+									<div class="submitField">
+										<input type="submit" value="保存并更新" class="saveAndUpdate"/>
+										<button class="preview" >预览发送</button>
+										<input class="cellphone" type="text" value="输入手机号码" maxlength="14"/> <!-- +861876******* -->
+									</div>
 								</div>
-								<input type="submit" value="保存并更新" class="saveAndUpdate"/>						
+
 							</form>
 						</div>
 					</div>
@@ -76,4 +82,12 @@
 	</body>
 	<script type="text/javascript" src="../../dependency/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="../../js/fenyuan/org_profile.js"></script>
+	
+	<!-- ueditor -->
+	<!-- 配置文件 -->
+	<script type="text/javascript" src="../../dependency/ueditor/ueditor.config.js"></script>
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="../../dependency/ueditor/ueditor.all.min.js"></script>
+	<!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
+	<script type="text/javascript" src="../../dependency/ueditor/lang/zh-cn/zh-cn.js"></script>
 </html>
