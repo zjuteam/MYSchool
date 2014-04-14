@@ -10,6 +10,13 @@
 </style>
 </head>
 <body>
+		<!-- 提示对话框 -->
+		<div title="发送" id="dialog-form-confirm-send">
+			`<p>是否确认发送该资讯？</p>
+			 <button class="yes">是</button>
+			 <button class="no">否</button>
+		</div>
+		
 	<div id="dialog_body" >	
 		<form action="" method="post" id="form" enctype="multipart/form-data">
 			<fieldset>
@@ -20,7 +27,7 @@
 					<div style="clear:both"></div>
 				</li>
 				<li>
-					<label>标签</label><select><option>请选择</option><option>体育</option><option>娱乐</option></select>
+					<label>标签</label><select id="tag"><option>请选择</option><option>体育</option><option>娱乐</option></select>
 					<div style="clear:both"></div>
 				</li>
 				<li id="snapshot1">
@@ -41,11 +48,18 @@
 					<div style="clear:both"></div>
 				</li>
 				<li>
-					<label class="top">正文</label><textarea required name="body">正文</textarea>
+					<label class="top">正文</label>
+					<textarea required name="body" id="mNewsfeedContent" style="width: 470px;height: 117px;float: right;">正文</textarea>
 					<div style="clear:both"></div>
 				</li>
 				<li>
-					<button class="cancel">取消</button><input type="submit" value="发布" />
+					<button class="preview" >预览发送</button>
+				    <input class="cellphone" type="text" value="输入手机号码" maxlength="14"/> <!-- +861876******* -->
+				    <label class="cellphonehint">填写的手机帐号需已注册客户端</label>
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<button class="cancel">取消</button><input type="submit" id="publish_newsfeed" value="发布" />
 					<div style="clear:both"></div>
 				</li>
 				</ul>
@@ -56,6 +70,7 @@
 	<script type="text/javascript">
 	$(function() {
 		dialogInit();
+		var editor = UE.getEditor('mNewsfeedContent');
 	});
 	</script>
 </html>

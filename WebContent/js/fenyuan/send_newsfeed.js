@@ -3,19 +3,11 @@ $(function() {
 });
 
 
-function clearPhoneHint() {
-	$('#input_phone').focus(function() {
-		if($(this).val() == '输入手机号码')
-			$(this).val('');
-	});
-	
-	$('#input_phone').blur(function() {
-		if($(this).val() == '') {
-			$(this).val('输入手机号码');
-		}
-	});
-	
+function usefulHint() {
+	infoHint('#theme','少于16个字');
+	infoHint('.cellphone','输入手机号码');
 }
+
 function publishNewsfeed() {
 	$('#create_news').click(function() {
 		$('#dialog-form').dialog({
@@ -27,7 +19,7 @@ function publishNewsfeed() {
 				  },	
 				  show: { effect: "fold", duration: 300
 				  },
-			      height: 502,
+			      height: 660,
 			      width: 640,
 			      draggable: false,
 			      resizable: false,
@@ -37,21 +29,49 @@ function publishNewsfeed() {
 }
 
 function close() {
-	$('input[type="button"]').click(function() {
-		$('#dialog-form').dialog("close");
+	$('.cancel').click(function(event) {
+		event.preventDefault();
+		$('#dialog-form').dialog("destroy");
 	});
 }
 
-function submitForm() {
-	$('#dialog-form input[type="submit"]').click(function(event) {
-		
+
+/* 对话框是否事件 */
+function dialogEvent() {
+	$('.yes').click(function(event) {
 		event.preventDefault();
-		
-		$("#dialog-form").dialog( "close" );	// 关闭对话框
+		$("#dialog-form-confirm-send").dialog( "destroy" );	// 关闭对话框
+		$("#dialog-form").dialog( "destroy" );	// 关闭对话框
 		$('#progressDialog').show();	// 打开加载框
-		
-		id = setInterval('publish()',1500); // 模拟网络操作 1500ms		
-		
+		id = setInterval('publish()',1500); // 模拟网络操作 1500ms	
+	});
+	$('.no').click(function(event) {
+		event.preventDefault();
+		$('#dialog-form-confirm-send').dialog("close");
+	});
+}
+
+function publishNewsFeedConfirmDialog() {
+	$('#publish_newsfeed').click(function(event) {
+		event.preventDefault();
+		$('#dialog-form-confirm-send').dialog({
+		      height: 220,
+		      width: 400,
+		      draggable: false,
+		      resizable: false,
+		      modal: true	/* prevent user from interacting with the rest of the page. */
+	});
+	});
+	
+	$('.preview').click(function(event) {
+		event.preventDefault();
+		$('#dialog-form-confirm-send').dialog({
+		      height: 220,
+		      width: 400,
+		      draggable: false,
+		      resizable: false,
+		      modal: true	/* prevent user from interacting with the rest of the page. */
+	});
 	});
 }
 function publish() {
@@ -243,9 +263,10 @@ function dialogInit() {
 	del();
 	close();
 	confirmDelete();
-	clearPhoneHint();
+	usefulHint();
 	openFilePickDialog();
 	pickImg();
 	validate();
-	submitForm();
+	publishNewsFeedConfirmDialog();
+	dialogEvent();
 }
