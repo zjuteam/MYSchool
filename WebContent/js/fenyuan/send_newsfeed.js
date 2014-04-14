@@ -1,5 +1,6 @@
 $(function() {
 	publishNewsfeed();
+	editNewsfeed();
 });
 
 
@@ -8,6 +9,26 @@ function usefulHint() {
 	infoHint('.cellphone','输入手机号码');
 }
 
+function editNewsfeed() {
+	$('#edit_newsfeed').click(function(event) {
+		event.preventDefault();
+		$('#dialog-form').dialog({
+			 open: function(event, ui) {
+			   $(this).load('dialog/create_newsfeed_dialog.html', function() {
+			   });
+			  },
+			  close: function(event, ui) {
+			  },	
+			  show: { effect: "fold", duration: 300
+			  },
+		      height: 660,
+		      width: 640,
+		      draggable: false,
+		      resizable: false,
+		      modal: true	/* prevent user from interacting with the rest of the page. */
+	});
+	});
+}
 function publishNewsfeed() {
 	$('#create_news').click(function() {
 		$('#dialog-form').dialog({
