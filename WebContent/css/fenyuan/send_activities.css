@@ -59,7 +59,7 @@
 	cursor: pointer;
 }
 #content #down {
-	height: 526px;
+	min-height: 526px;
 
 }
 #down .activity {

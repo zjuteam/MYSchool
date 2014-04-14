@@ -79,7 +79,7 @@
 	font-family: '宋体';
 }
 #content #down {
-	height: 526px;
+	min-height: 526px;
 	text-align: center;
 	vertical-align: middle;
 }

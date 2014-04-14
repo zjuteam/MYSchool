@@ -57,7 +57,7 @@
 	cursor: pointer;
 }
 #content #down {
-	height: 526px;
+	min-height: 526px;
 }
 
 /* borrow from activity */
