@@ -3,6 +3,7 @@ $(function() {
 	changePortrait();
 	dialogEvent();
 	openFilePickDialog();
+
 });
 
 

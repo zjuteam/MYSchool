@@ -182,24 +182,22 @@ input[type="submit"]:hover, input[type="button"]:hover {
 	color: #fff;
 	width: 90px;
 	height: 30px;
-	padding: 8px 35px 8px 35px;
+	line-height: 30px;
+	vertical-align: middle;
 	font-size: 16px;
 	border-radius: 6px;
 	margin-left: 86px;
 	margin-top: 20px;
 }
-#dialog-form .yes:hover,#dialog-form .no:hover,.operation input[type='submit']:hover {
-	cursor: pointer;
-	opacity: 0.8;
-	filter:alpha(opacity="80");
-}
+
 #dialog-form .no {
 	margin-top: 20px;
 	background-color: #515151;
 	color: #fff;
 	width: 90px;
 	height: 30px;
-	padding: 8px 35px 8px 35px;
+	line-height: 30px;
+	vertical-align: middle;
 	font-size: 16px;
 	border-radius: 6px;
 }

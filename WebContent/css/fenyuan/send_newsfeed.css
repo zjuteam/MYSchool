@@ -336,24 +336,22 @@
 	color: #fff;
 	width: 90px;
 	height: 30px;
-	padding: 8px 35px 8px 35px;
 	font-size: 16px;
 	border-radius: 6px;
 	margin-left: 86px;
 	margin-top: 20px;
+	line-height: 30px;
+	vertical-align: middle;
 }
-#dialog-form-confirm-send .yes:hover,#dialog-form-confirm-send .no:hover,.operation input[type='submit']:hover {
-	cursor: pointer;
-	opacity: 0.8;
-	filter:alpha(opacity="80");
-}
+
 #dialog-form-confirm-send .no {
 	margin-top: 20px;
 	background-color: #515151;
 	color: #fff;
 	width: 90px;
 	height: 30px;
-	padding: 8px 35px 8px 35px;
+	line-height: 30px;
+	vertical-align: middle;
 	font-size: 16px;
 	border-radius: 6px;
 }
