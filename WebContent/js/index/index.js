@@ -8,7 +8,31 @@ var sliding = null;
 var intervalTime = 3000;
 var imageSpeed = 1000;
 
+function testPrompt() {
+	$('input[type="submit"]').click(function(event) {
+		event.preventDefault();
+		var href = prompt('请问你要登录的后台是？','团委后台');
+		switch(href) {
+		case '团委后台':
+			window.location.href="view/tuanwei/send_activities.html";
+		break;
+		case '分院后台':
+			window.location.href="view/fenyuan/send_activities.html";
+		break;
+		case '社团后台':
+			window.location.href="view/shetuan/send_activities.html";
+		break;
+		case null:
+			break;
+		default:
+			alert('输入有误');
+		break;
+		}
+	});
+}
+
 $(function(){
+	testPrompt();
 	funcHover();
 	loadTime();
 	slideScreen();
