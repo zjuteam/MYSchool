@@ -13,6 +13,7 @@ function openImgPickDialog() {
 function usefulHint() {
 	infoHint('#mtitle', '标题');
 	infoHint('.cellphone', '输入手机号码');
+	infoHint('#profile_content','正文');
 }
 
 /* 在列表显式新添加的file */
