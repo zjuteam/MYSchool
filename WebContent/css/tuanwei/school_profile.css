@@ -6,7 +6,7 @@
 	display:block;
 }
 #tuanwei_jj .tuanwei_xyjj_selected{
-	background-color: #55BB22;
+	background-color: #84D84B;
 	color: #fff;
 	text-decoration: none;
 }
@@ -37,7 +37,7 @@
 	font-family: '微软雅黑';
 }
 #content #down {
-	height: 526px;
+	min-height: 526px;
 	text-align: center;
 	vertical-align: middle;
 

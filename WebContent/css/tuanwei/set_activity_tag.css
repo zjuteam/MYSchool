@@ -6,7 +6,7 @@
 	display:block;
 }
 #tuanwei_sz .tuanwei_bqsz_selected{
-	background-color: #55BB22;
+	background-color: #84D84B;
 	color: #fff;
 	text-decoration: none;
 }
@@ -79,7 +79,7 @@
 	cursor: pointer;
 }
 #content #down {
-	height: 526px;
+	min-height: 526px;
 }
 
 /* 新建标签弹出框样式 */

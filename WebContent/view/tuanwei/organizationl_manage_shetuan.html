@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>组织管理——社团管理</title>
+<link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="../../css/tuanwei/organizationl_manage_shetuan.css" />
 <link rel="stylesheet" type="text/css" href="../../dependency/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="../../dependency/jqGrid/css/jquery-ui-1.10.4.custom.css"  />
+<link rel="stylesheet" type="text/css" href="../../dependency/jqGrid/css/ui.jqgrid.css"  />
 </head>
 <body>
 	<div id="header_wrapper">
@@ -16,7 +20,7 @@
 			</div>
 			<div id="right_side">
 				<img src="../../img/tuanwei/u117.png" /> <a href="account_setting.html"
-					class="word">欢迎求是设计协会</a> <img src="../../img/tuanwei/u196.png" class="notify" />
+					class="word">欢迎求是设计协会</a>
 				<span class="word">|</span> <a href="../index.html" class="word">注销</a>
 			</div>
 		</div>
@@ -29,7 +33,7 @@
 					<li><a href="statistic_signup.html" class="tjbm">统计报名</a></li>
 					<li><a href="send_newsfeed.html" class="fszx">发送资讯</a></li>
 					<li id="tuanwei_zzgl"><a href="#" class="zzgl">组织管理<img
-							class="up_to_down" src="../../img/tuanwei/down.png" /></a>
+							class="up_to_down" src="../../img/tuanwei/up.png" /></a>
 						<ul class="tuanwei_select">
 							<li class="manage_top"><a href="#"
 								class="tuanwei_stgl_selected">社团管理</a></li>
@@ -78,6 +82,12 @@
 						</div>
 						<div style="clear: both;"></div>
 					</div>
+					
+					<!-- 创建表格 -->
+					<div id="shetuan_table">
+					<table id="list"></table>
+					<div id="pager_List"></div><!-- 分页组件 -->					
+					</div>
 				</div>
 			</div>
 			<div style="clear: both"></div>
@@ -92,6 +102,11 @@
 	</div>
 </body>
 <script type="text/javascript" src="../../dependency/jquery-1.11.0.min.js"></script>
+<!-- <script src="../../dependency/jsGrid/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="../../dependency/jsGrid/js/jquery-ui.min.js" type="text/javascript"></script> -->
+<script type="text/javascript" src="../../dependency/jquery-ui.js"></script>
+<script type="text/javascript" src="../../dependency/jsGrid/js/grid.locale-en.js" ></script>
+<script type="text/javascript" src="../../dependency/jsGrid/js/jquery.jqGrid.min.js" ></script>
 <script type="text/javascript" src="../../js/tuanwei/organizationl_manage_shetuan.js"></script>
 <script type="text/javascript" src="../../js/tuanwei/tuanwei_common_menu.js"></script>
 </html>

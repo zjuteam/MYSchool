@@ -6,7 +6,7 @@
 	display:block;
 }
 #tuanwei_zzgl .tuanwei_stgl_selected{
-	background-color: #55BB22;
+	background-color: #84D84B;
 	color: #fff;
 	text-decoration: none;
 }
@@ -28,6 +28,9 @@
 	font-size: 20px;
 	color: #000;
 	font-family: '微软雅黑';
+}
+#content #down {
+	min-height: 526px;
 }
 #shetuan_head{
 	margin-left:25px;

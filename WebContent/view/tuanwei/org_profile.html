@@ -3,13 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>组织简介</title>
+ 		<link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../../css/tuanwei/org_profile.css" />
 	</head>
 	<body>
 		<div id="header_wrapper">
 			<div id="header">
 				<div id="left_side">
-					<img alt="logo" src="../../img/tuanwei/u15.png" />
+					<img alt="logo" src="../../img/tuanwei/u15.png" id="logo"/>
 					<img src="../../img/tuanwei/u549.png" class="word1" />
 					<img src="../../img/tuanwei/u546_line.png" />
 					<label class="word2">后台</label>
@@ -17,7 +19,6 @@
 				<div id="right_side">
 					<img src="../../img/tuanwei/u117.png" />
 					<a href="account_setting.html" class="word">欢迎求是设计协会</a>
-					<img src="../../img/tuanwei/u196.png" class="notify" />
 					<span class="word">|</span>
 					<a href="../../index.html" class="word">注销</a>
 				</div>
@@ -43,7 +44,7 @@
 						<li class="manage_bottom"><a href="kuaxiaoqu_publish.html">跨校区发布</a></li>
 						</ul>
 						</li>
-						<li id="tuanwei_jj"><a href="#" class="zzjj">简介<img class="up_to_down" src="../../img/tuanwei/down.png"/></a>
+						<li id="tuanwei_jj"><a href="#" class="zzjj">简介<img class="up_to_down" src="../../img/tuanwei/up.png"/></a>
 						<ul class="tuanwei_select">
 						<li class="manage_top"><a href="school_profile.html">校园简介</a></li>
 						<li class="manage_bottom"><a href="#" class="tuanwei_zzjj_selected">组织简介</a></li>
@@ -62,22 +63,27 @@
 						<div id="container">
 							<form action="" method="post" enctype="multipart/form-data" >
 								<div class="upload">
-									<div class="upload_file"></div>
+									<div class="upload_file" ></div>
 									<input type="file" name="" id="profile_image"/>
-									<div class="display">
+									<div class="display" >
 										<ul>
-<!-- 											<li><img src="../../img/tuanwei/u91.png" /></li>
-											<li><img src="../../img/tuanwei/u91.png" /></li> -->
+											<!-- <li><img src="../../img/tuanwei/u91.png" /></li> -->
 										</ul>
 									</div>
 									<div style="clear:both"></div>
 								</div>
-								<p>(支持的图片类型：jpg, png, gif, bmp)</p>
+								<label>(支持的图片类型：jpg, png, gif, bmp)</label>
 								<div class="description">
-									<input type="text" name="" value="标题" />
-									<textarea name="" >正文</textarea>
+									<input type="text" name="" value="标题" id="mtitle"/>
+									<textarea id="profile_content" style="height: 360px;width: 698px;"></textarea>
+									
+									<div class="submitField">
+										<input type="submit" value="保存并更新" class="saveAndUpdate"/>
+										<button class="preview" >预览发送</button>
+										<input class="cellphone" type="text" value="输入手机号码" maxlength="14"/> <!-- +861876******* -->
+									</div>
 								</div>
-								<input type="submit" value="保存并更新" class="saveAndUpdate"/>						
+
 							</form>
 						</div>
 					</div>
@@ -92,7 +98,16 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
 	<script type="text/javascript" src="../../dependency/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="../../js/tuanwei/org_profile.js"></script>
 	<script type="text/javascript"src="../../js/tuanwei/tuanwei_common_menu.js"></script>
+	
+	<!-- ueditor -->
+	<!-- 配置文件 -->
+	<script type="text/javascript" src="../../dependency/ueditor/ueditor.config.js"></script>
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="../../dependency/ueditor/ueditor.all.min.js"></script>
+	<!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
+	<script type="text/javascript" src="../../dependency/ueditor/lang/zh-cn/zh-cn.js"></script>
 </html>

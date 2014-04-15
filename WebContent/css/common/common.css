@@ -136,7 +136,9 @@ li {
 	color: #fff;
 	text-decoration: none;
 }
-
+#menu ul li .tuanwei_select li a:hover{
+	background-color: #84D84B;
+}
 .fshd {
 	background: url("../../img/fenyuan/send_activity.png") 10% center no-repeat;
 }

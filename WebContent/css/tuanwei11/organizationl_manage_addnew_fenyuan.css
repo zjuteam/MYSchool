@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+/* 新增分院样式 */
+#fenyuan_around{
+	width:676px;
+	position:relative;
+	box-shadow: 0 0 6px 1px #C1C6C1;
+	height:135px;
+}
+a.fenyuan_select{
+	left:225px;
+}
+#allnum_fenyuan{
+	position:relative;
+	left:226px;
+}

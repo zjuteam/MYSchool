@@ -6,7 +6,7 @@
 	display:block;
 }
 #tuanwei_sz .tuanwei_zhsz_selected{
-	background-color: #55BB22;
+	background-color: #84D84B;
 	color: #fff;
 	text-decoration: none;
 }
@@ -86,7 +86,7 @@
 	font-family: '宋体';
 }
 #content #down {
-	height: 526px;
+	min-height: 526px;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -189,24 +189,22 @@ input[type="submit"]:hover, input[type="button"]:hover {
 	color: #fff;
 	width: 90px;
 	height: 30px;
-	padding: 8px 35px 8px 35px;
+	line-height: 30px;
+	vertical-align: middle;
 	font-size: 16px;
 	border-radius: 6px;
 	margin-left: 86px;
 	margin-top: 20px;
 }
-#dialog-form .yes:hover,#dialog-form .no:hover,.operation input[type='submit']:hover {
-	cursor: pointer;
-	opacity: 0.8;
-	filter:alpha(opacity="80");
-}
+
 #dialog-form .no {
 	margin-top: 20px;
 	background-color: #515151;
 	color: #fff;
 	width: 90px;
 	height: 30px;
-	padding: 8px 35px 8px 35px;
+	line-height: 30px;
+	vertical-align: middle;
 	font-size: 16px;
 	border-radius: 6px;
 }

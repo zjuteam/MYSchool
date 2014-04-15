@@ -59,7 +59,7 @@
 	cursor: pointer;
 }
 #content #down {
-	height: 526px;
+	min-height: 526px;
 
 }
 #down .activity {
@@ -115,10 +115,6 @@
 	text-align: center;
 }
 
-
-#content #down label {
-} 
-
 #dialog-form {
 	display: none;
 	padding-top: 10px;
@@ -127,17 +123,13 @@
 	margin: 0 auto 0 auto;
 }
 
-#dialog-form table label {
-	float: right;
-	font-size: 16px;
-}
 .hint {
 	font-family: '宋体';
 	color: #FF8040;
 	font-size: 12px !important;
 }
 #start_time,#end_time {
-	width: 140px;
+	width: 149px;
 }
 #dialog-form .input {
 	width: 400px;
@@ -145,6 +137,10 @@
 input,select {
 	border: 1px solid #DBDBDB;
 	height: 30px;
+	font-family: '宋体';
+}
+input[type='text'],select {
+	font-size: 12px !important;
 }
 textarea {
 	border: 1px solid #DBDBDB;
@@ -177,9 +173,7 @@ textarea {
 	cursor: pointer;
 }
 #dialog-form input[type='file'] {
-	width: 80px;
-	height: 30px;
-	opacity: 0;
+	display: none;
 }
 .supported {
 	color: #888;
@@ -189,8 +183,12 @@ textarea {
 #dialog-form .upload {
 	width: 80px;
 	height: 30px;
+	border-radius: 6px;
 	display: inline-block;
-	background: url("../../img/fenyuan/upload.png") no-repeat;
+	background-color: #55BB22;
+	color: #fff;
+	float: left;
+	margin-left: 20px;
 }
 .ui-dialog {
 	border-radius: 0px !important;
@@ -201,4 +199,232 @@ textarea {
 
 
 /* end of activity item css */
+
+/* added from newsfeed */
+#dialog-form {
+	display: none;
+	padding-top: 40px;
+	width: 604px;
+}
+
+#dialog-form ul {
+	margin: 0 auto 20px auto;
+	width: 558px;
+}
+
+#dialog-form input {
+	border: 1px solid #DBDBDB;
+	font-size: 12px;
+}
+
+#dialog-form li label {
+	font-size: 16px;
+	font-family: '宋体';
+	float: left;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: right;
+	width: 78px;
+}
+
+#dialog-form li .top {
+	vertical-align: top;
+	float: left;
+}
+
+#dialog-form li {
+	margin-top: 15px;
+}
+.asteri:before {
+	content:'*';
+	color: red;
+	font-size: 16px;
+}
+#dialog-form select {
+	border: 1px solid #DBDBDB;
+	width: 470px;
+	height: 30px;
+	font-size: 12px;
+	line-height: 30px;
+	float: right;
+	vertical-align: middle;
+}
+
+#dialog-form input[type='text'] {
+	width: 465px;
+	height: 30px;
+	float: right;
+}
+
+#dialog-form input[type='submit'] {
+	float: right;
+	background-color: #55BB22;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 6px;
+	width: 90px;
+	height: 30px;
+	margin-right: 18px;
+}
+
+#dialog-form input[type='file'] {
+	visibility: hidden;
+}
+
+
+#dialog-form .upload:hover,.save:hover,.delete:hover,input[type='submit']:hover,.cancel:hover
+	{
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+}
+
+#dialog-form .supported {
+	color: #888;
+	vertical-align: middle;
+	line-height: 30px;
+	width: auto;
+	margin-left: 30px;
+}
+
+#dialog-form .cancel {
+	float: right;
+	height: 30px;
+	background-color: #666666;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 6px;
+	width: 90px;
+}
+
+#confirm_delete:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#dialog-confirm {
+	display: none;
+}
+
+#dialog-confirm .confirm_panel {
+	
+}
+
+#dialog-confirm ul {
+	
+}
+
+#dialog-confirm ul li {
+	
+}
+
+#dialog-confirm img {
+	
+}
+
+.hint {
+	font-family: '宋体';
+	color: #FF8040;
+	font-size: 12px !important;
+	margin-left: 120px;
+}
+
+.save {
+	margin-top: 15px;
+	color: #fff;
+	background-color: #55BB22;
+	padding: 5px 25px 5px 25px;
+	border-radius: 6px;
+}
+
+.delete {
+	margin-top: 15px;
+	margin-left: 20px;
+	color: #fff;
+	background-color: #999999;
+	padding: 5px 25px 5px 25px;
+	border-radius: 6px;
+}
+
+#dialog-form ul a {
+	vertical-align: middle;
+	color: blue;
+}
+
+.ui-dialog {
+	border-radius: 0px !important;
+}
+
+.preview {
+	height: 30px !important;
+	width: 80px !important;
+	color: #fff !important;
+	background-color: #55BB22 !important;
+	float: right !important;
+	font-size: 12px !important;
+	font-family: '宋体' !important;
+	text-align: right !important;
+	padding-right: 6px !important;
+}
+
+.cellphone {
+	width: 130px !important;
+	height: 28px !important;
+	border: 1px solid #DBDBDB !important;
+	float: right !important;
+	color: #ccc !important;
+	font-size: 12px !important;
+	font-family: '宋体' !important;
+}
+
+.cellphonehint {
+	height: 30px  !important;
+	vertical-align: middle  !important;
+	line-height: 30px  !important;
+	color: #FF8040  !important;
+	font-size: 12px  !important;
+	font-family: '宋体'  !important;
+	float: right  !important;
+	margin-right: 14px !important;
+	width: auto !important;
+}
+/* 是否确认发送资讯对话框 */
+#dialog-form-confirm-send {
+	display: none;
+}
+#dialog-form-confirm-send p {
+	background: url("../../img/fenyuan/u141.png") center left no-repeat;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	vertical-align: middle;
+	width: 360px;
+	font-size: 16px;
+	padding-left: 12px;
+}
+#dialog-form-confirm-send .yes {
+	background-color: #55BB22;
+	color: #fff;
+	width: 90px;
+	height: 30px;
+	font-size: 16px;
+	border-radius: 6px;
+	margin-left: 86px;
+	margin-top: 20px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+#dialog-form-confirm-send .no {
+	margin-top: 20px;
+	background-color: #515151;
+	color: #fff;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 16px;
+	border-radius: 6px;
+}
+/* 发送资讯对话框结束 */
 

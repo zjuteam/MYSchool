@@ -1,75 +1,92 @@
 <!DOCTYPE html>
-<!-- 新建活动对话框 -->
+<!-- 新建资讯对话框  -->
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
+<style>
+	input {
+		width: 466px;
+	}
+</style>
 </head>
 <body>
-	<form action="" method="post" enctype="multipart/form-data">
-		<fieldset>
-			<table cellspacing="15">
-				<tr>
-					<td><label>标题</label></td>
-					<td colspan="3"><input type="text" maxlength="16"
-						id="input_title" value="少于16个字" class="input" /></td>
-				</tr>
-				<tr>
-					<td><label>标签</label></td>
-					<td colspan="3"><select class="input" id="input_tag"><option>体育</option></select></td>
-				</tr>
-				<tr>
-					<td><label>活动配图</label></td>
-					<td colspan="3"><div class="upload">
-							<input type="file" name="" />
-						</div> <label class="supported">(支持的图片类型：jpg, png, gif, bmp)</label></td>
-				</tr>
-				<tr>
-					<td><label>开始时间</label></td>
-					<td><input type="text" id="start_time" /></td>
-					<td><label>结束时间</label></td>
-					<td><input type="text" id="end_time" /></td>
-				</tr>
-				<tr>
-					<td><label>活动地点</label></td>
-					<td colspan="3"><input class="input" type="text" /></td>
-				</tr>
-				<tr>
-					<td><label>主办方</label></td>
-					<td colspan="3"><input class="input" type="text" /></td>
-				</tr>
-				<tr>
-					<td><label>赞助商</label></td>
-					<td colspan="3"><input class="input" type="text" /></td>
-				</tr>
-				<tr>
-					<td><label class="upper">正文</label></td>
-					<td colspan="3"><textarea></textarea></td>
-				</tr>
-				<tr>
-					<td colspan="2"><label class="hint">填写的手机帐号需已注册客户端</label></td>
-					<td colspan="2" align="right">
-						<form action="" method="post">
-							<input type="text" value="输入手机号码" maxlength="11"
-								style="width: 130px; height: 28px; vertical-align: middle;" />
-							<button
-								style="height: 30px; background-color: #55BB22; font-size: 12px; color: #fff; width: 80px; vertical-align: middle;">预览发送</button>
-						</form>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2"></td>
-					<td colspan="2"><input type="button" value="发送" class="send" /><input
-						type="button" value="取消" class="cancel" /></td>
-				</tr>
-			</table>
-		</fieldset>
-	</form>
+		<!-- 提示对话框 -->
+		<div title="发送" id="dialog-form-confirm-send">
+			`<p>是否确认发送该活动？</p>
+			 <button class="yes">是</button>
+			 <button class="no">否</button>
+		</div>
+		
+	<div id="dialog_body" >	
+		<form action="" method="post" id="form" enctype="multipart/form-data">
+			<fieldset>
+				<ul>
+				
+				<li>
+					<label class="asteri">标题</label><input id="input_title" name="title" type="text" required maxlength="16" value="少于16个字" />
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<label>标签</label><select id="input_tag"><option>请选择</option><option>体育</option><option>娱乐</option></select>
+					<div style="clear:both"></div>
+				</li>
+				<li id="snapshot1">
+					<label>活动配图</label><button class="upload">上传</button><label class="supported">(支持的图片类型：jpg, png, gif, bmp)</label><input type="file" id="pic"/>
+					<div style="clear:both"></div>
+				</li>
+				<li id="snapshot2">
+					<label class="top">活动配图</label><img src="" width="220" height="120" id="originPic" style="margin-left: 20px"/>
+					 <span id="preview" style="float: right; margin-right: 100px;width: 110px; height: 110px; overflow: hidden;"><img src="" style="width: 110px; height: 110px;" id="final" /></span>
+					<button class="save" style="margin-left: 100px;">保存</button><button class="delete">删除</button>
+					<input type="hidden" name="x1" value="" />
+					<input type="hidden" name="y1" value="" />
+					<input type="hidden" name="x2" value="" />
+					<input type="hidden" name="y2" value="" />
+				</li>
+				<li id="snapshot3">
+					<label class="top" style="float: left;">活动配图</label><span id="final2" style="width: 110px; height: 110px; margin-left: 20px;overflow: hidden;float: left;"><img src="" width="110" height="110" /></span><a href="" id="changeImg" style="vertical-align: middle;line-height: 110px;">更改图片</a>
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<span style="float:left;"><label class="asteri">开始时间</label><input id="start_time" name="" type="text" style="width: 140px;height: 30px;margin-left: 18px;" /></span>
+					<span style="float: right;"><label>结束时间</label><input id="end_time" name="" type="text" style="width: 140px;height: 30px;margin-left: 18px;" /></span>
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<label class="asteri">活动地点</label><input id="place" name="" type="text" />
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<label>主办方</label><input id="host" name="" type="text" />
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<label>赞助商</label><input id="sponser" name="" type="text" />
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<label class="top asteri">正文</label>
+					<textarea required name="body" id="activity_content" style="width: 470px;height: 117px;float: right;"></textarea>
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<button class="preview" >预览发送</button>
+				    <input class="cellphone" type="text" value="输入手机号码" maxlength="14"/> <!-- +861876******* -->
+				    <label class="cellphonehint">填写的手机帐号需已注册客户端</label>
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<button class="cancel">取消</button><input type="submit" id="publish_newsfeed" value="发布" />
+					<div style="clear:both"></div>
+				</li>
+				</ul>
+			</fieldset>
+		</form>
+	</div>
 </body>
-<script>
+	<script type="text/javascript">
 	$(function() {
-		close();	/* 关闭事件 */
-		pickTime();	/* 时间弹出事件 */
-		sendActivity();	/* 模拟发送事件 */
+		dialogInit();
 	});
-</script>
+	</script>
 </html>
