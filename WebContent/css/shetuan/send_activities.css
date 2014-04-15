@@ -51,10 +51,10 @@
 	font-family: '黑体';
 	width: 86px;
 	padding-left: 30px;
-	background: url("../../img/fenyuan/u79.png") center left no-repeat;
+	background: url("../../img/shetuan/u79.png") center left no-repeat;
 }
 #content #up #create_acti:hover {
-	background: url("../../img/fenyuan/u669.png") center left no-repeat;
+	background: url("../../img/shetuan/u669.png") center left no-repeat;
 	color: #8A8C8A;
 	cursor: pointer;
 }
@@ -393,7 +393,7 @@ textarea {
 	display: none;
 }
 #dialog-form-confirm-send p {
-	background: url("../../img/fenyuan/u141.png") center left no-repeat;
+	background: url("../../img/shetuan/u141.png") center left no-repeat;
 	height: 48px;
 	text-align: center;
 	line-height: 48px;
