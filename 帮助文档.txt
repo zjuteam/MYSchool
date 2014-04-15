@@ -1,0 +1,11 @@
+控件说明：
+如何使用minNotification.js插件
+步骤一：引入库文件(依赖jQuery插件)
+ 		<script type="text/javascript" src="../../dependency/miniNotification.js"></script>
+步骤二：任意位置添加如下代码块
+		<div id="notification">
+		  content goes here
+		</div>
+步骤三：js初始化并设置相关参数，包括效果和时间
+	$('#notification').miniNotification({effect: 'fade',time: 300});
+Done...

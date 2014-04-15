@@ -1,3 +1,5 @@
+var editor;
+
 $(function() {
 	publishNewsfeed();
 	editNewsfeed();
@@ -34,6 +36,7 @@ function publishNewsfeed() {
 		$('#dialog-form').dialog({
 				 open: function(event, ui) {
 				   $(this).load('dialog/create_newsfeed_dialog.html', function() {
+						editor = UE.getEditor('mNewsfeedContent');
 				   });
 				  },
 				  close: function(event, ui) {
@@ -53,6 +56,7 @@ function close() {
 	$('.cancel').click(function(event) {
 		event.preventDefault();
 		$('#dialog-form').dialog("destroy");
+		editor.destroy();
 	});
 }
 
@@ -63,6 +67,7 @@ function dialogEvent() {
 		event.preventDefault();
 		$("#dialog-form-confirm-send").dialog( "destroy" );	// 关闭对话框
 		$("#dialog-form").dialog( "destroy" );	// 关闭对话框
+		editor.destroy();	/* 销毁ueditor */
 		$('#progressDialog').show();	// 打开加载框
 		id = setInterval('publish()',1500); // 模拟网络操作 1500ms	
 	});

@@ -10,6 +10,16 @@ $(function() {
 function changePortrait() {
 	$("#change_portrait").change(function(){
 	    if (this.files && this.files[0]) {
+	    	
+	    	// 扩展名判断 (jpg, png, gif, bmp)
+	    	var fileName = this.files[0].name;
+	    	var extention = fileName.substr(fileName.indexOf('.') + 1);
+	    	var pattern = /(jpg|png|gif|bmp)/;
+	    	if(!pattern.test(extention)) {
+	    		alert("支持的图片类型：jpg, png, gif, bmp");
+	    		return;
+	    	}
+	    	
 	        var reader = new FileReader();
 	        reader.onload = function (e) {
 	            $('#origin_portrait').attr('src', e.target.result);
