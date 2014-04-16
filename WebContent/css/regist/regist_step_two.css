@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+@IMPORT url("../common/common.css");
+
+/* Step2信息面板样式与布局 */
+
+#select_campus{
+	background-color:#FFFFFF;
+}
+#Step2_panel table select {	
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none;  /*Removes default style Firefox*/
+    appearance: none;
+    background: none repeat scroll 0 0 #FFFFFF;  
+    text-indent: 0.01px;          /* Removes default arrow from firefox*/
+    text-overflow: "";               /*Removes default arrow from firefox*/  
+	width: 410px;
+	height: 40px;
+	margin-bottom: 35px;
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	font-family: '宋体';
+	font-size: 16px;
+	text-align: left;
+	line-height: 40px;
+	background-color:#FFFFFF;
+	background:transparent url("../../img/regist/select.png") no-repeat scroll 368px -2px;
+}
+#step_one img{
+	display:none;
+}
+#regist_content
+{
+	height:760;
+}
+#step_two img{
+	display:block;
+}
+#step_one{
+	color:#999999;
+}
+#step_two{
+	color:#55BB22;
+}

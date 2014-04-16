@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>分院注册step4界面</title>
+<link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+<link href="../../css/regist/branch_regist.css" rel="stylesheet" type="text/css" />
+<link href="../../css/regist/regist_step_four.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="header_wrapper">
+		<div id="header">
+			<div id="logo_regist">
+				<ul id="logo">
+					<li><img src="../../img/regist/headlogo.png" /></li>
+					<li><img id="MySchool" src="../../img/regist/MySchool.png" /></li>
+					<li><img id="line" src="../../img/regist/line.png" /></li>
+					<li><span id="regist_text">注册</span></li>
+				</ul>
+			</div>
+			<div id="login_btns">
+				<span>已有账号？马上<a href="../../index.html">登录</a></span>
+			</div>
+		</div>
+	</div>
+	<!-- end of header_wrapper -->
+
+
+	<div id="regist_main">
+		<div id="regist_content">
+			<div class="tab">
+				<div id="fenyuan">
+					<img src="../../img/regist/u334_line.png" /> <label>分院注册</label>
+				</div>
+				<div id="shetuan">
+					<label>社团注册</label>
+				</div>
+			</div>
+			<div class="regist_step">
+				<div id="step_tab">
+					<!-- 申请步骤 -->
+					<ul id="step_num">
+						<li id="step_one"><span>Step 1:</span> 激活邮箱<img
+							src="../../img/regist/u61_line.png" /></li>
+						<li id="step_two"><span>Step 2:</span> 详细信息<img
+							src="../../img/regist/u61_line.png" /></li>
+						<li id="step_three"><span>Step 3:</span> 上传标志<img
+							src="../../img/regist/u61_line.png" /></li>
+						<li id="step_four"><span>Step 4:</span> 等待审核<img
+							src="../../img/regist/u61_line.png" /></li>
+					</ul>
+					<div id="underline">
+						<img id="u352_end" src="../../img/regist/u352_end.png" /> 
+						<img id="u525_end" src="../../img/regist/u525_end.png" />
+					</div>
+				</div>
+
+
+				<div id="regist_panel">
+					<!-- 信息面板 -->			
+					<div class="Step_panel" id="Step4_panel">
+						<!-- Step 4:等待审核面板 -->
+						<div id="audit">
+							<img alt="" src="../../img/regist/u536.png">
+							<p>请您等待团委审核，审核结果将会发送至你邮箱。</p>
+						</div>
+						<form action="#" method="post">
+							<table id="step4_table">
+								<tr>
+								    <td align="center" class="step_to_step"><input type="button" name="prestep" class="prestep"
+										value="上一步" onclick="returnToStep3()" /></td>
+									<td align="center" class="step_to_step"><a href="../../index.html"><input type="button" 
+									    name="finishstep" value="完成" /></a></td>									
+								</tr>					
+							</table>
+						</form>
+					</div>
+					<!-- end of Step4_panel -->
+
+
+				</div>
+			</div>
+			<!-- end of regist_step -->
+		</div>
+	</div>
+	<!-- end of regist_main -->
+	<div id="footer_wrapper">
+		<div id="footer">
+			<p>客服QQ：4009987011企业QQ客服电话： 400-998-7011官方微博关于我们最新素材图片下载Sitemap</p>
+			<p>Copyright @ 2014千图网 沪ICP备10011451号-6 用时： 0.0219 1.772 秒
+				当前版本:1.0</p>
+		</div>
+	</div>
+	<script src="../../dependency/jquery-1.11.0.min.js"></script>
+	<script src="../../js/regist/fenyuan_regist.js"></script>
+</body>
+</html>

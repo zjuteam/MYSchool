@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>社团注册step3界面</title>
+<link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+<link href="../../css/regist/branch_regist.css" rel="stylesheet" type="text/css" />
+<link href="../../css/regist/regist_step_three.css" rel="stylesheet" type="text/css" />
+<link href="../../css/regist/shetuan_regist.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="header_wrapper">
+		<div id="header">
+			<div id="logo_regist">
+				<ul id="logo">
+					<li><img src="../../img/regist/headlogo.png" /></li>
+					<li><img id="MySchool" src="../../img/regist/MySchool.png" /></li>
+					<li><img id="line" src="../../img/regist/line.png" /></li>
+					<li><span id="regist_text">注册</span></li>
+				</ul>
+			</div>
+			<div id="login_btns">
+				<span>已有账号？马上<a href="../../index.html">登录</a></span>
+			</div>
+		</div>
+	</div>
+	<!-- end of header_wrapper -->
+
+
+	<div id="regist_main">
+		<div id="regist_content">
+			<div class="tab">
+				<div id="fenyuan">
+					<label>分院注册</label>
+				</div>
+				<div id="shetuan">
+					<img src="../../img/regist/u334_line.png" /><label>社团注册</label>
+				</div>
+			</div>
+			<div class="regist_step">
+				<div id="step_tab">
+					<!-- 申请步骤 -->
+					<ul id="step_num">
+						<li id="step_one"><span>Step 1:</span> 激活邮箱<img
+							src="../../img/regist/u61_line.png" /></li>
+						<li id="step_two"><span>Step 2:</span> 详细信息<img
+							src="../../img/regist/u61_line.png" /></li>
+						<li id="step_three"><span>Step 3:</span> 上传标志<img
+							src="../../img/regist/u61_line.png" /></li>
+						<li id="step_four"><span>Step 4:</span> 等待审核<img
+							src="../../img/regist/u61_line.png" /></li>
+					</ul>
+					<div id="underline">
+						<img id="u352_end" src="../../img/regist/u352_end.png" /> 
+						<img id="u525_end" src="../../img/regist/u525_end.png" />
+					</div>
+				</div>
+
+
+				<div id="regist_panel">
+					<!-- 信息面板 -->
+					<div class="Step_panel" id="Step3_panel">
+						<!-- Step 3:上传标志面板 -->
+						<div id="appearance">
+							<div id="left_current">
+								<span>当前头像</span>
+								<img id="left_current_line" src="../../img/regist/u153_line.png" />
+								<div id="current_img">
+									<img src="../../img/regist/u140.png" />
+								</div>
+							</div>
+							<!--end of 当前头像 -->
+							<div id="right_new">								
+								<span id="set_new">设置新头像</span>	
+								<img class="lookline" id="new_img_line" src="../../img/regist/u481_line.png" />
+								<span id="unload_img_word">上传头像</span>								
+									<table>
+									<tr id="ues_img_camera">
+										<td id="upload_img"><input type="file" value="上传头像"/></td>
+										<td id="img_camera_line"><img src="../../img/regist/u153_line.png" /></td>
+										<td id="use_camera"><a href="#">使用摄像头</a></td>
+									</tr>
+									<tr>
+										<td id="support_form">支持JPG、JPEG、GIF、BMP、和PNG文件，最大4M</td>
+									</tr>
+									<tr id="little_img">
+										<td>小头像</td>
+									</tr>
+									<tr class="lookline">
+										<td><img src="../../img/regist/u481_line.png" /></td>
+									</tr>
+									<tr>
+										<td id="new_img"><img src="../../img/regist/u140.png" /></td>
+										<td id="save_img"><input type="button" value="保存" name="save_img"/></td>
+									</tr>
+								</table>
+								<span id="little_img_explain">一般出现在评论或者求伴窗口</span>
+							</div>
+							<!--end of 设置新头像 -->
+						</div>
+						<form action="#" method="post">
+							<table id="step3_table">
+								<tr class="step_button">
+								    <td align="center" class="step_to_step"><input type="button" name="prestep" class="prestep"
+										value="上一步" onclick="returnToStep2()" /></td>
+									<td align="center" class="step_to_step"><a href="shetuan_regist_step_four.html"><input type="button" name="nextstep"
+										value="下一步"/></td>
+								</tr>				
+							</table>
+						</form>
+					</div>
+					<!-- end of Step3_panel -->				
+
+				</div>
+			</div>
+			<!-- end of regist_step -->
+		</div>
+	</div>
+	<!-- end of regist_main -->
+	<div id="footer_wrapper">
+		<div id="footer">
+			<p>客服QQ：4009987011企业QQ客服电话： 400-998-7011官方微博关于我们最新素材图片下载Sitemap</p>
+			<p>Copyright @ 2014千图网 沪ICP备10011451号-6 用时： 0.0219 1.772 秒
+				当前版本:1.0</p>
+		</div>
+	</div>
+	<script src="../../dependency/jquery-1.11.0.min.js"></script>
+	<script src="../../js/regist/fenyuan_regist.js"></script>
+</body>
+</html>

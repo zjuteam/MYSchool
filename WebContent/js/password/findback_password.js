@@ -24,7 +24,7 @@ function inputClearEvent() {
 		}
 		$(".mailbox_warn").show();
 		$("#mailbox_wword").html("输入注册邮箱");
-		$(".mailbox_warn img").attr("src","./img/u585.png");
+		$(".mailbox_warn img").attr("src","../../img/password/u585.png");
 	});
 	$('input[name="mailbox"]').blur(function() {
 		if ($(this).val() == '') {
@@ -35,16 +35,16 @@ function inputClearEvent() {
 			var myReg = /^[-_A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
 			if(myReg.test($(this).val())) {
 				$("#mailbox_wword").html("");
-				$(".mailbox_warn img").attr("src","./img/u587.png");
+				$(".mailbox_warn img").attr("src","../../img/password/u587.png");
 			}				
 			else{
-				$(".mailbox_warn img").attr("src","./img/u589.png");
+				$(".mailbox_warn img").attr("src","../../img/password/u589.png");
 				$("#mailbox_wword").html("请输入正确的邮件地址");
 			}
 		}
 		else{
 			$("#mailbox_wword").html("输入注册邮箱");
-			$(".mailbox_warn img").attr("src","./img/u585.png");
+			$(".mailbox_warn img").attr("src","../../img/password/u585.png");
 			$(".mailbox_warn").hide();
 		}
 	});
@@ -59,7 +59,7 @@ function inputClearEvent() {
 		}
 		$(".password_warn").show();
 		$("#password_wword").html("6到16个字符区分大小写");
-		$(".password_warn img").attr("src","./img/u585.png");
+		$(".password_warn img").attr("src","../../img/password/u585.png");
 	});
 	$('input[name="password"]').blur(function() {
 			if ($(this).val() == '') {
@@ -70,16 +70,16 @@ function inputClearEvent() {
 		if($(this).val() != "输入新密码"){
 			if(6<=$(this).val().length&&$(this).val().length<=16) {
 				$("#password_wword").html("");
-				$(".password_warn img").attr("src","./img/u587.png");
+				$(".password_warn img").attr("src","../../img/password/u587.png");
 			}				
 			else{
-				$(".password_warn img").attr("src","./img/u589.png");
+				$(".password_warn img").attr("src","../../img/password/u589.png");
 				$("#password_wword").html("请输入正确格式的密码");
 			}
 		}
 		else{
 			$("#password_wword").html("6到16个字符区分大小写");
-			$(".password_warn img").attr("src","./img/u585.png");
+			$(".password_warn img").attr("src","../../img/password/u585.png");
 			$(".password_warn").hide();
 		}
 	});
@@ -95,7 +95,7 @@ function inputClearEvent() {
 		}
 		$(".password_again_warn").show();
 		$("#password_again_wword").html("再次输入你设置的密码");
-		$(".password_again_warn img").attr("src","./img/u585.png");
+		$(".password_again_warn img").attr("src","../../img/password/u585.png");
 	});
 	$('input[name="password_again"]').blur(function() {	
 		if ($(this).val() == '') {
@@ -106,16 +106,16 @@ function inputClearEvent() {
 		if($(this).val() != "再次输入新密码"){
 			if($(this).val()==$("input[name='password']").val()) {
 				$("#password_again_wword").html("");
-				$(".password_again_warn img").attr("src","./img/u587.png");
+				$(".password_again_warn img").attr("src","../../img/password/u587.png");
 			}				
 			else{
-				$(".password_again_warn img").attr("src","./img/u589.png");
+				$(".password_again_warn img").attr("src","../../img/password/u589.png");
 				$("#password_again_wword").html("两次输入的密码不一致");
 			}
 		}
 		else{
 			$("#password_again_wword").html("再次输入你设置的密码");
-			$(".password_again_warn img").attr("src","./img/u585.png");
+			$(".password_again_warn img").attr("src","../../img/password/u585.png");
 			$(".password_again_warn").hide();
 		}
 	});

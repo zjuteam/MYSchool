@@ -92,5 +92,10 @@ a.shetuan_select{
     position: relative;
     top: 35px;
 }
-
+#shetuan_table{
+	margin-top:40px;
+	margin-left:22px;
+	width:680px;
+	height:240px;
+}
 

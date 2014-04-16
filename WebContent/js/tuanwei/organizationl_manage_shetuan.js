@@ -1,97 +1,52 @@
 /**
  * 社团管理
  */
-$(function() {
+/*$(function() {
 	createTable();//创建表格
 });
+*/
+var mydata = [
+		{logo:"<img src='../../img/tuanwei/up.png'/>",name:"设计协会",time:"2014/12/12",amount:"45",
+		infor:"<a href='http://www.baidu.com'>详情</a>",
+		check:"<input style='width:60px;' type='button' value='通过' onclick='pass()'/>"+
+		"<input style='width:60px;' type='button' value='不通过' onclick='pass()'/>"},
+		{logo:"lo",name:"吉他协会",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
+		{logo:"logo",name:"团委会",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
+		{logo:"logo",name:"合唱团",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
+		{logo:"logo",name:"书法社",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
+		{logo:"logo",name:"围棋社",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
+		{logo:"logo",name:"动漫社",time:"2014/12/12",amount:"45",infor:"详情",check:"<input style='width:40px;' type='button' value='编辑'/>"}
+	];
+jQuery().ready(function (){
+jQuery("#list1").jqGrid({
+   	/*url:'',*/
+	data: mydata,
+	datatype: "local",
+   	colNames:['LOGO','社团名称', '申请时间', '社团人数','详细信息','审核'],
+   	colModel:[
+   		{name:'logo',index:'logo', width:110, height:40, align:"center"},
+   		{name:'name',index:'name', width:120, height:40, align:"center"},
+   		{name:'time',index:'time', width:140, height:40, align:"center"},
+   		{name:'amount',index:'amount', width:80, height:40, align:"center"},	
+   		{name:'infor',index:'infor', width:80, height:40, align:"center"},		
+   		{name:'check',index:'check', width:150, height:40, sortable:false}		
+   	],
+   	height:205,
+   	rowNum:5,
+   	autowidth: true,
+   /*	rowList:[10,20,30],*/
+   	pager: jQuery('#pager1'),
+   	/*sortname: 'logo',*/
+    viewrecords: true,
+ 
+    sortorder: "desc"
+    /*caption:"XML Example"*/
+}).navGrid('#pager1',{edit:false,add:false,del:false});
+ 
+	
+});
 
-function createTable(){
-	jQuery("#list").jqGrid({
-		
-		    url:'<%=basePath%>createGrid.action',
-		
-		    datatype: "json",
-		
-		    mtype: 'POST',
-		
-		    height: 240,
-		
-		    autowidth: true,
-		
-		    altRows:true,//隔行变色
-		
-		    altclass:'ui-widget-content-altclass',//隔行变色样式
-		
-		    colNames:['id','name','operation'],
-		
-		    colModel:[
-		
-		        {name:'id',key:true,index:'id',hidden:true},//如果需要对行操作,则选择一个主键 key:true
-		
-		        {name:'name',index:'name',sortable:false},//如果需要点击表头排序 则sortable:false
-		
-		        {name:'act',index:'act',width:200,sortable:false,title:false,align:"center" ,sortable:false} 
-	
-		    ],
-		
-		      
-		
-		    gridComplete: function(){ //列表生成后,给某一列绑定操作 例如删除操作
-		
-		            var ids = $("#list").jqGrid('getDataIDs');
-		
-		            for(var i=0;i < ids.length;i++){
-		
-		                showInfo = "<a href='##' onclick=\"showInfo('"+ids[i]+"');\">"+$("#list").jqGrid('getRowData',ids[i]).id+"</a>";
-		
-		                $("#list").jqGrid('setRowData',ids[i],{act:showInfo});
-	
-		            }
-		
-		    },
-		
-		     
-	
-		    postData: { //传递的数据，定义在form中
-		
-		        //查询所用
-	
-		            'searchId': function() { return $("#searchId").val(); },
-	
-		            'searchName': function() { return $("#searchName").val(); }
-		
-		    },
-	
-		    shrinkToFit:true,
-		
-		    rowNum:10,//初始化时每一页显示的个数
-	
-		    rowList:[10,20,30],//每一页能显示的个数
-	
-		    jsonReader:{ 
 
-		        root:"listJson", // 从服务端返回的实际数据，名字随意起，但是在Action类中必须有与之匹配的属性
-	
-		        repeatitems : false            
-		
-		    },
-		
-		    rownumbers: true,
-		
-		    pager: '#pager_List',//如果不需要左下角的 自带的查询 刷新功能  就不用添加在最后一行的 jqGrid('navGrid','#pager_List'...
-		
-		    sortname: 'id',
-		
-		    viewrecords: true,
-	
-		    sortorder: "desc",
-		
-		    multiselect: true
-		
-		    caption: "jQGrid列表"
-		
-		});
-		
-		jQuery("#list").jqGrid('navGrid','#',{add:false,edit:false,del:false});
-
+function pass(){
+	alert(1);
 }

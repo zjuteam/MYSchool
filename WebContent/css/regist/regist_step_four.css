@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+@IMPORT url("../common/common.css");
+/* step4等待审核页面样式 */
+#step_one img {
+	display: none;
+}
+
+#step_four img {
+	display: block;
+}
+
+img#u352_end {
+	display: none;
+}
+
+img#u525_end {
+	display: block;
+}
+
+#audit {
+	width: 600px;
+	height: 220px;
+	margin: 0 auto 0 auto;
+	line-height: 220px;
+}
+
+#audit img {
+	display: block;
+	float: left;
+	margin-right: 20px;
+	margin-top: 95px;
+}
+
+#audit p {
+	color: #333333;
+	font-size: 18px;
+	font-family: 'Arial Normal', 'Arial';
+}
