@@ -10,19 +10,31 @@
 </style>
 </head>
 <body>
+		<!-- 提示对话框 -->
+		<div title="发送" id="dialog-form-confirm-send">
+			`<p>是否确认发送该资讯？</p>
+			 <button class="yes">是</button>
+			 <button class="no">否</button>
+		</div>
+		
 	<div id="dialog_body" >	
 		<form action="" method="post" id="form" enctype="multipart/form-data">
 			<fieldset>
-				<p>
+				<ul>
+				
+				<li>
 					<label>主题</label><input id="theme" name="theme" type="text" required maxlength="16" value="少于16个字" />
-				</p>
-				<p>
-					<label>标签</label><select><option>请选择</option><option>体育</option><option>娱乐</option></select>
-				</p>
-				<p id="snapshot1">
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<label>标签</label><select id="tag"><option>请选择</option><option>体育</option><option>娱乐</option></select>
+					<div style="clear:both"></div>
+				</li>
+				<li id="snapshot1">
 					<label>活动配图</label><button class="upload">上传</button><label class="supported">(支持的图片类型：jpg, png, gif, bmp)</label><input type="file" id="pic"/>
-				</p>
-				<p id="snapshot2">
+					<div style="clear:both"></div>
+				</li>
+				<li id="snapshot2">
 					<label class="top">活动配图</label><img src="" width="220" height="120" id="originPic"/>
 					 <span id="preview" style="float: right; margin-right: 100px;width: 110px; height: 110px; overflow: hidden;"><img src="" style="width: 110px; height: 110px;" id="final" /></span>
 					<button class="save" style="margin-left: 100px;">保存</button><button class="delete">删除</button>
@@ -30,17 +42,27 @@
 					<input type="hidden" name="y1" value="" />
 					<input type="hidden" name="x2" value="" />
 					<input type="hidden" name="y2" value="" />
-				</p>
-				<p id="snapshot3">
+				</li>
+				<li id="snapshot3">
 					<label class="top" style="float: left;">活动配图</label><span id="final2" style="width: 110px; height: 110px; overflow: hidden;float: left;"><img src="" width="110" height="110" /></span><a href="" id="changeImg" style="vertical-align: middle;line-height: 110px;">更改图片</a>
 					<div style="clear:both"></div>
-				</p>
-				<p>
-					<label class="top">正文</label><textarea required name="body">正文</textarea>
-				</p>
-				<p>
-					<button class="cancel">取消</button><input type="submit" value="发布" />
-				</p>
+				</li>
+				<li>
+					<label class="top">正文</label>
+					<textarea required name="body" id="mNewsfeedContent" style="width: 470px;height: 117px;float: right;">正文</textarea>
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<button class="preview" >预览发送</button>
+				    <input class="cellphone" type="text" value="输入手机号码" maxlength="14"/> <!-- +861876******* -->
+				    <label class="cellphonehint">填写的手机帐号需已注册客户端</label>
+					<div style="clear:both"></div>
+				</li>
+				<li>
+					<button class="cancel">取消</button><input type="submit" id="publish_newsfeed" value="发布" />
+					<div style="clear:both"></div>
+				</li>
+				</ul>
 			</fieldset>
 		</form>
 	</div>

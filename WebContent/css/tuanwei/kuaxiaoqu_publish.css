@@ -6,7 +6,7 @@
 	display:block;
 }
 #tuanwei_sz .tuanwei_kxqfb_selected{
-	background-color: #55BB22;
+	background-color: #84D84B;
 	color: #fff;
 	text-decoration: none;
 }
@@ -30,7 +30,7 @@
 	font-family: '微软雅黑';
 }
 #content #down {
-	height: 526px;
+	min-height: 526px;
 
 }
 #explain{

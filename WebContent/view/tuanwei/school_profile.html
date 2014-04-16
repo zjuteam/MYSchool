@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>校园简介</title>
+		<link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../../css/tuanwei/school_profile.css" />
 	</head>
 	<body>
@@ -17,7 +19,6 @@
 				<div id="right_side">
 					<img src="../../img/tuanwei/u117.png" />
 					<a href="account_setting.html" class="word">欢迎求是设计协会</a>
-					<img src="../../img/tuanwei/u196.png" class="notify" />
 					<span class="word">|</span>
 					<a href="../../index.html" class="word">注销</a>
 				</div>
@@ -43,7 +44,7 @@
 						<li class="manage_bottom"><a href="kuaxiaoqu_publish.html">跨校区发布</a></li>
 						</ul>
 						</li>
-						<li id="tuanwei_jj"><a href="#" class="zzjj">简介<img class="up_to_down" src="../../img/tuanwei/down.png"/></a>
+						<li id="tuanwei_jj"><a href="#" class="zzjj">简介<img class="up_to_down" src="../../img/tuanwei/up.png"/></a>
 						<ul class="tuanwei_select">
 						<li class="manage_top"><a href="#" class="tuanwei_xyjj_selected">校园简介</a></li>
 						<li class="manage_bottom"><a href="org_profile.html" class="tuanwei_zzjj_selected">组织简介</a></li>
@@ -75,7 +76,7 @@
 								<p>(支持的图片类型：jpg, png, gif, bmp,最多添加四张图片)</p>
 								<div class="description">
 									<input type="text" name="title" value="标题" />
-									<textarea name="" >正文</textarea>
+									<textarea id="profile_content" style="height: 360px;width: 698px;"></textarea>
 								</div>
 								<input type="text" id="input_phone" value="输入手机号码" name="phone" maxlength="11" />
 								<button name="preview_send">预览发送</button>
@@ -97,4 +98,12 @@
 	<script type="text/javascript" src="../../dependency/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="../../js/tuanwei/school_profile.js"></script>
 	<script type="text/javascript"src="../../js/tuanwei/tuanwei_common_menu.js"></script>
+	
+	<!-- ueditor -->
+	<!-- 配置文件 -->
+	<script type="text/javascript" src="../../dependency/ueditor/ueditor.config.js"></script>
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="../../dependency/ueditor/ueditor.all.min.js"></script>
+	<!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
+	<script type="text/javascript" src="../../dependency/ueditor/lang/zh-cn/zh-cn.js"></script>
 </html>

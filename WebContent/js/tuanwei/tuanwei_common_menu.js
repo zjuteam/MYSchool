@@ -9,9 +9,19 @@ $(function() {
 
 function managingOrganizations(){
 	$(".zzgl").hover(function(){
-		$(".zzgl .up_to_down").attr("src","../../img/tuanwei/down1.png");
+		if($("#tuanwei_zzgl .tuanwei_select").is(":hidden")){
+			$(".zzgl .up_to_down").attr("src","../../img/tuanwei/down1.png");
+		}
+		else{
+			$(".zzgl .up_to_down").attr("src","../../img/tuanwei/up1.png");
+		}
 	},function(){
-		$(".zzgl .up_to_down").attr("src","../../img/tuanwei/down.png");
+		if($("#tuanwei_zzgl .tuanwei_select").is(":hidden")){
+			$(".zzgl .up_to_down").attr("src","../../img/tuanwei/down.png");
+		}
+		else{
+			$(".zzgl .up_to_down").attr("src","../../img/tuanwei/up.png");
+		}
 	});
 	$('a.zzgl').click(function() {
 		if($("#tuanwei_zzgl .tuanwei_select").is(":hidden")){
@@ -39,9 +49,19 @@ function managingOrganizations(){
 //简介二级菜单
 function briefIntroduction(){
 	$(".zzjj").hover(function(){
-		$(".zzjj .up_to_down").attr("src","../../img/tuanwei/down1.png");
+		if($("#tuanwei_jj .tuanwei_select").is(":hidden")){
+			$(".zzjj .up_to_down").attr("src","../../img/tuanwei/down1.png");
+		}
+		else{
+			$(".zzjj .up_to_down").attr("src","../../img/tuanwei/up1.png");
+		}
 	},function(){
-		$(".zzjj .up_to_down").attr("src","../../img/tuanwei/down.png");
+		if($("#tuanwei_jj .tuanwei_select").is(":hidden")){
+			$(".zzjj .up_to_down").attr("src","../../img/tuanwei/down.png");
+		}
+		else{
+			$(".zzjj .up_to_down").attr("src","../../img/tuanwei/up.png");
+		}
 	});
 	$('a.zzjj').click(function() {
 		if($("#tuanwei_jj .tuanwei_select").is(":hidden")){
@@ -68,9 +88,19 @@ function briefIntroduction(){
 //设置二级菜单
 function setTypes(){
 	$(".zhsz").hover(function(){
-		$(".zhsz .up_to_down").attr("src","../../img/tuanwei/down1.png");
+		if($("#tuanwei_sz .tuanwei_select").is(":hidden")){
+			$(".zhsz .up_to_down").attr("src","../../img/tuanwei/down1.png");
+		}
+		else{
+			$(".zhsz .up_to_down").attr("src","../../img/tuanwei/up1.png");
+		}
 	},function(){
-		$(".zhsz .up_to_down").attr("src","../../img/tuanwei/down.png");
+		if($("#tuanwei_sz .tuanwei_select").is(":hidden")){
+			$(".zhsz .up_to_down").attr("src","../../img/tuanwei/down.png");
+		}
+		else{
+			$(".zhsz .up_to_down").attr("src","../../img/tuanwei/up.png");
+		}
 	});
 	$('a.zhsz').click(function() {
 		if($("#tuanwei_sz .tuanwei_select").is(":hidden")){
