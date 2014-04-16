@@ -21,7 +21,7 @@ $(function() {
       onLoad: function() {},
       onVisible: function() {},
       onHide: function() {},
-      onHidden: function() {}
+      onHidden: function() {$(element).hide();}
     };
     state = '';
     this.settings = {};
