@@ -167,5 +167,16 @@ a.g-menu-item, a.soptclass, a.clearsearchclass { cursor: pointer; }
 .ui-jqgrid .ui-jqgrid-view select,
 .ui-jqgrid .ui-jqgrid-view textarea,
 .ui-jqgrid .ui-jqgrid-view button {
-    font-size: 11px
+    font-size: 11px;
+}
+.ui-jqgrid .ui-jqgrid-view input[type='button']{
+	width:60px; 
+	height:20px; 
+	background:rgb(240,240,240); 
+	margin-left:8px;
+	font-size:12px;
+	color:#333;
+}
+.ui-jqgrid .ui-jqgrid-view a{
+	color:#0000FF;
 }

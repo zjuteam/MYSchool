@@ -8,11 +8,16 @@
 var mydata = [
 		{logo:"<img src='../../img/tuanwei/up.png'/>",name:"设计协会",time:"2014/12/12",amount:"45",
 		infor:"<a href='http://www.baidu.com'>详情</a>",
-		check:"<input style='width:60px;' type='button' value='通过' onclick='pass()'/>"+
-		"<input style='width:60px;' type='button' value='不通过' onclick='pass()'/>"},
-		{logo:"lo",name:"吉他协会",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
-		{logo:"logo",name:"团委会",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
-		{logo:"logo",name:"合唱团",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
+		check:"<input type='button' value='通过' onclick='pass()'/>"+
+		"<input  type='button' value='不通过' onclick='pass()'/>"},
+		{logo:"lo",name:"吉他协会",time:"2014/12/12",amount:"45",infor:"<a href='http://www.baidu.com'>详情</a>",
+		check:"<input type='button' value='通过' onclick='pass()'/>"+
+		"<input  type='button' value='不通过' onclick='pass()'/>"},
+		{logo:"logo",name:"团委会",time:"2014/12/12",amount:"45",infor:"<a href='http://www.baidu.com'>详情</a>",
+			check:"<input type='button' value='通过' onclick='pass()'/>"+
+			"<input  type='button' value='不通过' onclick='pass()'/>"},
+		{logo:"logo",name:"合唱团",time:"2014/12/12",amount:"45",infor:"<a href='http://www.baidu.com'>详情</a>",
+	        check:"通过"},
 		{logo:"logo",name:"书法社",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
 		{logo:"logo",name:"围棋社",time:"2014/12/12",amount:"45",infor:"详情",check:"通过"},
 		{logo:"logo",name:"动漫社",time:"2014/12/12",amount:"45",infor:"详情",check:"<input style='width:40px;' type='button' value='编辑'/>"}
@@ -38,12 +43,11 @@ jQuery("#list1").jqGrid({
    	pager: jQuery('#pager1'),
    	/*sortname: 'logo',*/
     viewrecords: true,
- 
+    scrollOffset:0,
     sortorder: "desc"
     /*caption:"XML Example"*/
 }).navGrid('#pager1',{edit:false,add:false,del:false});
- 
-	
+ 	
 });
 
 
