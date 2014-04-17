@@ -50,7 +50,7 @@ function removeItem() {
 }
 
 function registDeleteBtn() {
-	$('#dialog-form-confirm-delete .yes').click(function() {
+	$('#dialog-form-confirm-delete .yes').click(function(event) {
 		event.preventDefault();
 		$('#dialog-form-confirm-delete').dialog("destroy");
 		$('input[type="checkbox"]').each(function() {
