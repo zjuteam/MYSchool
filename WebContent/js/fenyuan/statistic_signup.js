@@ -53,7 +53,6 @@ function dialogEvent() {
 		event.preventDefault();
 		$("#dialog-form-confirm-send").dialog( "destroy" );	// 关闭对话框
 		$('#piece').remove();
-		var cbs = $('input[type="checkbox"]');
 		$('#delete_stat').hide();
 		$('#notification').miniNotification({effect: 'fade',time: 300}); // 删除成功提示
 	});

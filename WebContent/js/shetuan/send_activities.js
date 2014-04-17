@@ -2,9 +2,73 @@ var editor;
 
 $(function() {
 	publishActivities();
-
+	removeItem();
+	registDeleteBtn();
 });
 
+/**
+ * listen checkbox check event
+ * @param cb checkbox obj
+ */
+function onCheck(cb) {
+	if($(cb).is(":checked")) {
+		if($('#remove_acti').is(":hidden")) {
+			$('#remove_acti').show();
+		}
+	}else {
+		// 检查是否有其它checkbox checked
+		var isChecked = false;
+		$('input[type="checkbox"]').each(function(){
+			if(!$(this).is($(cb)) && $(this).is(":checked")) {
+				isChecked = true;
+			}
+		});
+		if(!isChecked) {
+			$('#remove_acti').hide();
+		}
+		
+	}
+}
+
+/**
+ * 删除选中的活动
+ */
+function removeItem() {
+	$('#remove_acti').click(function() {
+		
+		// 确认对话框。。。
+		$('#dialog-form-confirm-delete').dialog({
+			  title: '删除',
+		      height: 220,
+		      width: 400,
+		      draggable: false,
+		      resizable: false,
+		      modal: true	/* prevent user from interacting with the rest of the page. */
+		});		
+
+	});
+}
+
+function registDeleteBtn() {
+	$('#dialog-form-confirm-delete .yes').click(function() {
+		event.preventDefault();
+		$('#dialog-form-confirm-delete').dialog("destroy");
+		$('input[type="checkbox"]').each(function() {
+			if($(this).is(":checked")) {
+				$(this).parent().parent().remove();
+			}
+		});
+		$('#remove_acti').hide();
+		$('#notification').empty();
+		$('#notification').append('<p>已成功删除信息</p>');
+		$('#notification').miniNotification({effect: 'fade',time: 300}); // 删除成功提示
+	});
+	
+	$('#dialog-form-confirm-delete .no').click(function() {
+		event.preventDefault();
+		$('#dialog-form-confirm-delete').dialog("destroy");
+	});	
+}
 function publishActivities() {
 	$('#create_acti').click(function() {
 		$('#dialog-form').dialog({
@@ -43,6 +107,8 @@ function close() {
 function uploadToServer() {
 	clearInterval(id);
 	// 通知栏
+	$('#notification').empty();
+	$('#notification').append('<p>发布成功</p>');
 	$('#notification').miniNotification({effect: 'fade',time: 300});
 	// 隐藏加载框
 	$('#progressDialog').hide();
@@ -55,7 +121,7 @@ function uploadToServer() {
 	
 	$('#down').append('<div class="activity">'
 			+ '<div class="check">'
-			+ '<input type="checkbox" onclick="alert(0)"/>'
+			+ '<input type="checkbox" onClick="onCheck(this)" />'
 			+ '</div>'
 			+ '<div class="info">'
 			+ '<table>'

@@ -18,7 +18,7 @@ $(function() {
       closeButtonText: 'close',
       closeButtonClass: 'close',
       hideOnClick: true,
-      onLoad: function() {},
+      onLoad: function() {$(element).show();},
       onVisible: function() {},
       onHide: function() {},
       onHidden: function() {$(element).hide();}
