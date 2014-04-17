@@ -147,7 +147,7 @@ function uploadToServer() {
 			+ '<td><img src="../../img/fenyuan/u212.png" /></td>'
 			+ '</tr>'
 			+ '<tr>'
-			+ '<td>编辑</td>'
+			+ '<td><span id="edit_acti">编辑</span></td>'
 			+ '</tr>'
 			+ '	</table>'
 			+ '</div>'
