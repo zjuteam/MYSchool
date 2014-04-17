@@ -3,8 +3,72 @@ var editor;
 $(function() {
 	publishNewsfeed();
 	editNewsfeed();
+	removeItem();
+	registDeleteBtn();
 });
 
+/**
+ * listen checkbox check event
+ * @param cb checkbox obj
+ */
+function onCheck(cb) {
+	if($(cb).is(":checked")) {
+		if($('#remove_news').is(":hidden")) {
+			$('#remove_news').show();
+		}
+	}else {
+		// 检查是否有其它checkbox checked
+		var isChecked = false;
+		$('input[type="checkbox"]').each(function(){
+			if(!$(this).is($(cb)) && $(this).is(":checked")) {
+				isChecked = true;
+			}
+		});
+		if(!isChecked) {
+			$('#remove_news').hide();
+		}
+		
+	}
+}
+
+/**
+ * 删除选中的活动
+ */
+function removeItem() {
+	$('#remove_news').click(function() {
+		// 确认对话框。。。
+		$('#dialog-form-confirm-delete').dialog({
+			  title: '删除',
+		      height: 220,
+		      width: 400,
+		      draggable: false,
+		      resizable: false,
+		      modal: true	/* prevent user from interacting with the rest of the page. */
+		});		
+
+	});
+}
+
+function registDeleteBtn() {
+	$('#dialog-form-confirm-delete .yes').click(function(event) {
+		event.preventDefault();
+		$('#dialog-form-confirm-delete').dialog("destroy");
+		$('input[type="checkbox"]').each(function() {
+			if($(this).is(":checked")) {
+				$(this).parent().parent().remove();
+			}
+		});
+		$('#remove_news').hide();
+		$('#notification').empty();
+		$('#notification').append('<p>已成功删除信息</p>');
+		$('#notification').miniNotification({effect: 'fade',time: 300}); // 删除成功提示
+	});
+	
+	$('#dialog-form-confirm-delete .no').click(function(event) {
+		event.preventDefault();
+		$('#dialog-form-confirm-delete').dialog("destroy");
+	});	
+}
 
 function usefulHint() {
 	infoHint('#theme','少于16个字');
@@ -104,13 +168,17 @@ function publish() {
 	
 		$('#progressDialog').hide();	// 隐藏加载框
 		clearInterval(id);
+		// 隐藏提示字
+		if($('#down').find('.newsfeed').length == 0) {
+			$('#down .no_content').hide();
+		}
 		$('#notification').miniNotification({effect: 'fade',time: 300});
 		var theme = $("#theme").val();
 		var tag = $("#tag").val();
 		
 		$('#down').append('<div class="newsfeed">'
 				+ '<div class="check">'
-				+ '<input type="checkbox" />'
+				+ '<input type="checkbox" onClick="onCheck(this)" />'
 				+ '</div>'
 				+ '<div class="info">'
 				+ '<table>'

@@ -21,6 +21,12 @@
 				</ul>
 			</div>
 		</div>
+		<!-- 提示对话框 -->
+		<div title="发送" id="dialog-form-confirm-delete">
+			`<p>是否确认删除这条消息？</p>
+			 <button class="yes">是</button>
+			 <button class="no">否</button>
+		</div>
 		<!-- 上传成功提醒 -->
 		<div id="notification">
 		  <p>发布成功</p>
@@ -78,10 +84,16 @@
 						<div id="create_news">
 							新建资讯
 						</div>
+						<div id="remove_news">
+							删除
+						</div>
 					</div>
 					<div id="down">
+						<div class="no_content" >
+						您还没有创建任何资讯，请点击右上方【新建资讯】来创建活动
+						</div>
 						<!-- one piece of news feed -->
-						<div class="newsfeed">
+<!-- 						<div class="newsfeed">
 							<div class="check">
 								<input type="checkbox" />
 							</div>
@@ -113,7 +125,7 @@
 									</tr>
 								</table>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<div style="clear:both"></div>		
