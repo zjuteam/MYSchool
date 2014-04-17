@@ -244,20 +244,22 @@ li {
 	left: 150px;
 }
 .tuanwei_select li a{
-	color: #333333;
     display: block;
     height: 29px !important;
     line-height: 29px !important;
-    font-size:14px;
+   	font-size: 12px ;
+	font-family: '宋体';
+	font-style: normal ;
 }
 .tuanwei_select li a:hover {
 	background-color: #55BB22;
-	color: #fff;
 	text-decoration:none;
+	color: #fff;
 }
 #tuanwei_zzgl, .manage_bottom{
 	border-bottom:none;
 }
+
 .manage_top{
 	border-top:1px solid #D7D7D7;
 }

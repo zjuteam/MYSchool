@@ -94,8 +94,13 @@ function publishActivities() {
 }
 
 function pickTime() {
-	$('#start_time').datepicker();
-	$('#end_time').datepicker();
+	$('#start_time').datepicker({
+		dateFormat: "mm/dd/yy"
+	});
+	$('#end_time').datepicker( {
+		dateFormat: "mm/dd/yy",
+		minDate: new Date()
+	});
 }
 
 function close() {
